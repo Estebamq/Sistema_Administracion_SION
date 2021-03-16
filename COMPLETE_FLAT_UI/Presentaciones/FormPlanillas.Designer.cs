@@ -30,39 +30,47 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.InstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridViewInstructores = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarClasesInstructor = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarClasesInstructorPorFecha = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewPersonas = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).BeginInit();
             this.SuspendLayout();
             // 
             // InstructorBindingSource
             // 
             this.InstructorBindingSource.DataSource = typeof(Logic.Instructor);
+            // 
+            // AlumnoBindingSource
+            // 
+            this.AlumnoBindingSource.DataSource = typeof(Logic.Alumno);
+            // 
+            // ClaseBindingSource
+            // 
+            this.ClaseBindingSource.DataSource = typeof(Logic.Clase);
             // 
             // panel1
             // 
@@ -108,38 +116,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel2.Size = new System.Drawing.Size(1168, 492);
             this.panel2.TabIndex = 1;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Left;
-            reportDataSource1.Name = "Instructor";
-            reportDataSource1.Value = this.InstructorBindingSource;
-            reportDataSource2.Name = "Alumno";
-            reportDataSource2.Value = this.AlumnoBindingSource;
-            reportDataSource3.Name = "Clases";
-            reportDataSource3.Value = this.ClaseBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "COMPLETE_FLAT_UI.Presentaciones.reportes.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(797, 492);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // AlumnoBindingSource
-            // 
-            this.AlumnoBindingSource.DataSource = typeof(Logic.Alumno);
-            // 
-            // ClaseBindingSource
-            // 
-            this.ClaseBindingSource.DataSource = typeof(Logic.Clase);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.dataGridViewPersonas);
+            this.panel3.Controls.Add(this.dataGridViewInstructores);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.btnBuscarClasesInstructor);
             this.panel3.Controls.Add(this.label2);
@@ -149,6 +129,73 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 492);
             this.panel3.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 20);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Elegir instructor";
+            // 
+            // dataGridViewInstructores
+            // 
+            this.dataGridViewInstructores.AllowUserToAddRows = false;
+            this.dataGridViewInstructores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewInstructores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewInstructores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.dataGridViewInstructores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewInstructores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewInstructores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstructores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewInstructores.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewInstructores.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewInstructores.EnableHeadersVisualStyles = false;
+            this.dataGridViewInstructores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.dataGridViewInstructores.Location = new System.Drawing.Point(16, 89);
+            this.dataGridViewInstructores.Name = "dataGridViewInstructores";
+            this.dataGridViewInstructores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstructores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewInstructores.Size = new System.Drawing.Size(328, 231);
+            this.dataGridViewInstructores.TabIndex = 41;
+            this.dataGridViewInstructores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInstructores_CellClick_1);
+            this.dataGridViewInstructores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInstructores_CellDoubleClick_1);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(72, 422);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(224, 20);
+            this.dateTimePicker1.TabIndex = 40;
             // 
             // btnBuscarClasesInstructor
             // 
@@ -201,70 +248,25 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarClasesInstructorPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarClasesInstructorPorFecha.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // reportViewer1
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 422);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 20);
-            this.dateTimePicker1.TabIndex = 40;
-            // 
-            // dataGridViewPersonas
-            // 
-            this.dataGridViewPersonas.AllowUserToAddRows = false;
-            this.dataGridViewPersonas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewPersonas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewPersonas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dataGridViewPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewPersonas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewPersonas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewPersonas.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewPersonas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewPersonas.EnableHeadersVisualStyles = false;
-            this.dataGridViewPersonas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.dataGridViewPersonas.Location = new System.Drawing.Point(16, 89);
-            this.dataGridViewPersonas.Name = "dataGridViewPersonas";
-            this.dataGridViewPersonas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPersonas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewPersonas.Size = new System.Drawing.Size(328, 231);
-            this.dataGridViewPersonas.TabIndex = 41;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Elegir instructor";
+            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Left;
+            reportDataSource1.Name = "Instructor";
+            reportDataSource1.Value = this.InstructorBindingSource;
+            reportDataSource2.Name = "Alumno";
+            reportDataSource2.Value = this.AlumnoBindingSource;
+            reportDataSource3.Name = "Clases";
+            reportDataSource3.Value = this.ClaseBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "COMPLETE_FLAT_UI.Presentaciones.reportes.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(797, 492);
+            this.reportViewer1.TabIndex = 0;
             // 
             // FormPlanillas
             // 
@@ -278,14 +280,14 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Text = "FormPlanillas";
             this.Load += new System.EventHandler(this.FormPlanillas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +308,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Button btnBuscarClasesInstructorPorFecha;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridViewPersonas;
+        private System.Windows.Forms.DataGridView dataGridViewInstructores;
     }
 }

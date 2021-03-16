@@ -124,6 +124,14 @@ namespace Logic
             instructor.Search = search;
             return instructorDAO.SearchInstructorDni(instructor);
         }
+
+        //BUSCAR INSTRUCTORES POR ID
+        public List<Instructor> SearchingInstructorIdPlanilla(string search)
+        {
+            Instructor instructor = new Instructor();
+            instructor.Search = search;
+            return instructorDAO.SearchInstructorIdPlanilla(instructor);
+        }
         #endregion
     }
 }

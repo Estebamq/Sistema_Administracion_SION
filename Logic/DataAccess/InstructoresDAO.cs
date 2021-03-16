@@ -117,6 +117,8 @@ namespace Logic
 
         }
 
+       
+
         public void UpdateBajaInstructor(Instructor instructor)
         {
             using (SqlConnection connection = GetConnection())
@@ -213,7 +215,46 @@ namespace Logic
                 }
             }
         }
+        //LISTAR INSTRUCTORES EN LA PLANILLA
+        public List<Instructor> SearchInstructorIdPlanilla(Instructor instructor)
+        {
 
+
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_searchInstructorIdClase", connection))
+                {
+                    SqlDataReader readRows;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.AddWithValue("@searchId", instructor.Search);
+
+                    readRows = cmd.ExecuteReader();
+
+                    List<Instructor> listing = new List<Instructor>();
+
+                    while (readRows.Read())
+                    {
+                        listing.Add(new Instructor
+                        {
+                            Id = readRows.GetInt32(0),
+                            Nombre = readRows.GetString(1),
+                            Apellido = readRows.GetString(2),
+                            Telefono = readRows.GetInt32(3),
+
+                        });
+                    }
+
+
+                    readRows.Close();
+
+                    return listing;
+                }
+            }
+        }
         public void DeleteInstructor(Instructor instructor)
         {
             using (SqlConnection connection = GetConnection())
