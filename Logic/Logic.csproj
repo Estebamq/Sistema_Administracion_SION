@@ -73,6 +73,7 @@
     <Compile Include="DataAccess\InstructoresDAO.cs" />
     <Compile Include="Domain\MetodosDePago.cs" />
     <Compile Include="Domain\Persona.cs" />
+    <Compile Include="Domain\ReporteClase.cs" />
     <Compile Include="Domain\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

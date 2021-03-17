@@ -68,6 +68,7 @@ namespace Logic
             set { search = value; }
         }
         #endregion
+
         #region Metodo
         public void CreatingInstructor(Instructor instructor)
         {

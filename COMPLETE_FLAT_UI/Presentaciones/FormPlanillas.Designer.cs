@@ -36,9 +36,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.InstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
@@ -51,26 +49,19 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarClasesInstructorPorFecha = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).BeginInit();
+            this.InstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ReporteClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReporteClaseBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // InstructorBindingSource
-            // 
-            this.InstructorBindingSource.DataSource = typeof(Logic.Instructor);
-            // 
-            // AlumnoBindingSource
-            // 
-            this.AlumnoBindingSource.DataSource = typeof(Logic.Alumno);
-            // 
-            // ClaseBindingSource
-            // 
-            this.ClaseBindingSource.DataSource = typeof(Logic.Clase);
             // 
             // panel1
             // 
@@ -147,7 +138,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewInstructores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewInstructores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewInstructores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewInstructores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             this.dataGridViewInstructores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewInstructores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -216,6 +207,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarClasesInstructor.Text = "GENERAR PLANILLA PARA MAÑANA";
             this.btnBuscarClasesInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarClasesInstructor.UseVisualStyleBackColor = false;
+            this.btnBuscarClasesInstructor.Click += new System.EventHandler(this.btnBuscarClasesInstructor_Click);
             // 
             // label2
             // 
@@ -258,15 +250,34 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             reportDataSource2.Value = this.AlumnoBindingSource;
             reportDataSource3.Name = "Clases";
             reportDataSource3.Value = this.ClaseBindingSource;
+            reportDataSource4.Name = "Reporte_Clase";
+            reportDataSource4.Value = this.ReporteClaseBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "COMPLETE_FLAT_UI.Presentaciones.reportes.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(797, 492);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // InstructorBindingSource
+            // 
+            this.InstructorBindingSource.DataSource = typeof(Logic.Instructor);
+            // 
+            // AlumnoBindingSource
+            // 
+            this.AlumnoBindingSource.DataSource = typeof(Logic.Alumno);
+            // 
+            // ClaseBindingSource
+            // 
+            this.ClaseBindingSource.DataSource = typeof(Logic.Clase);
+            // 
+            // ReporteClaseBindingSource
+            // 
+            this.ReporteClaseBindingSource.DataSource = typeof(Logic.Domain.ReporteClase);
             // 
             // FormPlanillas
             // 
@@ -279,15 +290,16 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Name = "FormPlanillas";
             this.Text = "FormPlanillas";
             this.Load += new System.EventHandler(this.FormPlanillas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReporteClaseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,5 +321,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewInstructores;
+        private System.Windows.Forms.BindingSource ReporteClaseBindingSource;
     }
 }

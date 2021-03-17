@@ -403,6 +403,8 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Logic.Alumno.datasource" />
     <None Include="Properties\DataSources\Logic.Clase.datasource" />
+    <None Include="Properties\DataSources\Logic.ClasesDAO.datasource" />
+    <None Include="Properties\DataSources\Logic.Domain.ReporteClase.datasource" />
     <None Include="Properties\DataSources\Logic.Instructor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

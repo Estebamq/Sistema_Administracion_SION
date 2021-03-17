@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Logic.DataAccess;
+using Logic.Domain;
 
 
 namespace Logic
@@ -151,7 +152,56 @@ namespace Logic
             }
 
         }
+        //LISTAR CLASE POR FECHA Y ID DE INSTRUCTOR
 
+        public List<ReporteClase> ListarInstructorIdPlanilla(Clase clase)
+        {
+
+
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_listClasesPorIdInstructor", connection))
+                {
+                    SqlDataReader reader;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.AddWithValue("@searchIdInstructor", clase.IdInstructor);
+                    cmd.Parameters.AddWithValue("@searchFechaClase", clase.Fecha);
+
+                    reader = cmd.ExecuteReader();
+
+                    List<ReporteClase> listing = new List<ReporteClase>();
+
+                    while (reader.Read())
+                    {
+                        string nombreAlumno =(string) reader[0];
+                        string apellidoAlumno = (string)reader[1];
+                        string direccionAlumno = (string)reader[2];
+                        int numClase = (int)reader[3];
+                        string dia = DateTime.Parse(reader[4].ToString()).ToString("dd/MM/yyyy");
+                        string hora = DateTime.Parse(reader[5].ToString()).ToString("hh: mm");
+                        string descripcion = null;
+                        if (reader["descripcion"]!=DBNull.Value )
+                        {
+                            descripcion = reader.GetString(6);
+                        }
+
+                        ReporteClase reporteClase = new ReporteClase(nombreAlumno,apellidoAlumno,direccionAlumno,numClase,dia,hora,descripcion);
+                        listing.Add(reporteClase);
+                    }
+
+
+                    reader.Close();
+
+                    return listing;
+                }
+            }
+        }
+
+        //BORRAR CLASE
         public void DeleteClase(Clase clase)
         {
             using (SqlConnection connection = GetConnection())

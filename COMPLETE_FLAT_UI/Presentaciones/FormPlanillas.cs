@@ -85,5 +85,18 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             InstructorBindingSource.DataSource = instructor.SearchingInstructorIdPlanilla(instructor.Search);
             this.reportViewer1.RefreshReport();
         }
+
+        private void btnBuscarClasesInstructor_Click(object sender, EventArgs e)
+        {
+            Clase clase = new Clase();
+            clase.IdInstructor = Convert.ToInt32(instructor.Search);
+            clase.Fecha = DateTime.Today.AddDays(1);
+
+            ReporteClase reporteClase = new ReporteClase();
+
+            ReporteClaseBindingSource.DataSource = reporteClase.ListiingInstructorIdPlanilla(clase);
+            this.reportViewer1.RefreshReport();
+
+        }
     }
 }
