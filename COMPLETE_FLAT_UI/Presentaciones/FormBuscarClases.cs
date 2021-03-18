@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
+using Logic.Domain;
 
 
 namespace COMPLETE_FLAT_UI.Presentaciones
@@ -16,11 +17,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
     public partial class FormBuscarClases : Form
     {
         Clase clase = new Clase();
+        ReporteClase reporteClase = new ReporteClase();
         public FormBuscarClases()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();   
         }
 
         private void FormBuscarClases_Load(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             task.Start();
         }
 
-        public void ShowClasPorIdAlumno()
+        public void ShowClasePorIdAlumno()
         {
             clase.IdAlumno = Convert.ToInt32(txtSearchPersonaId.Text);
             dataGridViewPersonas.DataSource = clase.ListingClasesPorIdAlumno(clase);
@@ -48,6 +48,22 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             dataGridViewPersonas.Columns[7].HeaderText = "DIRECCION";
             dataGridViewPersonas.Columns[8].HeaderText = "METODO DE PAGO";
             dataGridViewPersonas.Columns[9].HeaderText = "DESCRIPCION";
+
+        }
+
+        public void ShowClasePorIdInstructor()
+        {
+
+            clase.IdInstructor = Convert.ToInt32(txtSearchPersonaId.Text);
+            clase.Fecha = DateTime.Today;
+            dataGridViewPersonas.DataSource = reporteClase.ListiingInstructorIdPlanilla(clase);
+            dataGridViewPersonas.Columns[0].HeaderText = "NOMBRE";
+            dataGridViewPersonas.Columns[1].HeaderText = "APELLIDO";
+            dataGridViewPersonas.Columns[2].HeaderText = "DIRECCION";
+            dataGridViewPersonas.Columns[3].HeaderText = "Nº CLASE";
+            dataGridViewPersonas.Columns[4].HeaderText = "FECHA";
+            dataGridViewPersonas.Columns[5].HeaderText = "HORA";
+            dataGridViewPersonas.Columns[6].HeaderText = "DESCRIPCION";
 
         }
 
@@ -77,7 +93,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             {
                 if (txtSearchPersonaId.Text != "")
                 {
-                    ShowClasPorIdAlumno();
+                    ShowClasePorIdAlumno();
                     lblInformacion.Text = "Datos de los Instructores y clases";
                     
                 }
@@ -96,6 +112,28 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
         }
 
-        
+        private void btnBuscarInstructor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtSearchPersonaId.Text != "")
+                {
+                    ShowClasePorIdInstructor();
+                    lblInformacion.Text = "Datos de los Alumnos y clases";
+
+                }
+                else
+                {
+                    FormInformacion frmError = new FormInformacion("INGRESE ID");
+                    frmError.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                FormInformacion frmError = new FormInformacion("ERROR DE BUSQUEDA");
+                frmError.ShowDialog();
+
+            }
+        }
     }
 }

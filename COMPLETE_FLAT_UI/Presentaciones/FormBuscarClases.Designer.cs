@@ -29,9 +29,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnWhatsapp = new System.Windows.Forms.Button();
             this.btnInstagram = new System.Windows.Forms.Button();
             this.btnFacebook = new System.Windows.Forms.Button();
@@ -46,12 +46,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarAlumno = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarInstructor = new System.Windows.Forms.Button();
-            this.txtSearchPersonaDni = new System.Windows.Forms.TextBox();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtSearchNombreNombre = new System.Windows.Forms.TextBox();
-            this.txtSearchPersonaApellido = new System.Windows.Forms.TextBox();
-            this.lblApellido = new System.Windows.Forms.Label();
             this.txtSearchPersonaId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -154,37 +148,37 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPersonas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewPersonas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewPersonas.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewPersonas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewPersonas.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewPersonas.EnableHeadersVisualStyles = false;
             this.dataGridViewPersonas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewPersonas.Location = new System.Drawing.Point(10, 32);
             this.dataGridViewPersonas.Name = "dataGridViewPersonas";
             this.dataGridViewPersonas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPersonas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewPersonas.Size = new System.Drawing.Size(438, 171);
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.PaleVioletRed;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPersonas.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewPersonas.Size = new System.Drawing.Size(438, 269);
             this.dataGridViewPersonas.TabIndex = 8;
             // 
             // label1
@@ -222,9 +216,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel6.Controls.Add(this.lblInformacion);
             this.panel6.Controls.Add(this.dataGridViewPersonas);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 262);
+            this.panel6.Location = new System.Drawing.Point(0, 164);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(460, 264);
+            this.panel6.Size = new System.Drawing.Size(460, 362);
             this.panel6.TabIndex = 10;
             // 
             // lblInformacion
@@ -243,18 +237,12 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel5.Controls.Add(this.btnBuscarAlumno);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.btnBuscarInstructor);
-            this.panel5.Controls.Add(this.txtSearchPersonaDni);
-            this.panel5.Controls.Add(this.lblDni);
-            this.panel5.Controls.Add(this.lblNombre);
-            this.panel5.Controls.Add(this.txtSearchNombreNombre);
-            this.panel5.Controls.Add(this.txtSearchPersonaApellido);
-            this.panel5.Controls.Add(this.lblApellido);
             this.panel5.Controls.Add(this.txtSearchPersonaId);
             this.panel5.Controls.Add(this.lblId);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(460, 262);
+            this.panel5.Size = new System.Drawing.Size(460, 164);
             this.panel5.TabIndex = 9;
             // 
             // btnBuscarAlumno
@@ -269,7 +257,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarAlumno.ForeColor = System.Drawing.Color.Silver;
             this.btnBuscarAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarAlumno.Location = new System.Drawing.Point(124, 226);
+            this.btnBuscarAlumno.Location = new System.Drawing.Point(124, 119);
             this.btnBuscarAlumno.Name = "btnBuscarAlumno";
             this.btnBuscarAlumno.Size = new System.Drawing.Size(100, 30);
             this.btnBuscarAlumno.TabIndex = 14;
@@ -283,11 +271,11 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(137, 33);
+            this.label2.Location = new System.Drawing.Point(165, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 20);
+            this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 13;
-            this.label2.Text = "DATOS DE LA PERSONA";
+            this.label2.Text = "ID  DE LA PERSONA";
             // 
             // btnBuscarInstructor
             // 
@@ -301,89 +289,24 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarInstructor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarInstructor.ForeColor = System.Drawing.Color.Silver;
             this.btnBuscarInstructor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarInstructor.Location = new System.Drawing.Point(241, 226);
+            this.btnBuscarInstructor.Location = new System.Drawing.Point(241, 119);
             this.btnBuscarInstructor.Name = "btnBuscarInstructor";
             this.btnBuscarInstructor.Size = new System.Drawing.Size(100, 30);
             this.btnBuscarInstructor.TabIndex = 13;
             this.btnBuscarInstructor.Text = "Instructor";
             this.btnBuscarInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarInstructor.UseVisualStyleBackColor = false;
-            // 
-            // txtSearchPersonaDni
-            // 
-            this.txtSearchPersonaDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.txtSearchPersonaDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchPersonaDni.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSearchPersonaDni.Location = new System.Drawing.Point(165, 180);
-            this.txtSearchPersonaDni.Multiline = true;
-            this.txtSearchPersonaDni.Name = "txtSearchPersonaDni";
-            this.txtSearchPersonaDni.Size = new System.Drawing.Size(236, 23);
-            this.txtSearchPersonaDni.TabIndex = 27;
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.ForeColor = System.Drawing.Color.White;
-            this.lblDni.Location = new System.Drawing.Point(64, 180);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(37, 20);
-            this.lblDni.TabIndex = 28;
-            this.lblDni.Text = "DNI";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(64, 107);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(79, 20);
-            this.lblNombre.TabIndex = 25;
-            this.lblNombre.Text = "NOMBRE";
-            // 
-            // txtSearchNombreNombre
-            // 
-            this.txtSearchNombreNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.txtSearchNombreNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchNombreNombre.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSearchNombreNombre.Location = new System.Drawing.Point(165, 104);
-            this.txtSearchNombreNombre.Multiline = true;
-            this.txtSearchNombreNombre.Name = "txtSearchNombreNombre";
-            this.txtSearchNombreNombre.Size = new System.Drawing.Size(236, 23);
-            this.txtSearchNombreNombre.TabIndex = 21;
-            // 
-            // txtSearchPersonaApellido
-            // 
-            this.txtSearchPersonaApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.txtSearchPersonaApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchPersonaApellido.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSearchPersonaApellido.Location = new System.Drawing.Point(165, 141);
-            this.txtSearchPersonaApellido.Multiline = true;
-            this.txtSearchPersonaApellido.Name = "txtSearchPersonaApellido";
-            this.txtSearchPersonaApellido.Size = new System.Drawing.Size(236, 23);
-            this.txtSearchPersonaApellido.TabIndex = 22;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(64, 141);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(88, 20);
-            this.lblApellido.TabIndex = 26;
-            this.lblApellido.Text = "APELLIDO";
+            this.btnBuscarInstructor.Click += new System.EventHandler(this.btnBuscarInstructor_Click);
             // 
             // txtSearchPersonaId
             // 
             this.txtSearchPersonaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             this.txtSearchPersonaId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchPersonaId.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSearchPersonaId.Location = new System.Drawing.Point(165, 73);
+            this.txtSearchPersonaId.Location = new System.Drawing.Point(241, 76);
             this.txtSearchPersonaId.Multiline = true;
             this.txtSearchPersonaId.Name = "txtSearchPersonaId";
-            this.txtSearchPersonaId.Size = new System.Drawing.Size(236, 23);
+            this.txtSearchPersonaId.Size = new System.Drawing.Size(69, 23);
             this.txtSearchPersonaId.TabIndex = 20;
             // 
             // lblId
@@ -391,7 +314,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ForeColor = System.Drawing.Color.White;
-            this.lblId.Location = new System.Drawing.Point(64, 76);
+            this.lblId.Location = new System.Drawing.Point(165, 76);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(26, 20);
             this.lblId.TabIndex = 23;
@@ -480,12 +403,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtSearchPersonaDni;
-        private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtSearchNombreNombre;
-        private System.Windows.Forms.TextBox txtSearchPersonaApellido;
-        private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtSearchPersonaId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label label3;
