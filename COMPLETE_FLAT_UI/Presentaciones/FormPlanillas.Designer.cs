@@ -37,6 +37,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.InstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ReporteClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
@@ -44,24 +48,36 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewInstructores = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerPlanillas = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarClasesInstructor = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnBuscarClasesInstructorPorFecha = new System.Windows.Forms.Button();
+            this.btnGenerarPlanillaPorFecha = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.InstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReporteClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteClaseBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).BeginInit();
             this.SuspendLayout();
+            // 
+            // InstructorBindingSource
+            // 
+            this.InstructorBindingSource.DataSource = typeof(Logic.Instructor);
+            // 
+            // AlumnoBindingSource
+            // 
+            this.AlumnoBindingSource.DataSource = typeof(Logic.Alumno);
+            // 
+            // ClaseBindingSource
+            // 
+            this.ClaseBindingSource.DataSource = typeof(Logic.Clase);
+            // 
+            // ReporteClaseBindingSource
+            // 
+            this.ReporteClaseBindingSource.DataSource = typeof(Logic.Domain.ReporteClase);
             // 
             // panel1
             // 
@@ -111,10 +127,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.dataGridViewInstructores);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.dateTimePickerPlanillas);
             this.panel3.Controls.Add(this.btnBuscarClasesInstructor);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.btnBuscarClasesInstructorPorFecha);
+            this.panel3.Controls.Add(this.btnGenerarPlanillaPorFecha);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(803, 0);
             this.panel3.Name = "panel3";
@@ -178,15 +194,15 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewInstructores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInstructores_CellClick_1);
             this.dataGridViewInstructores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInstructores_CellDoubleClick_1);
             // 
-            // dateTimePicker1
+            // dateTimePickerPlanillas
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 422);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 20);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dateTimePickerPlanillas.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dateTimePickerPlanillas.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.dateTimePickerPlanillas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerPlanillas.Location = new System.Drawing.Point(72, 422);
+            this.dateTimePickerPlanillas.Name = "dateTimePickerPlanillas";
+            this.dateTimePickerPlanillas.Size = new System.Drawing.Size(224, 20);
+            this.dateTimePickerPlanillas.TabIndex = 40;
             // 
             // btnBuscarClasesInstructor
             // 
@@ -220,25 +236,26 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.label2.TabIndex = 29;
             this.label2.Text = "INSTRUCTORES";
             // 
-            // btnBuscarClasesInstructorPorFecha
+            // btnGenerarPlanillaPorFecha
             // 
-            this.btnBuscarClasesInstructorPorFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarClasesInstructorPorFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.btnBuscarClasesInstructorPorFecha.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscarClasesInstructorPorFecha.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnBuscarClasesInstructorPorFecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.btnBuscarClasesInstructorPorFecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.btnBuscarClasesInstructorPorFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarClasesInstructorPorFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarClasesInstructorPorFecha.ForeColor = System.Drawing.Color.Silver;
-            this.btnBuscarClasesInstructorPorFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarClasesInstructorPorFecha.Location = new System.Drawing.Point(72, 458);
-            this.btnBuscarClasesInstructorPorFecha.Name = "btnBuscarClasesInstructorPorFecha";
-            this.btnBuscarClasesInstructorPorFecha.Size = new System.Drawing.Size(224, 30);
-            this.btnBuscarClasesInstructorPorFecha.TabIndex = 30;
-            this.btnBuscarClasesInstructorPorFecha.Text = "GENERAR PLANILLA POR FECHA";
-            this.btnBuscarClasesInstructorPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarClasesInstructorPorFecha.UseVisualStyleBackColor = false;
+            this.btnGenerarPlanillaPorFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerarPlanillaPorFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnGenerarPlanillaPorFecha.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGenerarPlanillaPorFecha.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnGenerarPlanillaPorFecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnGenerarPlanillaPorFecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnGenerarPlanillaPorFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPlanillaPorFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarPlanillaPorFecha.ForeColor = System.Drawing.Color.Silver;
+            this.btnGenerarPlanillaPorFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarPlanillaPorFecha.Location = new System.Drawing.Point(72, 458);
+            this.btnGenerarPlanillaPorFecha.Name = "btnGenerarPlanillaPorFecha";
+            this.btnGenerarPlanillaPorFecha.Size = new System.Drawing.Size(224, 30);
+            this.btnGenerarPlanillaPorFecha.TabIndex = 30;
+            this.btnGenerarPlanillaPorFecha.Text = "GENERAR PLANILLA POR FECHA";
+            this.btnGenerarPlanillaPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarPlanillaPorFecha.UseVisualStyleBackColor = false;
+            this.btnGenerarPlanillaPorFecha.Click += new System.EventHandler(this.btnGenerarPlanillaPorFecha_Click);
             // 
             // reportViewer1
             // 
@@ -263,22 +280,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.reportViewer1.Size = new System.Drawing.Size(797, 492);
             this.reportViewer1.TabIndex = 0;
             // 
-            // InstructorBindingSource
-            // 
-            this.InstructorBindingSource.DataSource = typeof(Logic.Instructor);
-            // 
-            // AlumnoBindingSource
-            // 
-            this.AlumnoBindingSource.DataSource = typeof(Logic.Alumno);
-            // 
-            // ClaseBindingSource
-            // 
-            this.ClaseBindingSource.DataSource = typeof(Logic.Clase);
-            // 
-            // ReporteClaseBindingSource
-            // 
-            this.ReporteClaseBindingSource.DataSource = typeof(Logic.Domain.ReporteClase);
-            // 
             // FormPlanillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,16 +291,16 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Name = "FormPlanillas";
             this.Text = "FormPlanillas";
             this.Load += new System.EventHandler(this.FormPlanillas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReporteClaseBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstructorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlumnoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClaseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteClaseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,8 +318,8 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBuscarClasesInstructor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBuscarClasesInstructorPorFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnGenerarPlanillaPorFecha;
+        private System.Windows.Forms.DateTimePicker dateTimePickerPlanillas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewInstructores;
         private System.Windows.Forms.BindingSource ReporteClaseBindingSource;

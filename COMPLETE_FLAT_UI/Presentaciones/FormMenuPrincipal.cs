@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using COMPLETE_FLAT_UI.Presentaciones;
 using COMPLETE_FLAT_UI.Presentaciones.alumno;
@@ -17,6 +18,8 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class FormMenuPrincipal : Form
     {
+        
+
         //Constructor
         public FormMenuPrincipal()
         {
@@ -292,6 +295,7 @@ namespace COMPLETE_FLAT_UI
         }
         private void btnPlanillas_Click(object sender, EventArgs e)
         {
+
             FormPlanillas fm = new FormPlanillas();
             fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(fm);
@@ -316,10 +320,7 @@ namespace COMPLETE_FLAT_UI
         }
         
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new FormListaInstructores());
-        }
+       
 
         
 

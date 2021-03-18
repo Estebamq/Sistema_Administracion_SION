@@ -8,6 +8,7 @@ using System.Data;
 
 
 namespace Logic
+
 {
     public class Instructor : Persona
     {

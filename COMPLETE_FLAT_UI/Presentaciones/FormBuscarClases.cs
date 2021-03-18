@@ -25,9 +25,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
         private void FormBuscarClases_Load(object sender, EventArgs e)
         {
+
             Task task = new Task(() =>
             {
-                Thread.Sleep(0060);
+                Thread.Sleep(1000);
                 chWebBrowser.Load("web.whatsapp.com");
             });
             task.Start();

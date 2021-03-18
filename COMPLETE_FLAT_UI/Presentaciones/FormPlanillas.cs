@@ -88,9 +88,22 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
         private void btnBuscarClasesInstructor_Click(object sender, EventArgs e)
         {
+
+            ClasesPorIdInstructor(instructor.Search, DateTime.Today.AddDays(1));
+
+        }
+
+        private void btnGenerarPlanillaPorFecha_Click(object sender, EventArgs e)
+        {
+            ClasesPorIdInstructor(instructor.Search, dateTimePickerPlanillas.Value);
+        }
+
+
+        private void ClasesPorIdInstructor(string idInstructor, DateTime fecha) 
+        {
             Clase clase = new Clase();
-            clase.IdInstructor = Convert.ToInt32(instructor.Search);
-            clase.Fecha = DateTime.Today.AddDays(1);
+            clase.IdInstructor = Convert.ToInt32(idInstructor);
+            clase.Fecha = fecha;
 
             ReporteClase reporteClase = new ReporteClase();
 

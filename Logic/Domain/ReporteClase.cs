@@ -40,13 +40,41 @@ namespace Logic.Domain
 
         #region Propiedades
 
-        public string NombreAlumno { get => nombreAlumno; set => nombreAlumno = value; }
-        public string ApellidoAlumno { get => apellidoAlumno; set => apellidoAlumno = value; }
-        public string DireccionAlumno { get => direccionAlumno; set => direccionAlumno = value; }
-        public int NumClase { get => numClase; set => numClase = value; }
-        public string Dia { get => dia; set => dia = value; }
-        public string Hora { get => hora; set => hora = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string NombreAlumno 
+        {
+             get {return nombreAlumno; }
+             private set { nombreAlumno = value; }
+        }
+        public string ApellidoAlumno
+        {
+            get { return apellidoAlumno; }
+            private set { apellidoAlumno = value; }
+        }
+        public string DireccionAlumno
+        {
+            get { return direccionAlumno; }
+            private set { direccionAlumno = value; }
+        }
+        public int NumClase
+        {
+            get { return numClase; }
+            private set { numClase = value; }
+        }
+        public string Dia
+        {
+            get { return dia;}
+            private set{ dia = value;}
+        }
+        public string Hora
+        { 
+            get { return hora;} 
+            private set { hora = value;} 
+        }
+        public string Descripcion
+        {
+            get {return descripcion;}
+           private set {descripcion = value;}
+        }
 
         #endregion
 
