@@ -10,8 +10,11 @@ namespace Logic.Domain
     public class Estados
     {
         private int id;
+        //estadosA son los estados de los alumnos (Alta/Baja)
         private string estadoA;
+        //estadosI son los estados de los instructores(Alta/Baja)
         private string estadoI;
+        //estadoP son los estados de los Alumnos en las Clases
         private string estadoP;
 
         EstadosDAO estadosDAO = new EstadosDAO();

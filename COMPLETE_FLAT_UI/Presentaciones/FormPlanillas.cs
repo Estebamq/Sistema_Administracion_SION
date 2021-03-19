@@ -72,6 +72,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private void dataGridViewInstructores_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             renglon = e.RowIndex; //La variable renglon debe estar previamente declarada y ser de tipo entero
+            
         }
 
         //PASO LOS DATOS AL REPORTE CON EL DOBLE CLICK
@@ -88,14 +89,36 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
         private void btnBuscarClasesInstructor_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ClasesPorIdInstructor(instructor.Search, DateTime.Today.AddDays(1));
+            }
+            catch (Exception ex)
+            {
 
-            ClasesPorIdInstructor(instructor.Search, DateTime.Today.AddDays(1));
+                FormInformacion frmError = new FormInformacion("ERROR");
+                frmError.ShowDialog();
+                // MessageBox.Show($"error {ex}");
+                
+            }
+            
 
         }
 
         private void btnGenerarPlanillaPorFecha_Click(object sender, EventArgs e)
         {
-            ClasesPorIdInstructor(instructor.Search, dateTimePickerPlanillas.Value);
+            try
+            {
+                ClasesPorIdInstructor(instructor.Search, dateTimePickerPlanillas.Value);
+            }
+            catch (Exception ex)
+            {
+                FormInformacion frmError = new FormInformacion("ERROR");
+                frmError.ShowDialog();
+                // MessageBox.Show($"error {ex}");
+               
+            }
+            
         }
 
 

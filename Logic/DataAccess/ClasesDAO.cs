@@ -61,6 +61,26 @@ namespace Logic
             }
         }
 
+        public void UpdateAsistenciaClase(Clase clase) 
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_ActualizarAsistenciaAlumno", connection))
+                {
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@idClase", clase.Id);
+                    cmd.Parameters.AddWithValue("@estadoPresente", clase.IdPresente);
+
+
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+
+        }
+
         public DataTable ListarInstructorClase(Clase clase)
         {
 
@@ -152,6 +172,7 @@ namespace Logic
             }
 
         }
+
         //LISTAR CLASE POR FECHA Y ID DE INSTRUCTOR
 
         public List<ReporteClase> ListarInstructorIdPlanilla(Clase clase)

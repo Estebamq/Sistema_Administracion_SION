@@ -93,8 +93,22 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             {
                 if (txtSearchPersonaId.Text != "")
                 {
+                    Alumno alumno = new Alumno();
+                    dataGridViewInformacionDato.DataSource=alumno.SearchingAlumnoId(txtSearchPersonaId.Text);
+                    //Oculta las columnas en informacion de datos de persona
+                    dataGridViewInformacionDato.Columns[0].Visible = false;
+                    dataGridViewInformacionDato.Columns[5].Visible = false;
+                    dataGridViewInformacionDato.Columns[6].Visible = false;
+                    dataGridViewInformacionDato.Columns[7].Visible = false;
+                    dataGridViewInformacionDato.Columns[8].Visible = false;
+                    dataGridViewInformacionDato.Columns[9].Visible = false;
+                    dataGridViewInformacionDato.Columns[10].Visible = false;
+                   
+                    
                     ShowClasePorIdAlumno();
-                    lblInformacion.Text = "Datos de los Instructores y clases";
+                    
+                    lblInformacionDatos.Text = "Datos del Instructor";
+                    lblInformacion.Text = "Instructores y  clases";
                     
                 }
                 else
@@ -118,9 +132,20 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             {
                 if (txtSearchPersonaId.Text != "")
                 {
+                    
+                    Instructor instructor = new Instructor();
+                    dataGridViewInformacionDato.DataSource = instructor.SearchingInstructorIdPlanilla(txtSearchPersonaId.Text);
+                    dataGridViewInformacionDato.Columns[0].Visible = false;
+                    dataGridViewInformacionDato.Columns[1].Visible = false;
+                    dataGridViewInformacionDato.Columns[2].Visible = false;
+                    dataGridViewInformacionDato.Columns[3].Visible = false;
+                    dataGridViewInformacionDato.Columns[7].Visible = false;
+                    dataGridViewInformacionDato.Columns[8].Visible = false;
+                    dataGridViewInformacionDato.Columns[10].Visible = false;
+                    dataGridViewInformacionDato.Columns[11].Visible = false;
+                    lblInformacionDatos.Text = "Datos del Instructor";
+                    lblInformacion.Text = "Alumnos y clases";
                     ShowClasePorIdInstructor();
-                    lblInformacion.Text = "Datos de los Alumnos y clases";
-
                 }
                 else
                 {

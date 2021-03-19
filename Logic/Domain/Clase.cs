@@ -129,6 +129,12 @@ namespace Logic
         {
             claseDAO.UpdateClase(clase);
         }
+
+        public void UpdatingAsistenciaClase(Clase clase)
+        {
+            claseDAO.UpdateAsistenciaClase(clase);
+        }
+
         public void DeletingClase(Clase clase)
         {
             claseDAO.DeleteClase(clase);

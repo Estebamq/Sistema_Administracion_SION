@@ -37,46 +37,46 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblHora = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlSubmenuAlumno = new System.Windows.Forms.Panel();
-            this.pnlSubmenuInstructor = new System.Windows.Forms.Panel();
-            this.PanelBarraTitulo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
-            this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
-            this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPlanillas = new System.Windows.Forms.Button();
             this.btnBuscarClase = new System.Windows.Forms.Button();
+            this.pnlSubmenuAlumno = new System.Windows.Forms.Panel();
             this.btnBajaAlumno = new System.Windows.Forms.Button();
             this.btnAltaEditarAlunmo = new System.Windows.Forms.Button();
             this.btnListaClientes = new System.Windows.Forms.Button();
+            this.pnlSubmenuInstructor = new System.Windows.Forms.Panel();
             this.btnBajaInstructor = new System.Windows.Forms.Button();
             this.btnAltaEditarInstructor = new System.Windows.Forms.Button();
             this.btnInstructores = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.PanelBarraTitulo = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnNormal = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
+            this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
+            this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
             this.panelContenedorPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlSubmenuAlumno.SuspendLayout();
             this.pnlSubmenuInstructor.SuspendLayout();
-            this.PanelBarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.PanelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,6 +163,16 @@
             this.lbFecha.TabIndex = 4;
             this.lbFecha.Text = "Lunes, 26 de septiembre 2018";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::COMPLETE_FLAT_UI.Properties.Resources.perfil;
+            this.pictureBox7.Location = new System.Drawing.Point(12, 18);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
+            // 
             // lblHora
             // 
             this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -203,80 +213,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(230, 415);
             this.panel2.TabIndex = 0;
-            // 
-            // pnlSubmenuAlumno
-            // 
-            this.pnlSubmenuAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.pnlSubmenuAlumno.Controls.Add(this.btnBajaAlumno);
-            this.pnlSubmenuAlumno.Controls.Add(this.btnAltaEditarAlunmo);
-            this.pnlSubmenuAlumno.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubmenuAlumno.Location = new System.Drawing.Point(0, 166);
-            this.pnlSubmenuAlumno.Name = "pnlSubmenuAlumno";
-            this.pnlSubmenuAlumno.Size = new System.Drawing.Size(230, 86);
-            this.pnlSubmenuAlumno.TabIndex = 21;
-            // 
-            // pnlSubmenuInstructor
-            // 
-            this.pnlSubmenuInstructor.BackColor = System.Drawing.Color.DimGray;
-            this.pnlSubmenuInstructor.Controls.Add(this.btnBajaInstructor);
-            this.pnlSubmenuInstructor.Controls.Add(this.btnAltaEditarInstructor);
-            this.pnlSubmenuInstructor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubmenuInstructor.Location = new System.Drawing.Point(0, 40);
-            this.pnlSubmenuInstructor.Name = "pnlSubmenuInstructor";
-            this.pnlSubmenuInstructor.Size = new System.Drawing.Size(230, 86);
-            this.pnlSubmenuInstructor.TabIndex = 0;
-            // 
-            // PanelBarraTitulo
-            // 
-            this.PanelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.PanelBarraTitulo.Controls.Add(this.pictureBox8);
-            this.PanelBarraTitulo.Controls.Add(this.label1);
-            this.PanelBarraTitulo.Controls.Add(this.btnNormal);
-            this.PanelBarraTitulo.Controls.Add(this.btnMinimizar);
-            this.PanelBarraTitulo.Controls.Add(this.btnMaximizar);
-            this.PanelBarraTitulo.Controls.Add(this.btnCerrar);
-            this.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.PanelBarraTitulo.Name = "PanelBarraTitulo";
-            this.PanelBarraTitulo.Size = new System.Drawing.Size(1100, 43);
-            this.PanelBarraTitulo.TabIndex = 1;
-            this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(72, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "- SISTEMA DE ADMINISTRACION -";
-            // 
-            // tmExpandirMenu
-            // 
-            this.tmExpandirMenu.Interval = 15;
-            this.tmExpandirMenu.Tick += new System.EventHandler(this.tmExpandirMenu_Tick);
-            // 
-            // tmContraerMenu
-            // 
-            this.tmContraerMenu.Interval = 15;
-            this.tmContraerMenu.Tick += new System.EventHandler(this.tmContraerMenu_Tick);
-            // 
-            // tmFechaHora
-            // 
-            this.tmFechaHora.Enabled = true;
-            this.tmFechaHora.Tick += new System.EventHandler(this.tmFechaHora_Tick);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::COMPLETE_FLAT_UI.Properties.Resources.perfil;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 18);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
             // 
             // button8
             // 
@@ -365,6 +301,17 @@
             this.btnBuscarClase.UseVisualStyleBackColor = true;
             this.btnBuscarClase.Click += new System.EventHandler(this.btnBuscarClase_Click);
             // 
+            // pnlSubmenuAlumno
+            // 
+            this.pnlSubmenuAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.pnlSubmenuAlumno.Controls.Add(this.btnBajaAlumno);
+            this.pnlSubmenuAlumno.Controls.Add(this.btnAltaEditarAlunmo);
+            this.pnlSubmenuAlumno.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubmenuAlumno.Location = new System.Drawing.Point(0, 166);
+            this.pnlSubmenuAlumno.Name = "pnlSubmenuAlumno";
+            this.pnlSubmenuAlumno.Size = new System.Drawing.Size(230, 86);
+            this.pnlSubmenuAlumno.TabIndex = 21;
+            // 
             // btnBajaAlumno
             // 
             this.btnBajaAlumno.Cursor = System.Windows.Forms.Cursors.Default;
@@ -427,6 +374,17 @@
             this.btnListaClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnListaClientes.UseVisualStyleBackColor = true;
             this.btnListaClientes.Click += new System.EventHandler(this.btnListaClientes_Click);
+            // 
+            // pnlSubmenuInstructor
+            // 
+            this.pnlSubmenuInstructor.BackColor = System.Drawing.Color.DimGray;
+            this.pnlSubmenuInstructor.Controls.Add(this.btnBajaInstructor);
+            this.pnlSubmenuInstructor.Controls.Add(this.btnAltaEditarInstructor);
+            this.pnlSubmenuInstructor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubmenuInstructor.Location = new System.Drawing.Point(0, 40);
+            this.pnlSubmenuInstructor.Name = "pnlSubmenuInstructor";
+            this.pnlSubmenuInstructor.Size = new System.Drawing.Size(230, 86);
+            this.pnlSubmenuInstructor.TabIndex = 0;
             // 
             // btnBajaInstructor
             // 
@@ -524,6 +482,22 @@
             this.btnSalir.TabIndex = 13;
             this.btnSalir.TabStop = false;
             // 
+            // PanelBarraTitulo
+            // 
+            this.PanelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.PanelBarraTitulo.Controls.Add(this.pictureBox8);
+            this.PanelBarraTitulo.Controls.Add(this.label1);
+            this.PanelBarraTitulo.Controls.Add(this.btnNormal);
+            this.PanelBarraTitulo.Controls.Add(this.btnMinimizar);
+            this.PanelBarraTitulo.Controls.Add(this.btnMaximizar);
+            this.PanelBarraTitulo.Controls.Add(this.btnCerrar);
+            this.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.PanelBarraTitulo.Name = "PanelBarraTitulo";
+            this.PanelBarraTitulo.Size = new System.Drawing.Size(1100, 43);
+            this.PanelBarraTitulo.TabIndex = 1;
+            this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::COMPLETE_FLAT_UI.Properties.Resources.LOGO_SION_CURSOS_DE_MANEJO;
@@ -533,6 +507,17 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 5;
             this.pictureBox8.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(72, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "- SISTEMA DE ADMINISTRACION -";
             // 
             // btnNormal
             // 
@@ -591,6 +576,21 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // tmExpandirMenu
+            // 
+            this.tmExpandirMenu.Interval = 15;
+            this.tmExpandirMenu.Tick += new System.EventHandler(this.tmExpandirMenu_Tick);
+            // 
+            // tmContraerMenu
+            // 
+            this.tmContraerMenu.Interval = 15;
+            this.tmContraerMenu.Tick += new System.EventHandler(this.tmContraerMenu_Tick);
+            // 
+            // tmFechaHora
+            // 
+            this.tmFechaHora.Enabled = true;
+            this.tmFechaHora.Tick += new System.EventHandler(this.tmFechaHora_Tick);
+            // 
             // FormMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,16 +609,16 @@
             this.panelContenedorPrincipal.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlSubmenuAlumno.ResumeLayout(false);
             this.pnlSubmenuInstructor.ResumeLayout(false);
-            this.PanelBarraTitulo.ResumeLayout(false);
-            this.PanelBarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            this.PanelBarraTitulo.ResumeLayout(false);
+            this.PanelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 

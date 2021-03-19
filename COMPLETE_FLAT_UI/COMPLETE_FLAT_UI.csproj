@@ -243,6 +243,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentaciones\alumno\FormAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\alumno\FormAsistencia.Designer.cs">
+      <DependentUpon>FormAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentaciones\alumno\FormInscripcionClases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\alumno\FormListaClientesBaja.resx">
       <DependentUpon>FormListaClientesBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\alumno\FormAsistencia.resx">
+      <DependentUpon>FormAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\FormConfirmacion.resx">
       <DependentUpon>FormConfirmacion.cs</DependentUpon>

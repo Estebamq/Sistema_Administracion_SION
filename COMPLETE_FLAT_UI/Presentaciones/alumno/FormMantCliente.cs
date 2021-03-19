@@ -38,6 +38,7 @@ namespace COMPLETE_FLAT_UI
 
         public void ListEstadosAlumnos()
         {
+            // estadosA son los estados que el alumno toma (alta/Baja)
             Estados estadosA = new Estados();
             cmbEstadosAlumnos.DataSource = estadosA.ListingEstadosA("");
             cmbEstadosAlumnos.ValueMember = "Id";

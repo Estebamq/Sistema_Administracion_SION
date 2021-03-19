@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Logic;
 using Logic.Domain;
 using COMPLETE_FLAT_UI.Presentaciones;
+using COMPLETE_FLAT_UI.Presentaciones.alumno;
 
 namespace COMPLETE_FLAT_UI
 {
@@ -140,6 +141,26 @@ namespace COMPLETE_FLAT_UI
                 frm.txtNombreAlumno.Text = dataGridViewAlumnos.CurrentRow.Cells[1].Value.ToString();
                 frm.txtApellidoAlumno.Text = dataGridViewAlumnos.CurrentRow.Cells[2].Value.ToString();
                 frm.txtDireccionAlumno.Text = dataGridViewAlumnos.CurrentRow.Cells[5].Value.ToString();
+                frm.ShowDialog();
+                ShowAlumnos();
+            }
+            else
+            {
+                FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
+                frmError.ShowDialog();
+                // MessageBox.Show("seleccione una fila por favor");
+            }
+        }
+
+        private void btnAsistencia_Click(object sender, EventArgs e)
+        {
+            FormAsistencia frm = new FormAsistencia();
+
+            if (dataGridViewAlumnos.SelectedRows.Count > 0)
+            {
+                frm.txtIdAlumno.Text = dataGridViewAlumnos.CurrentRow.Cells[0].Value.ToString();
+                frm.txtNombreAlumno.Text = dataGridViewAlumnos.CurrentRow.Cells[1].Value.ToString();
+                frm.txtApellidoAlumno.Text = dataGridViewAlumnos.CurrentRow.Cells[2].Value.ToString();
                 frm.ShowDialog();
                 ShowAlumnos();
             }

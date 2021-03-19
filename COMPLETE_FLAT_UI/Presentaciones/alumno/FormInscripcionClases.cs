@@ -11,6 +11,7 @@ using Logic.Domain;
 using Logic;
 using Logic.DataAccess;
 using COMPLETE_FLAT_UI.Presentaciones;
+using System.Runtime.InteropServices;
 
 namespace COMPLETE_FLAT_UI
 {
@@ -28,7 +29,20 @@ namespace COMPLETE_FLAT_UI
             ListMetodosDePago();
             ShowInstructoresClase();
         }
+        //-------Movimiento de ventana---------------
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void BarraTituloInscripcion_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        //----------------------------------------------
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -92,6 +106,7 @@ namespace COMPLETE_FLAT_UI
             clase.IdAlumno = Convert.ToInt32(txtIdAlumno.Text);
             dataGridViewClases.DataSource = clase.ListingClasesPorIdAlumno(clase);
             dataGridViewClases.Columns[0].Visible = false;
+            dataGridViewClases.Columns[10].Visible = false;
             dataGridViewClases.Columns[1].HeaderText = "ID";
             dataGridViewClases.Columns[2].HeaderText = "NOMBRE";
             dataGridViewClases.Columns[3].HeaderText = "APELLIDO";
@@ -122,40 +137,54 @@ namespace COMPLETE_FLAT_UI
             cmbMediosDePago.ValueMember = "Id";
             cmbMediosDePago.DisplayMember = "MetodoDePago";
         }
-       //ELIJO CELDA PARA PASAR DATOS DE LOS INTRUCTORES
-        private void dataGridViewInstructoresClases_CellClick(object sender, DataGridViewCellEventArgs e)
+        //ELIJO CELDA PARA PASAR DATOS DE LOS INTRUCTORES
+
+        private void dataGridViewInstructoresClases_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             renglon = e.RowIndex; //La variable renglon debe estar previamente declarada y ser de tipo entero
         }
-
         //PASO LOS DATOS A LOS TEXBOX
-        private void dataGridViewInstructoresClases_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridViewInstructoresClases_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             txtIdInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[0].Value.ToString();
             txtNombreInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[1].Value.ToString();
             txtApellidoInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[2].Value.ToString();
         }
 
+        
+        
+
 
         //--------------------------------BOTONES---------------------------------------------------------------
 
         //BOTONES PARA VER LOS INSTRUCTORES
-        private void btnTodosInstructores_Click(object sender, EventArgs e)
+        
+        //Boton "OCUPADOS" este boton muestra a los instructores ocupados ese dia con las direcciones a donde se dirigen
+        private void btnTodosInstructoresOcupados_Click(object sender, EventArgs e)
         {
             if (txtDiaClase.Text != "")
 
             {
                 clase.SearchFecha = Convert.ToDateTime(txtDiaClase.Text);
                 dataGridViewInstructoresClases.DataSource = clase.ListingInstructorClase(clase);
-
-
+                dataGridViewInstructoresClases.Columns[0].HeaderText = "ID";
+                dataGridViewInstructoresClases.Columns[1].HeaderText = "NOMBRE";
+                dataGridViewInstructoresClases.Columns[2].HeaderText = "APELLIDO";
+                dataGridViewInstructoresClases.Columns[3].Visible =false;
+                dataGridViewInstructoresClases.Columns[4].HeaderText = "HORA";
+                dataGridViewInstructoresClases.Columns[5].HeaderText = "DIRECCION";
+                dataGridViewInstructoresClases.Columns[6].HeaderText = "DESCRIPCION";
             }
-        }
 
-        private void btnDisponibleInstructor_Click(object sender, EventArgs e)
+        }
+        //Muestra todos los instructores dados de alta
+        private void btnTodoLosInstructor_Click(object sender, EventArgs e)
         {
             ShowInstructoresClase();
+
         }
+
 
         //DE EDICION DE CLASE
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -235,50 +264,69 @@ namespace COMPLETE_FLAT_UI
         }
         private void btnEditarClase_Click(object sender, EventArgs e)
         {
-            update = true;
-            if (dataGridViewClases.SelectedRows.Count > 0)
+            try
             {
-                txtIdClase.Text = dataGridViewClases.CurrentRow.Cells[0].Value.ToString();
-                txtIdInstructor.Text = dataGridViewClases.CurrentRow.Cells[1].Value.ToString();
-                txtNombreInstructor.Text = dataGridViewClases.CurrentRow.Cells[2].Value.ToString();
-                txtApellidoInstructor.Text = dataGridViewClases.CurrentRow.Cells[3].Value.ToString();
-                txtNumClase.Text = dataGridViewClases.CurrentRow.Cells[4].Value.ToString();
-                txtDiaClase.Text = dataGridViewClases.CurrentRow.Cells[5].Value.ToString();
-                cmbHoraClase.Text = dataGridViewClases.CurrentRow.Cells[6].Value.ToString();
-                cmbMediosDePago.Text = dataGridViewClases.CurrentRow.Cells[8].Value.ToString();
-                txtDescripcionClase.Text = dataGridViewClases.CurrentRow.Cells[9].Value.ToString();
+                update = true;
+                if (dataGridViewClases.SelectedRows.Count > 0)
+                {
+                    txtIdClase.Text = dataGridViewClases.CurrentRow.Cells[0].Value.ToString();
+                    txtIdInstructor.Text = dataGridViewClases.CurrentRow.Cells[1].Value.ToString();
+                    txtNombreInstructor.Text = dataGridViewClases.CurrentRow.Cells[2].Value.ToString();
+                    txtApellidoInstructor.Text = dataGridViewClases.CurrentRow.Cells[3].Value.ToString();
+                    txtNumClase.Text = dataGridViewClases.CurrentRow.Cells[4].Value.ToString();
+                    txtDiaClase.Text = dataGridViewClases.CurrentRow.Cells[5].Value.ToString();
+                    cmbHoraClase.Text = dataGridViewClases.CurrentRow.Cells[6].Value.ToString();
+                    cmbMediosDePago.Text = dataGridViewClases.CurrentRow.Cells[8].Value.ToString();
+                    txtDescripcionClase.Text = dataGridViewClases.CurrentRow.Cells[9].Value.ToString();
+                }
+                else
+                {
+                    FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
+                    frmError.ShowDialog();
+                    // MessageBox.Show("seleccione una fila por favor");
+                }
             }
-            else
+            catch ( Exception ex)
             {
-                FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
-                frmError.ShowDialog();
-                // MessageBox.Show("seleccione una fila por favor");
+
+               
             }
+            
         }
 
         private void btnEliminarClase_Click(object sender, EventArgs e)
         {
-            if (dataGridViewClases.SelectedRows.Count > 0)
+            try
             {
-                FormInformacion frm = new FormInformacion("DESEA ELIMINAR LA CLASE");
-                DialogResult result = frm.ShowDialog();
-
-                if (result == DialogResult.OK)
+                if (dataGridViewClases.SelectedRows.Count > 0)
                 {
-                    clase.Id = Convert.ToInt32(dataGridViewClases.CurrentRow.Cells[0].Value.ToString());
-                    clase.DeletingClase(clase);
-                    ShowClasPorIdAlumno();
-                }                
-            }
-            else
-            {
-                FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
-                frmError.ShowDialog();
-                // MessageBox.Show("seleccione una fila por favor");
-            }
-        }
-        
+                    FormInformacion frm = new FormInformacion("DESEA ELIMINAR LA CLASE");
+                    DialogResult result = frm.ShowDialog();
 
-        
+                    if (result == DialogResult.OK)
+                    {
+                        clase.Id = Convert.ToInt32(dataGridViewClases.CurrentRow.Cells[0].Value.ToString());
+                        clase.DeletingClase(clase);
+                        ShowClasPorIdAlumno();
+                    }
+                }
+                else
+                {
+                    FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
+                    frmError.ShowDialog();
+                    // MessageBox.Show("seleccione una fila por favor");
+                }
+            }
+            catch (Exception ex) 
+            {
+                FormInformacion frmError = new FormInformacion("ERROR");
+                frmError.ShowDialog();
+                // MessageBox.Show($"error {ex}");
+
+            }
+
+        }
+
+       
     }
 }
