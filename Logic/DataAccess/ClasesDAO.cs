@@ -221,6 +221,29 @@ namespace Logic
                 }
             }
         }
+        //LISTAR CLASE POR ID Y ESTADO DE ASISTENCIA
+        public DataTable ListarClasesDeHoy(Clase clase)
+        {
+
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_listClasesHoy", connection))
+                {
+
+                    DataTable tabla = new DataTable();
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@searchFechaClase", clase.Fecha);
+                    cmd.Parameters.AddWithValue("@estadoAsistencia", clase.IdPresente);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(tabla);
+                    return tabla;
+                }
+            }
+
+        }
 
         //BORRAR CLASE
         public void DeleteClase(Clase clase)

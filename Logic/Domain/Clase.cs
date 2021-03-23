@@ -149,6 +149,10 @@ namespace Logic
         {
             return claseDAO.ListarClasesPorIdAlumno(clase);
         }
+        public DataTable ListingClasesDeHoy(Clase clase)
+        {
+            return claseDAO.ListarClasesDeHoy(clase);
+        }
 
         public bool SearchingInstructorClase(Clase clase)
         {

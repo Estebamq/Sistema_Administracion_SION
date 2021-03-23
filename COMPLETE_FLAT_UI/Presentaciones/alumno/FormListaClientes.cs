@@ -42,6 +42,7 @@ namespace COMPLETE_FLAT_UI
                     alumno.Estado = estado.Id;
                 }
             }
+
             dataGridViewAlumnos.DataSource = alumno.ListingAlumnosPorEstado(alumno);
             dataGridViewAlumnos.Columns[0].HeaderText = "ID";
             dataGridViewAlumnos.Columns[1].HeaderText = "NOMBRE";

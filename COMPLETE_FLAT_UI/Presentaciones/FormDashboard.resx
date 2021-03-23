@@ -153,4 +153,40 @@
   <metadata name="lineShape6.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 167</value>
   </metadata>
+  <metadata name="lineShape1.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 39, 548, 0</value>
+  </metadata>
+  <metadata name="lineShape1.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 39</value>
+  </metadata>
+  <metadata name="lineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>548, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 206, 549, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 206</value>
+  </metadata>
+  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>549, 0</value>
+  </metadata>
+  <metadata name="lineShape4.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 40, 0, 165</value>
+  </metadata>
+  <metadata name="lineShape4.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 40</value>
+  </metadata>
+  <metadata name="lineShape4.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 165</value>
+  </metadata>
+  <metadata name="lineShape6.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>571, 39, 0, 167</value>
+  </metadata>
+  <metadata name="lineShape6.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>571, 39</value>
+  </metadata>
+  <metadata name="lineShape6.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 167</value>
+  </metadata>
 </root>

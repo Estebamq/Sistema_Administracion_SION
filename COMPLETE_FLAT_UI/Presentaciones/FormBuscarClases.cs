@@ -12,6 +12,7 @@ using Logic;
 using Logic.Domain;
 
 
+
 namespace COMPLETE_FLAT_UI.Presentaciones
 {
     public partial class FormBuscarClases : Form
@@ -107,7 +108,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                     
                     ShowClasePorIdAlumno();
                     
-                    lblInformacionDatos.Text = "Datos del Instructor";
+                    lblInformacionDatos.Text = "Datos del Alumno";
                     lblInformacion.Text = "Instructores y  clases";
                     
                 }
