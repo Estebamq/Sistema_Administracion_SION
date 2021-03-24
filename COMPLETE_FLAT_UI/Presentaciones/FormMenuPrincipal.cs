@@ -170,23 +170,24 @@ namespace COMPLETE_FLAT_UI
         private void btnMenu_Click(object sender, EventArgs e)
         {
             //-------CON EFECTO SLIDING
-            if (panelMenu.Width == 230)
-            {
-                this.tmContraerMenu.Start();
-            }
-            else if (panelMenu.Width == 55)
-            {
-                this.tmExpandirMenu.Start();
-            }
+            // if (panelMenu.Width == 230)
+            //{
+            //  this.tmContraerMenu.Start();
+            //}
+            //else if (panelMenu.Width == 55)
+            //{
+            //  this.tmExpandirMenu.Start();
+            //}
 
             //-------SIN EFECTO 
-            //if (panelMenu.Width == 55)
-            //{
-            //    panelMenu.Width = 230;
-            //}
-            //else
-
-            //    panelMenu.Width = 55;
+            if (panelMenu.Width == 55)
+            {
+                panelMenu.Width = 230;
+            }
+            else
+            {
+                panelMenu.Width = 55;
+            }
         }
 
         private void tmExpandirMenu_Tick(object sender, EventArgs e)

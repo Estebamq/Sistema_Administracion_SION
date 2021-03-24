@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic.Domain;
 using Logic;
-using Logic.DataAccess;
 using COMPLETE_FLAT_UI.Presentaciones;
 using System.Runtime.InteropServices;
 
@@ -147,9 +146,20 @@ namespace COMPLETE_FLAT_UI
 
         private void dataGridViewInstructoresClases_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            txtIdInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[0].Value.ToString();
-            txtNombreInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[1].Value.ToString();
-            txtApellidoInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[2].Value.ToString();
+            try 
+            {
+                txtIdInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[0].Value.ToString();
+                txtNombreInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[1].Value.ToString();
+                txtApellidoInstructor.Text = dataGridViewInstructoresClases.Rows[renglon].Cells[2].Value.ToString();
+
+            }
+            catch (Exception)
+            {
+                FormInformacion frmError = new FormInformacion("SELECCIONE UN CONDUCTOR");
+                frmError.ShowDialog();
+
+
+            }
         }
 
         
@@ -228,6 +238,8 @@ namespace COMPLETE_FLAT_UI
                                 FormConfirmacion frmConfirm = new FormConfirmacion("SE ACTUALIZO CON EXITO");
                                 DialogResult resultConfirm = frmConfirm.ShowDialog();
                                 update = false;
+                                 btnEditarClase.BackColor = Color.Firebrick;
+
                             }
                             else if (clase.SearchingInstructorClase(clase) == false)
                             {
@@ -243,21 +255,20 @@ namespace COMPLETE_FLAT_UI
                 
                 }
                 //SI EL INSTRUCTOR EXISTE LO CAPTURAMOS ACA
-                catch (IndexOutOfRangeException ex) 
+                catch (IndexOutOfRangeException) 
                 {
                     FormInformacion frmError = new FormInformacion("INSTRUCTOR OCUPADO");
                     frmError.ShowDialog();
-                    //MessageBox.Show("No se pudo guardar el registro" + ex);
+                    
                 }
 
                 //SI SURGE UN ERROR EN LA CARGA LO CAPTURAMOS ACA
-                catch (Exception ex)
+                catch (Exception)
                 {
                     
                         FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
                         frmError.ShowDialog();
-                        //MessageBox.Show("No se pudo guardar el registro" + ex);
-                    
+                        
                 }
 
             }
@@ -269,6 +280,7 @@ namespace COMPLETE_FLAT_UI
                 update = true;
                 if (dataGridViewClases.SelectedRows.Count > 0)
                 {
+                    
                     txtIdClase.Text = dataGridViewClases.CurrentRow.Cells[0].Value.ToString();
                     txtIdInstructor.Text = dataGridViewClases.CurrentRow.Cells[1].Value.ToString();
                     txtNombreInstructor.Text = dataGridViewClases.CurrentRow.Cells[2].Value.ToString();
@@ -278,18 +290,20 @@ namespace COMPLETE_FLAT_UI
                     cmbHoraClase.Text = dataGridViewClases.CurrentRow.Cells[6].Value.ToString();
                     cmbMediosDePago.Text = dataGridViewClases.CurrentRow.Cells[8].Value.ToString();
                     txtDescripcionClase.Text = dataGridViewClases.CurrentRow.Cells[9].Value.ToString();
+                    
                 }
                 else
                 {
                     FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
                     frmError.ShowDialog();
-                    // MessageBox.Show("seleccione una fila por favor");
+                    
                 }
             }
-            catch ( Exception ex)
+            catch (Exception)
             {
+                FormInformacion frmError = new FormInformacion("ERROR");
+                frmError.ShowDialog();
 
-               
             }
             
         }
@@ -314,19 +328,22 @@ namespace COMPLETE_FLAT_UI
                 {
                     FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
                     frmError.ShowDialog();
-                    // MessageBox.Show("seleccione una fila por favor");
+                    
                 }
             }
-            catch (Exception ex) 
+            catch (Exception) 
             {
                 FormInformacion frmError = new FormInformacion("ERROR");
                 frmError.ShowDialog();
-                // MessageBox.Show($"error {ex}");
+                
 
             }
 
         }
 
-       
+        private void dataGridViewClases_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEditarClase.BackColor = Color.Turquoise;
+        }
     }
 }

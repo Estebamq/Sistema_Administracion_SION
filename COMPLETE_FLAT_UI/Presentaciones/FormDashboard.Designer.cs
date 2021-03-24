@@ -44,9 +44,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridViewVencimientoSeguros = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblCantidadDeAlumnos = new System.Windows.Forms.Label();
+            this.lblCantidadDeInstructores = new System.Windows.Forms.Label();
+            this.lblNuevosConductores = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -113,9 +113,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.dataGridViewVencimientoSeguros);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblCantidadDeAlumnos);
+            this.panel2.Controls.Add(this.lblCantidadDeInstructores);
+            this.panel2.Controls.Add(this.lblNuevosConductores);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -184,44 +184,44 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewVencimientoSeguros.Size = new System.Drawing.Size(355, 168);
             this.dataGridViewVencimientoSeguros.TabIndex = 32;
             // 
-            // label7
+            // lblCantidadDeAlumnos
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Bebas Neue", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(85, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 56);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "0";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCantidadDeAlumnos.AutoSize = true;
+            this.lblCantidadDeAlumnos.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantidadDeAlumnos.Font = new System.Drawing.Font("Bebas Neue", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadDeAlumnos.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblCantidadDeAlumnos.Location = new System.Drawing.Point(85, 50);
+            this.lblCantidadDeAlumnos.Name = "lblCantidadDeAlumnos";
+            this.lblCantidadDeAlumnos.Size = new System.Drawing.Size(43, 56);
+            this.lblCantidadDeAlumnos.TabIndex = 13;
+            this.lblCantidadDeAlumnos.Text = "0";
+            this.lblCantidadDeAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // lblCantidadDeInstructores
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Bebas Neue", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(280, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 56);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "0";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCantidadDeInstructores.AutoSize = true;
+            this.lblCantidadDeInstructores.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantidadDeInstructores.Font = new System.Drawing.Font("Bebas Neue", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadDeInstructores.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblCantidadDeInstructores.Location = new System.Drawing.Point(280, 50);
+            this.lblCantidadDeInstructores.Name = "lblCantidadDeInstructores";
+            this.lblCantidadDeInstructores.Size = new System.Drawing.Size(43, 56);
+            this.lblCantidadDeInstructores.TabIndex = 12;
+            this.lblCantidadDeInstructores.Text = "0";
+            this.lblCantidadDeInstructores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lblNuevosConductores
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Bebas Neue", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(470, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 56);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "0";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNuevosConductores.AutoSize = true;
+            this.lblNuevosConductores.BackColor = System.Drawing.Color.Transparent;
+            this.lblNuevosConductores.Font = new System.Drawing.Font("Bebas Neue", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevosConductores.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblNuevosConductores.Location = new System.Drawing.Point(470, 50);
+            this.lblNuevosConductores.Name = "lblNuevosConductores";
+            this.lblNuevosConductores.Size = new System.Drawing.Size(43, 56);
+            this.lblNuevosConductores.TabIndex = 11;
+            this.lblNuevosConductores.Text = "0";
+            this.lblNuevosConductores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -514,6 +514,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Controls.Add(this.panel1);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
+            this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -537,9 +538,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Button ImgNuevosConductores;
         private System.Windows.Forms.Button ImgCantidadAlumno;
         private System.Windows.Forms.Button ImgCantidadInstructores;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblCantidadDeAlumnos;
+        private System.Windows.Forms.Label lblCantidadDeInstructores;
+        private System.Windows.Forms.Label lblNuevosConductores;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

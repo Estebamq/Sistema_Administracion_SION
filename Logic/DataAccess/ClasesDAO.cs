@@ -270,6 +270,32 @@ namespace Logic
                 }
             }
         }
+
+        //CONTADOR CANTIDAD DE ALUMNOS
+
+        public string ListarCantidadDeNuevosConductores(Clase clase)
+        {
+            int cant = 0;
+
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_listCantidadAlumnoCompleto", connection))
+                {
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@estadoAsistencia", clase.IdPresente);
+
+                    cant = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return cant.ToString();
+
+
+                }
+            }
+        }
+
         //BORRAR CLASE
         public void DeleteClase(Clase clase)
         {

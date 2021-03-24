@@ -27,6 +27,15 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             ShowClasesDeHoy();
             ShowClasesCertificado();
             ShowInstructoresVencimientoSeguro();
+            ShowCantidadDeInstructores();
+            ShowCantidadDeAlumno();
+            ShowCantidadDeNuevos();
+
+        }
+
+        private void FormDashboard_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -82,7 +91,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             {
                 idClase = Convert.ToInt32(dataGridViewClasesDeHoy.Rows[renglon].Cells[0].Value.ToString());
                 btnCambiar.BackColor = Color.Turquoise;
-            }catch(Exception ex) 
+            }catch(Exception) 
             {
                 FormInformacion frmError = new FormInformacion("ERROR: SELECCIONE UNA FILA");
                 frmError.ShowDialog();
@@ -112,12 +121,12 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                     }
 
                     //SI SURGE UN ERROR EN LA CARGA LO CAPTURAMOS ACA
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                         FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
                         frmError.ShowDialog();
-                        //MessageBox.Show("No se pudo guardar el registro" + ex);
+                        
 
                     }
                     idClase = -1;
@@ -177,6 +186,56 @@ namespace COMPLETE_FLAT_UI.Presentaciones
            
 
         }
+
+        void ShowCantidadDeInstructores( ) 
+        {
+            Instructor instructor = new Instructor();
+            List<Estados> listEstadosInstructores = new List<Estados>();
+            listEstadosInstructores = estados.ListingEstadosI("");
+            foreach (Estados estado in listEstadosInstructores)
+            {
+                if (estado.EstadoI == "Alta")
+                {
+                    instructor.Estado = estado.Id;
+                }
+            }
+            DataTable tableInstructor = instructor.ListingInstructoresPorEstado(instructor);
+
+            lblCantidadDeInstructores.Text = (tableInstructor.Rows.Count).ToString();
+        }
+
+        void ShowCantidadDeAlumno()
+        {
+            Alumno alumno = new Alumno();
+            List<Estados> listEstadosAlumno = new List<Estados>();
+            listEstadosAlumno = estados.ListingEstadosA("");
+            foreach (Estados estado in listEstadosAlumno)
+            {
+                if (estado.EstadoA == "Alta")
+                {
+                    alumno.Estado = estado.Id;
+                }
+            }
+            DataTable tableInstructor = alumno.ListingAlumnosPorEstado(alumno);
+
+            lblCantidadDeAlumnos.Text = (tableInstructor.Rows.Count).ToString();
+        }
+
+        void ShowCantidadDeNuevos() 
+        {
+            Clase clase = new Clase();
+            List<Estados> listEstadosClase = new List<Estados>();
+            listEstadosClase = estados.ListingEstadosP("");
+            foreach (Estados estado in listEstadosClase)
+            {
+                if (estado.EstadoP == "Completo")
+                {
+                    clase.IdPresente = estado.Id;
+                }
+            }
+            lblNuevosConductores.Text = clase.ListingCantidadNuevosConductores(clase);
+        }
+        
     }
 }
 
