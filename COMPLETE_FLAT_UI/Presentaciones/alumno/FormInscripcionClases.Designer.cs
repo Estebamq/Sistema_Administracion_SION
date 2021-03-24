@@ -625,7 +625,7 @@ namespace COMPLETE_FLAT_UI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInstructoresClases.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewInstructoresClases.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dataGridViewInstructoresClases.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewInstructoresClases.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewInstructoresClases.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewInstructoresClases.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -671,7 +671,7 @@ namespace COMPLETE_FLAT_UI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewClases.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewClases.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dataGridViewClases.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewClases.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewClases.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewClases.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

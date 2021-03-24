@@ -156,7 +156,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInstructores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewInstructores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dataGridViewInstructores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewInstructores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewInstructores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewInstructores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

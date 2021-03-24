@@ -203,7 +203,7 @@ namespace Logic
                         string direccionAlumno = (string)reader[2];
                         int numClase = (int)reader[3];
                         string dia = DateTime.Parse(reader[4].ToString()).ToString("dd/MM/yyyy");
-                        string hora = DateTime.Parse(reader[5].ToString()).ToString("hh: mm");
+                        string hora = DateTime.Parse(reader[5].ToString()).ToString("HH: mm");
                         string descripcion = null;
                         if (reader["descripcion"]!=DBNull.Value )
                         {
@@ -245,6 +245,31 @@ namespace Logic
 
         }
 
+        //LISTAR CLASE PARA CERTIFICADO POR NUMERO DE CLASE Y FECHA 
+        public DataTable ListarClaseCertificado(Clase clase)
+        {
+
+
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_listClasesCertificado", connection))
+                {
+
+                    DataTable tabla = new DataTable();
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@searchFechaClase", clase.Fecha);
+                    cmd.Parameters.AddWithValue("@numDeClase", clase.NumClase);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(tabla);
+                    return tabla;
+
+                   
+                }
+            }
+        }
         //BORRAR CLASE
         public void DeleteClase(Clase clase)
         {

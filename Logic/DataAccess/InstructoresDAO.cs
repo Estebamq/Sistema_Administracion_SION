@@ -255,6 +255,50 @@ namespace Logic
                 }
             }
         }
+
+        //LISTAR INSTRUCTOR PARA VENCIMIENTO DE SEGURO
+        public List<Instructor> ListarInstructorVencimientoSeguro(Instructor instructor)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_listarInstructorPorEstado", connection))
+                {
+                    SqlDataReader readRows;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@searchEstado", instructor.Estado);
+                    readRows = cmd.ExecuteReader();
+
+                    List<Instructor> listing = new List<Instructor>();
+
+                    while (readRows.Read())
+                    {
+                        DateTime fechaVencimiento = readRows.GetDateTime(11);
+                        TimeSpan diferenciaDias = fechaVencimiento - DateTime.Today;
+
+
+                        if (diferenciaDias.Days<3 && diferenciaDias.Days>0){
+                            listing.Add(new Instructor
+                            {
+                                Id = readRows.GetInt32(0),
+                                Nombre = readRows.GetString(1),
+                                Apellido = readRows.GetString(2),
+                                Telefono = readRows.GetInt32(3),
+
+                            });
+
+                        }
+                    }
+
+
+                    readRows.Close();
+
+                    return listing;
+                }
+            }
+
+        }
         public void DeleteInstructor(Instructor instructor)
         {
             using (SqlConnection connection = GetConnection())

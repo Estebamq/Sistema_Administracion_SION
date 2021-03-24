@@ -25,6 +25,8 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             InitializeComponent();
             ListEstadosAsistencia();
             ShowClasesDeHoy();
+            ShowClasesCertificado();
+            ShowInstructoresVencimientoSeguro();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -76,8 +78,15 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
         private void dataGridViewClasesDeHoy_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            idClase = Convert.ToInt32(dataGridViewClasesDeHoy.Rows[renglon].Cells[0].Value.ToString());
-            btnCambiar.BackColor = Color.Turquoise;
+            try
+            {
+                idClase = Convert.ToInt32(dataGridViewClasesDeHoy.Rows[renglon].Cells[0].Value.ToString());
+                btnCambiar.BackColor = Color.Turquoise;
+            }catch(Exception ex) 
+            {
+                FormInformacion frmError = new FormInformacion("ERROR: SELECCIONE UNA FILA");
+                frmError.ShowDialog();
+            }
         }
 
         private void btnCambiar_Click_1(object sender, EventArgs e)
@@ -120,6 +129,53 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                 FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
                 frmError.ShowDialog();
             }
+        }
+
+        public void ShowClasesCertificado()
+        {
+            Clase clase = new Clase();
+            clase.NumClase = 5;
+            clase.Fecha = DateTime.Today;
+            dataGridViewCertificados.DataSource = clase.ListingClaseCertificado(clase);
+            dataGridViewCertificados.Columns[0].Visible = false;//ID DE CLASE
+            dataGridViewCertificados.Columns[1].HeaderText = "ID ALUMNO";
+            dataGridViewCertificados.Columns[2].HeaderText = "NOMBRE";
+            dataGridViewCertificados.Columns[3].HeaderText = "APELLIDO";
+            dataGridViewCertificados.Columns[4].HeaderText = "NUM DE CLASE";
+            dataGridViewCertificados.Columns[5].Visible = false;//FECHA
+            dataGridViewCertificados.Columns[6].Visible = false;//HORA
+            
+        }
+
+        public void ShowInstructoresVencimientoSeguro()
+        {
+                Instructor instructor = new Instructor();
+                List<Estados> listEstadosInstructores = new List<Estados>();
+                listEstadosInstructores = estados.ListingEstadosI("");
+                foreach (Estados estado in listEstadosInstructores)
+                {
+                    if (estado.EstadoI == "Alta")
+                    {
+                        instructor.Estado = estado.Id;
+                    }
+                }
+                dataGridViewVencimientoSeguros.DataSource = instructor.ListingInstructorVencimientoSeguro(instructor);
+             
+                        dataGridViewVencimientoSeguros.Columns[0].Visible = false;
+                        dataGridViewVencimientoSeguros.Columns[1].Visible = false;
+                        dataGridViewVencimientoSeguros.Columns[2].Visible = false;
+                        dataGridViewVencimientoSeguros.Columns[3].Visible = false;
+                        dataGridViewVencimientoSeguros.Columns[4].HeaderText = "ID";
+                        dataGridViewVencimientoSeguros.Columns[5].HeaderText = "NOMBRE";
+                        dataGridViewVencimientoSeguros.Columns[6].HeaderText = "APELLIDO";
+                        dataGridViewVencimientoSeguros.Columns[7].Visible = false;
+                        dataGridViewVencimientoSeguros.Columns[8].Visible = false;//"ESTADO"
+                        dataGridViewVencimientoSeguros.Columns[9].HeaderText = "TELEFONO";
+                        dataGridViewVencimientoSeguros.Columns[10].Visible = false;//"PATENTE"
+                        dataGridViewVencimientoSeguros.Columns[11].Visible = false; //"VENCIMIENTO SEGURO"
+            
+           
+
         }
     }
 }

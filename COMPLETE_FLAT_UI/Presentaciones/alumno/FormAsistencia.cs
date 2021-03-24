@@ -90,8 +90,19 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
 
         private void dataGridViewClasesAsistencia_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            idClase = Convert.ToInt32(dataGridViewClasesAsistencia.Rows[renglon].Cells[0].Value.ToString());
-            btnCambiar.BackColor = Color.Turquoise;
+            try
+            {
+                idClase = Convert.ToInt32(dataGridViewClasesAsistencia.Rows[renglon].Cells[0].Value.ToString());
+                btnCambiar.BackColor = Color.Turquoise;
+            }
+            catch (Exception ex)
+            {
+
+                FormInformacion frmError = new FormInformacion("ERROR: SELECCIONE UNA FILA");
+                frmError.ShowDialog();
+                //MessageBox.Show("No se pudo guardar el registro" + ex);
+
+            }
         }
 
         private void btnCambiar_Click(object sender, EventArgs e)

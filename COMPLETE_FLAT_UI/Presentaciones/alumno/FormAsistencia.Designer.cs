@@ -310,7 +310,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewClasesAsistencia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewClasesAsistencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.dataGridViewClasesAsistencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewClasesAsistencia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewClasesAsistencia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewClasesAsistencia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

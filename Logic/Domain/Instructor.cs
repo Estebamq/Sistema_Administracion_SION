@@ -134,6 +134,13 @@ namespace Logic
             instructor.Search = search;
             return instructorDAO.SearchInstructorIdPlanilla(instructor);
         }
+
+        //LISTAR INSTRUCTORES VENCIMIENTO DE SEGURO
+        public List<Instructor> ListingInstructorVencimientoSeguro(Instructor instructor)
+        {
+            return instructorDAO.ListarInstructorVencimientoSeguro(instructor);
+        }
+
         #endregion
     }
 }

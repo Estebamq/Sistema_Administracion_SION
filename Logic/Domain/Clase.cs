@@ -154,6 +154,11 @@ namespace Logic
             return claseDAO.ListarClasesDeHoy(clase);
         }
 
+        public DataTable ListingClaseCertificado(Clase clase)
+        {
+            return claseDAO.ListarClaseCertificado(clase);
+        }
+
         public bool SearchingInstructorClase(Clase clase)
         {
             return claseDAO.SearchInstructorClaseValidacion(clase);
