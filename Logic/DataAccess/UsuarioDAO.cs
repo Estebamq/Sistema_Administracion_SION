@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 namespace Logic.DataAccess
 {
@@ -45,5 +46,34 @@ namespace Logic.DataAccess
             }
         }
 
+        public bool GenerateBackUp()
+        {
+            bool respuesta=false;
+            using (SqlConnection connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    //esto puede ser un método aparte para ejecutar comandos SQL---------------
+                    SqlCommand command;
+                    command = new SqlCommand(@"backup database AdministracionDB to disk ='c:\ Respaldo\resp.bak' with init,stats=10", connection);
+                    command.ExecuteNonQuery();
+                    //-------------------------------------------------------------------------
+                    respuesta = true;
+                }
+                finally
+                {
+                    connection.Close();
+
+                }
+                return respuesta;
+
+            }
+
+        }
+       
+
+
     }
+
 }

@@ -158,12 +158,15 @@ namespace COMPLETE_FLAT_UI
                 }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de cerrar?", "¡Atención!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            FormInformacion frm = new FormInformacion("¿DESEA CERRAR SESION?");
+            DialogResult result = frm.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                Application.Exit();
+                this.Close();
             }
+
         }
 
         //METODOS PARA ANIMACION DE MENU SLIDING--
@@ -252,18 +255,14 @@ namespace COMPLETE_FLAT_UI
 
         private void btnAltaEditarInstructor_Click_1(object sender, EventArgs e)
         {
-            FormListaInstructores fmI = new FormListaInstructores();
-            fmI.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fmI);
-            HideSubMenu();
+            FormListaInstructores fm = new FormListaInstructores();
+            IniciarForm(fm);
         }
 
         private void btnAltaEditarAlunmo_Click(object sender, EventArgs e)
         {
             FormListaAlumnos fm = new FormListaAlumnos();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
+            IniciarForm(fm);
         }
 
         
@@ -271,18 +270,14 @@ namespace COMPLETE_FLAT_UI
         private void btnBajaAlumno_Click(object sender, EventArgs e)
         {
             FormListaClientesBaja fm = new FormListaClientesBaja();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
+            IniciarForm(fm);
 
         }
 
         private void btnBajaInstructor_Click(object sender, EventArgs e)
         {
             FormListaInstructoresBaja fm = new FormListaInstructoresBaja();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
+            IniciarForm(fm);
         }
 
 
@@ -290,27 +285,31 @@ namespace COMPLETE_FLAT_UI
         private void btnBuscarClase_Click(object sender, EventArgs e)
         {
             FormBuscarClases fm = new FormBuscarClases();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
+            IniciarForm(fm);
         }
         private void btnPlanillas_Click(object sender, EventArgs e)
         {
 
             FormPlanillas fm = new FormPlanillas();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
+            IniciarForm(fm);
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FormUsuario fm = new FormUsuario();
+            IniciarForm(fm);
+            
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             FormDashboard fm = new FormDashboard();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
+            IniciarForm(fm);
 
         }
+
+       
 
 
         //METODO PARA HORA Y FECHA ACTUAL ----------------------------------------------------------
@@ -318,6 +317,13 @@ namespace COMPLETE_FLAT_UI
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
+        }
+
+        private void IniciarForm(Form fm) 
+        {
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
+            HideSubMenu();
         }
         
 

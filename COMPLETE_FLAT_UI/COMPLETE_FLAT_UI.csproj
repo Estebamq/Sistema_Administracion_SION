@@ -285,6 +285,12 @@
     <Compile Include="Presentaciones\FormPlanillas.Designer.cs">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentaciones\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentaciones\instructor\FormListaInstructoresBaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -367,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\FormPlanillas.resx">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\instructor\FormListaInstructores.resx">
       <DependentUpon>FormListaInstructores.cs</DependentUpon>

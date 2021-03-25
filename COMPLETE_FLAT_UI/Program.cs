@@ -17,7 +17,7 @@ namespace COMPLETE_FLAT_UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Elijo el formulario que inicia primero
-            Application.Run(new FormMenuPrincipal());
+            Application.Run(new FormLogin());
         }
     }
 }

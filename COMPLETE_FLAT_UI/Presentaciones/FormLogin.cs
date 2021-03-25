@@ -27,6 +27,7 @@ namespace COMPLETE_FLAT_UI
             {
                 txtUsuario.Text = "";
             }
+
         }
 
         //Vuelve a la normalidad el cuadro de texto, si esta vacio escribe USUARIO
@@ -47,6 +48,7 @@ namespace COMPLETE_FLAT_UI
                 //ocultar contraseña
                 txtPass.PasswordChar = '●';
             }
+
 
         }
 
@@ -83,12 +85,13 @@ namespace COMPLETE_FLAT_UI
                     {
                         FormMenuPrincipal menuPrincipal = new FormMenuPrincipal();
                         menuPrincipal.Show();
+                        menuPrincipal.FormClosed += Logout;
                         this.Hide();
                     }
                     else 
                     {
                         MsjError("Nombre de Usuario o Contraseña incorrecto. \n Intentelo nuevamente");
-                        txtPass.Clear();
+                        txtPass.Text= "CONTRASEÑA";
                         txtUsuario.Focus();
                     }
                         
@@ -111,6 +114,21 @@ namespace COMPLETE_FLAT_UI
             lblErrorMensaje.Text = mensajeError;
             lblErrorMensaje.Visible = true;
         }
+
+        //metodo logout salida del usuario
+
+        private void Logout(object sender, FormClosedEventArgs e) 
+        {
+            //reinicia el texto contraseña y usuario cuando se cierra sesion
+            txtPass.Text = "CONTRASEÑA";
+            txtPass.PasswordChar = '\0';
+            txtUsuario.Text = "USUARIO";
+            lblErrorMensaje.Visible = false;
+            this.Show();
+           // txtUsuario.Focus();
+
+        }
+
 
        
     }
