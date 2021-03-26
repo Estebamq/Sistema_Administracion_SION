@@ -65,6 +65,19 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Close();
         }
 
-        
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLblEditar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panelEditarPerfil.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelEditarPerfil.Visible = false;
+        }
     }
 }

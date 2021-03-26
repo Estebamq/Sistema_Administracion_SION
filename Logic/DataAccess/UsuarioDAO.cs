@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.IO;
+using Logic.Cache;
 
 namespace Logic.DataAccess
 {
@@ -34,6 +35,14 @@ namespace Logic.DataAccess
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        while (reader.Read()) 
+                        {
+                            UserLoginCache.idUser = reader.GetInt32(0);
+                            UserLoginCache.nombre = reader.GetString(3);
+                            UserLoginCache.apellido = reader.GetString(4);
+                            UserLoginCache.email = reader.GetString(5);
+                            UserLoginCache.cargo = reader.GetString(6);
+                        }
                         respuesta = true;
                     }
                     else 
@@ -72,6 +81,8 @@ namespace Logic.DataAccess
 
         }
        
+
+
 
 
     }

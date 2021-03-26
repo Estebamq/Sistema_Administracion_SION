@@ -13,6 +13,8 @@ using System.Windows.Forms;
 using COMPLETE_FLAT_UI.Presentaciones;
 using COMPLETE_FLAT_UI.Presentaciones.alumno;
 using COMPLETE_FLAT_UI.Presentaciones.instructor;
+using Logic.Cache;
+
 
 namespace COMPLETE_FLAT_UI
 {
@@ -29,6 +31,7 @@ namespace COMPLETE_FLAT_UI
             this.DoubleBuffered = true;
             CustomizeDesing();
         }
+
 
         //METODO PARA OCULTAR SUBMENU DE LOS PANELES
         private void CustomizeDesing() 
@@ -119,6 +122,8 @@ namespace COMPLETE_FLAT_UI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        #region METODOS CERRAR/MAXIMIZAR/MINIMIZAR FORMULARIO
         //METODOS PARA CERRAR,MAXIMIZAR, MINIMIZAR FORMULARIO------------------------------------------------------
         int lx, ly;
         int sw, sh;
@@ -148,6 +153,7 @@ namespace COMPLETE_FLAT_UI
             this.WindowState = FormWindowState.Minimized;
         }
 
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             FormInformacion frm = new FormInformacion("¿ESTAS SEGURO QUE DESEAS SALIR?");
@@ -157,17 +163,9 @@ namespace COMPLETE_FLAT_UI
                     Application.Exit();
                 }
         }
+        #endregion
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            FormInformacion frm = new FormInformacion("¿DESEA CERRAR SESION?");
-            DialogResult result = frm.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                this.Close();
-            }
-
-        }
+       
 
         //METODOS PARA ANIMACION DE MENU SLIDING--
         private void btnMenu_Click(object sender, EventArgs e)
@@ -232,21 +230,25 @@ namespace COMPLETE_FLAT_UI
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
             MostrarFormLogo();
+            LoadUserData();
+
+        }
+
+        private void LoadUserData() 
+        {
+            lblUser.Text = UserLoginCache.nombre+ ", " +UserLoginCache.apellido;
+            lblCargo.Text = UserLoginCache.cargo;
         }
         //METODO PARA MOSTRAR FORMULARIO DE LOGO Al CERRAR OTROS FORM ----------------------------------------------------------
         private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
         {
             MostrarFormLogo();
         }
+
+        #region BOTONES PANEL IZQUIERDO
         //METODOS PARA ABRIR OTROS FORMULARIOS Y MOSTRAR FORM DE LOGO Al CERRAR ----------------------------------------------------------
-        private void btnListaClientes_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlSubmenuAlumno);
-        }
-  
 
-       
-
+        // BOTONES INSTRUCTOR-----------
         private void btnInstructores_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlSubmenuInstructor);
@@ -259,20 +261,7 @@ namespace COMPLETE_FLAT_UI
             IniciarForm(fm);
         }
 
-        private void btnAltaEditarAlunmo_Click(object sender, EventArgs e)
-        {
-            FormListaAlumnos fm = new FormListaAlumnos();
-            IniciarForm(fm);
-        }
 
-        
-
-        private void btnBajaAlumno_Click(object sender, EventArgs e)
-        {
-            FormListaClientesBaja fm = new FormListaClientesBaja();
-            IniciarForm(fm);
-
-        }
 
         private void btnBajaInstructor_Click(object sender, EventArgs e)
         {
@@ -281,12 +270,37 @@ namespace COMPLETE_FLAT_UI
         }
 
 
+        // BOTONES ALUMNO---------
+        private void btnListaClientes_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlSubmenuAlumno);
+        }
+         
+        private void btnAltaEditarAlunmo_Click(object sender, EventArgs e)
+        {
+            FormListaAlumnos fm = new FormListaAlumnos();
+            IniciarForm(fm);
+        }
 
+
+
+        private void btnBajaAlumno_Click(object sender, EventArgs e)
+        {
+            FormListaClientesBaja fm = new FormListaClientesBaja();
+            IniciarForm(fm);
+
+        }
+
+        
+
+        // BOTON BUSCAR CLASE-------------
         private void btnBuscarClase_Click(object sender, EventArgs e)
         {
             FormBuscarClases fm = new FormBuscarClases();
             IniciarForm(fm);
         }
+
+        // BOTON PLANILLAS---------------
         private void btnPlanillas_Click(object sender, EventArgs e)
         {
 
@@ -294,14 +308,7 @@ namespace COMPLETE_FLAT_UI
             IniciarForm(fm);
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            FormUsuario fm = new FormUsuario();
-            IniciarForm(fm);
-            
-
-        }
-
+        // BOTON DASHBOARD----INFORMACION DE LA ESCUELA DE MANEJO
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             FormDashboard fm = new FormDashboard();
@@ -309,27 +316,46 @@ namespace COMPLETE_FLAT_UI
 
         }
 
-       
 
+        // BOTON USUARIO-----------------
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FormUsuario fm = new FormUsuario();
+            IniciarForm(fm);
+        }
 
+        /// <summary>
+        /// Metodo que inicia los formularios que recibe
+        /// </summary>
+        /// <param name="fm"></param>
+        private void IniciarForm(Form fm)
+        {
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
+            HideSubMenu();
+        }
+
+        //BOTON DE CERRAR SESION
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormInformacion frm = new FormInformacion("¿DESEA CERRAR SESION?");
+            DialogResult result = frm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+
+        }
+        #endregion
+
+        #region HORA DEL PANEL PRINCIPAL
         //METODO PARA HORA Y FECHA ACTUAL ----------------------------------------------------------
         private void tmFechaHora_Tick(object sender, EventArgs e)
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
-
-        private void IniciarForm(Form fm) 
-        {
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
-            HideSubMenu();
-        }
-        
-
-       
-
-        
+        #endregion
 
     }
 }

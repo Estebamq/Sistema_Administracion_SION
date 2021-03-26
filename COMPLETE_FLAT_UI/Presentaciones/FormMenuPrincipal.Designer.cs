@@ -33,11 +33,11 @@
             this.panelContenedorPrincipal = new System.Windows.Forms.Panel();
             this.panelContenedorForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblHora = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -68,7 +68,6 @@
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
             this.panelContenedorPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlSubmenuAlumno.SuspendLayout();
@@ -106,11 +105,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.panel1.Controls.Add(this.lblCargo);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblUser);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lbFecha);
-            this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.lblHora);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(230, 503);
@@ -118,38 +117,49 @@
             this.panel1.Size = new System.Drawing.Size(870, 97);
             this.panel1.TabIndex = 5;
             // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.LightGray;
+            this.lblCargo.Location = new System.Drawing.Point(66, 65);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(45, 16);
+            this.lblCargo.TabIndex = 8;
+            this.lblCargo.Text = "Cargo";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightGray;
-            this.label5.Location = new System.Drawing.Point(83, 54);
+            this.label5.Location = new System.Drawing.Point(6, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 16);
+            this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Cargo : Administrador General";
+            this.label5.Text = "Cargo : ";
             // 
-            // label4
+            // lblUser
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(153, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Acosta User";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.LightGray;
+            this.lblUser.Location = new System.Drawing.Point(66, 41);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(37, 16);
+            this.lblUser.TabIndex = 6;
+            this.lblUser.Text = "User";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(83, 34);
+            this.label3.Location = new System.Drawing.Point(6, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Luis Miguel";
+            this.label3.Text = "Usuario:";
             // 
             // lbFecha
             // 
@@ -162,16 +172,6 @@
             this.lbFecha.Size = new System.Drawing.Size(224, 20);
             this.lbFecha.TabIndex = 4;
             this.lbFecha.Text = "Lunes, 26 de septiembre 2018";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::COMPLETE_FLAT_UI.Properties.Resources.perfil;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 18);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
             // 
             // lblHora
             // 
@@ -611,7 +611,6 @@
             this.panelContenedorPrincipal.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlSubmenuAlumno.ResumeLayout(false);
@@ -639,10 +638,8 @@
         private System.Windows.Forms.Panel panelContenedorForm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lbFecha;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox btnLogout;
@@ -664,6 +661,8 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnPlanillas;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCargo;
     }
 }
 
