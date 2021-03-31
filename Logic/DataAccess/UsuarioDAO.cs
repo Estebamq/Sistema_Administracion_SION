@@ -220,6 +220,21 @@ namespace Logic.DataAccess
             }
         }
 
+        public void DeleteUsuario(Usuario usuario)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_deleteUsuario", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@idUsuario", usuario.UserId);
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+        }
+
     }
 
 }

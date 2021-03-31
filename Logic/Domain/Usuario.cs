@@ -99,6 +99,12 @@ namespace Logic.Domain
             UsuarioDAO usuarioDao = new UsuarioDAO();
             return usuarioDao.ListUsuariosActivos();
         }
+
+
+        public void DeletingUsuario(Usuario usuario) 
+        {
+            usuarioDAO.DeleteUsuario(usuario);
+        }
         #endregion
 
     }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic.Domain;
+using Logic.Cache;
 using System.Runtime.InteropServices;
 
 namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
@@ -123,7 +124,40 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
         //Eliminar usuario
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+           
+                Usuario usuario = new Usuario();
+                if (dataGridViewUsuariosActivos.SelectedRows.Count > 0)
+                {
+                    usuario.NombreUsuario = dataGridViewUsuariosActivos.CurrentRow.Cells[1].Value.ToString();
+                    usuario.UserId = Convert.ToInt32(dataGridViewUsuariosActivos.CurrentRow.Cells[0].Value.ToString());
+                    FormInformacion frm = new FormInformacion($"DESEA ELIMINAR El USUARIO '{usuario.NombreUsuario}' ");
+                    DialogResult result = frm.ShowDialog();
 
+                    if (usuario.UserId != 1 && usuario.UserId != UserLoginCache.idUser)
+                    {
+                        if (result == DialogResult.OK)
+                        {
+
+                            usuario.DeletingUsuario(usuario);
+                            FormConfirmacion frmConfirm = new FormConfirmacion("USUARIO ELIMINADO");
+                            frmConfirm.ShowDialog();
+                            ShowUsuariosActivos();
+                        }
+                    }
+                    else 
+                    {
+                        FormInformacion frmError = new FormInformacion("NO PUEDE ELIMINAR ESTE USUARIO");
+                        frmError.ShowDialog();
+                    }
+                }
+                else
+                {
+                    FormInformacion frmError = new FormInformacion("SELECCIONE UNA FILA POR FAVOR");
+                    frmError.ShowDialog();
+
+                }
         }
+
+                
     }
 }
