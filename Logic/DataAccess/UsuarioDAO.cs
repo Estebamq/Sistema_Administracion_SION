@@ -83,6 +83,31 @@ namespace Logic.DataAccess
 
         }
 
+        //CREAR USUARIOS
+        public void CreateAlumno(Usuario usuario)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_createUsuario", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.AddWithValue("@userName", usuario.NombreUsuario);
+                    cmd.Parameters.AddWithValue("@contraseña", usuario.Contraseña);
+                    cmd.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                    cmd.Parameters.AddWithValue("@apellido", usuario.Apellido);
+                    cmd.Parameters.AddWithValue("@email", usuario.Email);
+                    cmd.Parameters.AddWithValue("@idCargo", usuario.IdCargo);
+                   
+
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+        }
+
         //BUSCAR CARGO DEL USUARIO POR NOMBRE DE CARGO
         public List<Cargo> ListCargoPersonal(string search)
         {
@@ -153,6 +178,44 @@ namespace Logic.DataAccess
                     
 
                     return cargo;
+                }
+            }
+        }
+
+        //BUSCAR CARGO DEL USUARIO POR NOMBRE DE CARGO
+        public List<Usuario> ListUsuariosActivos()
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_listarUsuariosActivos", connection))
+                {
+                    SqlDataReader readRows;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    readRows = cmd.ExecuteReader();
+
+                    List<Usuario> listing = new List<Usuario>();
+
+                    while (readRows.Read())
+                    {
+                        listing.Add(new Usuario
+
+                        {
+                            UserId = readRows.GetInt32(0),
+                            NombreUsuario = readRows.GetString(1),
+                            Nombre = readRows.GetString(2),
+                            Apellido = readRows.GetString(3),
+                            Email = readRows.GetString(4),
+                            Cargo = readRows.GetString(5),
+
+                        });
+                    }
+
+
+                    readRows.Close();
+
+                    return listing;
                 }
             }
         }
