@@ -359,6 +359,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.Controls.Add(this.lblInstructoresBaja);
             this.Name = "FormListaInstructoresBaja";
             this.Text = "FormInstructoresBaja";
+            this.Load += new System.EventHandler(this.FormListaInstructoresBaja_Load);
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructoresBaja)).EndInit();

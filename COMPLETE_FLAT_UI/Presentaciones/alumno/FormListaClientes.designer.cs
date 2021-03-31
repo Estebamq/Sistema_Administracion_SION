@@ -431,6 +431,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormListaAlumnos";
             this.Text = "FormListaAlumnos";
+            this.Load += new System.EventHandler(this.FormListaAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).EndInit();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();

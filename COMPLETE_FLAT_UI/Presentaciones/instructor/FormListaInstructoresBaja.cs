@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
 using Logic.Domain;
+using Logic.Cache;
 
 namespace COMPLETE_FLAT_UI.Presentaciones.instructor
 {
@@ -24,6 +25,26 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             HideWidthColumns();
         }
 
+        private void FormListaInstructoresBaja_Load(object sender, EventArgs e)
+        {
+            ManejoDePermisos();
+        }
+
+
+        //PERMISOS
+        void ManejoDePermisos()
+        {
+            Cargo cargoUsuario = new Cargo();
+            cargoUsuario = cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
+
+
+            if (CargoEstructura.Recepcionista == cargoUsuario.NombreCargo)
+            {
+                btnEliminarInstructor.Enabled = false;
+            }
+
+
+        }
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -109,5 +130,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
                 // MessageBox.Show("seleccione una fila por favor");
             }
         }
+
+        
     }
 }

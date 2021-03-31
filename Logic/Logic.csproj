@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\CargoEstructura.cs" />
     <Compile Include="Cache\UserLoginCache.cs" />
     <Compile Include="DataAccess\ConnetionSql.cs" />
     <Compile Include="DataAccess\EstadosDAO.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="DataAccess\UsuarioDAO.cs" />
     <Compile Include="Domain\Alumno.cs" />
     <Compile Include="DataAccess\AlumnosDAO.cs" />
+    <Compile Include="Domain\Cargo.cs" />
     <Compile Include="Domain\Clase.cs" />
     <Compile Include="DataAccess\ClasesDAO.cs" />
     <Compile Include="Domain\Estados.cs" />

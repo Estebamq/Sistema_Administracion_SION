@@ -35,6 +35,8 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelEditarPerfil = new System.Windows.Forms.Panel();
+            this.cmbBoxCargoPersonal = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtBoxContraseñaActual = new System.Windows.Forms.TextBox();
             this.txtBoxConfirmarContraseña = new System.Windows.Forms.TextBox();
             this.txtBoxNuevaContraseña = new System.Windows.Forms.TextBox();
@@ -53,8 +55,13 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.labelEditarPerfil = new System.Windows.Forms.Label();
             this.panelInformacionDelPerfil = new System.Windows.Forms.Panel();
-            this.linkLblEditar = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnCrearNuevoUsuario = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnCrearNuevoMedioDePago = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLblEditar = new System.Windows.Forms.LinkLabel();
             this.lblInputEmail = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblInputCargo = new System.Windows.Forms.Label();
@@ -66,13 +73,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.lblInputnombreUsuario = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnCrearNuevoMedioDePago = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnCrearNuevoUsuario = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnCrearEstadoUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelEditarPerfil.SuspendLayout();
             this.panelInformacionDelPerfil.SuspendLayout();
@@ -141,6 +141,8 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // panelEditarPerfil
             // 
             this.panelEditarPerfil.BackColor = System.Drawing.Color.LightGray;
+            this.panelEditarPerfil.Controls.Add(this.cmbBoxCargoPersonal);
+            this.panelEditarPerfil.Controls.Add(this.label4);
             this.panelEditarPerfil.Controls.Add(this.txtBoxContraseñaActual);
             this.panelEditarPerfil.Controls.Add(this.txtBoxConfirmarContraseña);
             this.panelEditarPerfil.Controls.Add(this.txtBoxNuevaContraseña);
@@ -165,23 +167,42 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panelEditarPerfil.TabIndex = 31;
             this.panelEditarPerfil.Visible = false;
             // 
+            // cmbBoxCargoPersonal
+            // 
+            this.cmbBoxCargoPersonal.FormattingEnabled = true;
+            this.cmbBoxCargoPersonal.Location = new System.Drawing.Point(21, 197);
+            this.cmbBoxCargoPersonal.Name = "cmbBoxCargoPersonal";
+            this.cmbBoxCargoPersonal.Size = new System.Drawing.Size(255, 21);
+            this.cmbBoxCargoPersonal.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Location = new System.Drawing.Point(119, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Cargo";
+            // 
             // txtBoxContraseñaActual
             // 
-            this.txtBoxContraseñaActual.Location = new System.Drawing.Point(21, 359);
+            this.txtBoxContraseñaActual.Location = new System.Drawing.Point(21, 383);
             this.txtBoxContraseñaActual.Name = "txtBoxContraseñaActual";
             this.txtBoxContraseñaActual.Size = new System.Drawing.Size(255, 20);
             this.txtBoxContraseñaActual.TabIndex = 52;
             // 
             // txtBoxConfirmarContraseña
             // 
-            this.txtBoxConfirmarContraseña.Location = new System.Drawing.Point(21, 309);
+            this.txtBoxConfirmarContraseña.Location = new System.Drawing.Point(21, 333);
             this.txtBoxConfirmarContraseña.Name = "txtBoxConfirmarContraseña";
             this.txtBoxConfirmarContraseña.Size = new System.Drawing.Size(255, 20);
             this.txtBoxConfirmarContraseña.TabIndex = 51;
             // 
             // txtBoxNuevaContraseña
             // 
-            this.txtBoxNuevaContraseña.Location = new System.Drawing.Point(21, 263);
+            this.txtBoxNuevaContraseña.Location = new System.Drawing.Point(21, 287);
             this.txtBoxNuevaContraseña.Name = "txtBoxNuevaContraseña";
             this.txtBoxNuevaContraseña.Size = new System.Drawing.Size(255, 20);
             this.txtBoxNuevaContraseña.TabIndex = 50;
@@ -191,7 +212,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelContraseñaActual.AutoSize = true;
             this.labelContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContraseñaActual.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelContraseñaActual.Location = new System.Drawing.Point(76, 336);
+            this.labelContraseñaActual.Location = new System.Drawing.Point(76, 360);
             this.labelContraseñaActual.Name = "labelContraseñaActual";
             this.labelContraseñaActual.Size = new System.Drawing.Size(141, 20);
             this.labelContraseñaActual.TabIndex = 47;
@@ -202,7 +223,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelConfirmarContraseña.AutoSize = true;
             this.labelConfirmarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmarContraseña.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelConfirmarContraseña.Location = new System.Drawing.Point(45, 286);
+            this.labelConfirmarContraseña.Location = new System.Drawing.Point(45, 310);
             this.labelConfirmarContraseña.Name = "labelConfirmarContraseña";
             this.labelConfirmarContraseña.Size = new System.Drawing.Size(214, 20);
             this.labelConfirmarContraseña.TabIndex = 48;
@@ -213,7 +234,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelNuevaContraseña.AutoSize = true;
             this.labelNuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaContraseña.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelNuevaContraseña.Location = new System.Drawing.Point(76, 240);
+            this.labelNuevaContraseña.Location = new System.Drawing.Point(76, 264);
             this.labelNuevaContraseña.Name = "labelNuevaContraseña";
             this.labelNuevaContraseña.Size = new System.Drawing.Size(141, 20);
             this.labelNuevaContraseña.TabIndex = 49;
@@ -225,7 +246,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAceptar.Location = new System.Drawing.Point(156, 404);
+            this.btnAceptar.Location = new System.Drawing.Point(156, 428);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(120, 40);
             this.btnAceptar.TabIndex = 46;
@@ -238,7 +259,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCancelar.Location = new System.Drawing.Point(21, 404);
+            this.btnCancelar.Location = new System.Drawing.Point(21, 428);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 40);
             this.btnCancelar.TabIndex = 41;
@@ -248,28 +269,28 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(21, 217);
+            this.txtBoxEmail.Location = new System.Drawing.Point(21, 241);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(255, 20);
             this.txtBoxEmail.TabIndex = 45;
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.Location = new System.Drawing.Point(21, 172);
+            this.txtBoxApellido.Location = new System.Drawing.Point(21, 153);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(255, 20);
             this.txtBoxApellido.TabIndex = 44;
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.Location = new System.Drawing.Point(21, 126);
+            this.txtBoxNombre.Location = new System.Drawing.Point(21, 107);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(255, 20);
             this.txtBoxNombre.TabIndex = 43;
             // 
             // txtBoxNombreUsuario
             // 
-            this.txtBoxNombreUsuario.Location = new System.Drawing.Point(21, 80);
+            this.txtBoxNombreUsuario.Location = new System.Drawing.Point(21, 61);
             this.txtBoxNombreUsuario.Name = "txtBoxNombreUsuario";
             this.txtBoxNombreUsuario.Size = new System.Drawing.Size(255, 20);
             this.txtBoxNombreUsuario.TabIndex = 42;
@@ -279,7 +300,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelEmail.Location = new System.Drawing.Point(119, 194);
+            this.labelEmail.Location = new System.Drawing.Point(122, 218);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(48, 20);
             this.labelEmail.TabIndex = 41;
@@ -290,7 +311,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelApellido.AutoSize = true;
             this.labelApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelApellido.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelApellido.Location = new System.Drawing.Point(115, 149);
+            this.labelApellido.Location = new System.Drawing.Point(115, 130);
             this.labelApellido.Name = "labelApellido";
             this.labelApellido.Size = new System.Drawing.Size(65, 20);
             this.labelApellido.TabIndex = 41;
@@ -301,7 +322,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelNombre.Location = new System.Drawing.Point(115, 103);
+            this.labelNombre.Location = new System.Drawing.Point(115, 84);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(65, 20);
             this.labelNombre.TabIndex = 41;
@@ -312,7 +333,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelNombreUsuario.AutoSize = true;
             this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreUsuario.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelNombreUsuario.Location = new System.Drawing.Point(76, 57);
+            this.labelNombreUsuario.Location = new System.Drawing.Point(76, 38);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
             this.labelNombreUsuario.Size = new System.Drawing.Size(146, 20);
             this.labelNombreUsuario.TabIndex = 41;
@@ -324,7 +345,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelEditarPerfil.BackColor = System.Drawing.Color.LightGray;
             this.labelEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEditarPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.labelEditarPerfil.Location = new System.Drawing.Point(93, 23);
+            this.labelEditarPerfil.Location = new System.Drawing.Point(93, 4);
             this.labelEditarPerfil.Name = "labelEditarPerfil";
             this.labelEditarPerfil.Size = new System.Drawing.Size(104, 24);
             this.labelEditarPerfil.TabIndex = 40;
@@ -351,6 +372,81 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panelInformacionDelPerfil.Size = new System.Drawing.Size(589, 493);
             this.panelInformacionDelPerfil.TabIndex = 32;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.btnCrearNuevoUsuario);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.btnCrearNuevoMedioDePago);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnGenerar);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 393);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(589, 100);
+            this.panel2.TabIndex = 41;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(180, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 20);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Nuevo Usuario";
+            // 
+            // btnCrearNuevoUsuario
+            // 
+            this.btnCrearNuevoUsuario.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnCrearNuevoUsuario.FlatAppearance.BorderSize = 0;
+            this.btnCrearNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearNuevoUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCrearNuevoUsuario.Location = new System.Drawing.Point(182, 52);
+            this.btnCrearNuevoUsuario.Name = "btnCrearNuevoUsuario";
+            this.btnCrearNuevoUsuario.Size = new System.Drawing.Size(111, 36);
+            this.btnCrearNuevoUsuario.TabIndex = 43;
+            this.btnCrearNuevoUsuario.Text = "CREAR";
+            this.btnCrearNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnCrearNuevoUsuario.Click += new System.EventHandler(this.btnCrearNuevoUsuario_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(316, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(123, 20);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Medios de Pago";
+            // 
+            // btnCrearNuevoMedioDePago
+            // 
+            this.btnCrearNuevoMedioDePago.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnCrearNuevoMedioDePago.FlatAppearance.BorderSize = 0;
+            this.btnCrearNuevoMedioDePago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearNuevoMedioDePago.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCrearNuevoMedioDePago.Location = new System.Drawing.Point(320, 52);
+            this.btnCrearNuevoMedioDePago.Name = "btnCrearNuevoMedioDePago";
+            this.btnCrearNuevoMedioDePago.Size = new System.Drawing.Size(111, 36);
+            this.btnCrearNuevoMedioDePago.TabIndex = 40;
+            this.btnCrearNuevoMedioDePago.Text = "CREAR";
+            this.btnCrearNuevoMedioDePago.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(33, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 20);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Respaldo";
+            // 
             // linkLblEditar
             // 
             this.linkLblEditar.AutoSize = true;
@@ -363,17 +459,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.linkLblEditar.TabStop = true;
             this.linkLblEditar.Text = "Editar";
             this.linkLblEditar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblEditar_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 20);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Respaldo";
             // 
             // lblInputEmail
             // 
@@ -497,95 +582,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.btnCrearEstadoUsuario);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.btnCrearNuevoUsuario);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.btnCrearNuevoMedioDePago);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.btnGenerar);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 393);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(589, 100);
-            this.panel2.TabIndex = 41;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(162, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 20);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Medios de Pago";
-            // 
-            // btnCrearNuevoMedioDePago
-            // 
-            this.btnCrearNuevoMedioDePago.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnCrearNuevoMedioDePago.FlatAppearance.BorderSize = 0;
-            this.btnCrearNuevoMedioDePago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoMedioDePago.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCrearNuevoMedioDePago.Location = new System.Drawing.Point(166, 54);
-            this.btnCrearNuevoMedioDePago.Name = "btnCrearNuevoMedioDePago";
-            this.btnCrearNuevoMedioDePago.Size = new System.Drawing.Size(111, 36);
-            this.btnCrearNuevoMedioDePago.TabIndex = 40;
-            this.btnCrearNuevoMedioDePago.Text = "CREAR";
-            this.btnCrearNuevoMedioDePago.UseVisualStyleBackColor = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(306, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 20);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "Nuevo Usuario";
-            // 
-            // btnCrearNuevoUsuario
-            // 
-            this.btnCrearNuevoUsuario.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnCrearNuevoUsuario.FlatAppearance.BorderSize = 0;
-            this.btnCrearNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCrearNuevoUsuario.Location = new System.Drawing.Point(308, 54);
-            this.btnCrearNuevoUsuario.Name = "btnCrearNuevoUsuario";
-            this.btnCrearNuevoUsuario.Size = new System.Drawing.Size(111, 36);
-            this.btnCrearNuevoUsuario.TabIndex = 43;
-            this.btnCrearNuevoUsuario.Text = "CREAR";
-            this.btnCrearNuevoUsuario.UseVisualStyleBackColor = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(446, 15);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 20);
-            this.label16.TabIndex = 48;
-            this.label16.Text = "Estado Usuario";
-            // 
-            // btnCrearEstadoUsuario
-            // 
-            this.btnCrearEstadoUsuario.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnCrearEstadoUsuario.FlatAppearance.BorderSize = 0;
-            this.btnCrearEstadoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearEstadoUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCrearEstadoUsuario.Location = new System.Drawing.Point(450, 54);
-            this.btnCrearEstadoUsuario.Name = "btnCrearEstadoUsuario";
-            this.btnCrearEstadoUsuario.Size = new System.Drawing.Size(111, 36);
-            this.btnCrearEstadoUsuario.TabIndex = 46;
-            this.btnCrearEstadoUsuario.Text = "CREAR";
-            this.btnCrearEstadoUsuario.UseVisualStyleBackColor = false;
-            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,6 +593,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Controls.Add(this.panel1);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
+            this.Load += new System.EventHandler(this.FormUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelEditarPerfil.ResumeLayout(false);
@@ -649,11 +646,11 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelNombreUsuario;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnCrearEstadoUsuario;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnCrearNuevoUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCrearNuevoMedioDePago;
+        private System.Windows.Forms.ComboBox cmbBoxCargoPersonal;
+        private System.Windows.Forms.Label label4;
     }
 }

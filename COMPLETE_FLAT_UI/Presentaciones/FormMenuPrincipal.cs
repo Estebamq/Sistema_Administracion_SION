@@ -14,13 +14,14 @@ using COMPLETE_FLAT_UI.Presentaciones;
 using COMPLETE_FLAT_UI.Presentaciones.alumno;
 using COMPLETE_FLAT_UI.Presentaciones.instructor;
 using Logic.Cache;
+using Logic.Domain;
 
 
 namespace COMPLETE_FLAT_UI
 {
     public partial class FormMenuPrincipal : Form
     {
-        
+
 
         //Constructor
         public FormMenuPrincipal()
@@ -34,33 +35,33 @@ namespace COMPLETE_FLAT_UI
 
 
         //METODO PARA OCULTAR SUBMENU DE LOS PANELES
-        private void CustomizeDesing() 
+        private void CustomizeDesing()
         {
             pnlSubmenuInstructor.Visible = false;
             pnlSubmenuAlumno.Visible = false;
         }
 
-        private void HideSubMenu() 
+        private void HideSubMenu()
         {
-            if (pnlSubmenuInstructor.Visible == true) 
+            if (pnlSubmenuInstructor.Visible == true)
             {
                 pnlSubmenuInstructor.Visible = false;
             }
 
-            if (pnlSubmenuAlumno.Visible == true) 
+            if (pnlSubmenuAlumno.Visible == true)
             {
                 pnlSubmenuAlumno.Visible = false;
             }
         }
 
-        private void ShowSubMenu(Panel subMenu) 
+        private void ShowSubMenu(Panel subMenu)
         {
-            if (subMenu.Visible==false) 
+            if (subMenu.Visible == false)
             {
                 HideSubMenu();
                 subMenu.Visible = true;
             }
-            else 
+            else
             {
                 subMenu.Visible = false;
             }
@@ -109,7 +110,7 @@ namespace COMPLETE_FLAT_UI
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
-       
+
         //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -159,13 +160,13 @@ namespace COMPLETE_FLAT_UI
             FormInformacion frm = new FormInformacion("¿ESTAS SEGURO QUE DESEAS SALIR?");
             DialogResult result = frm.ShowDialog();
             if (result == DialogResult.OK)
-                {
-                    Application.Exit();
-                }
+            {
+                Application.Exit();
+            }
         }
         #endregion
 
-       
+
 
         //METODOS PARA ANIMACION DE MENU SLIDING--
         private void btnMenu_Click(object sender, EventArgs e)
@@ -197,7 +198,7 @@ namespace COMPLETE_FLAT_UI
                 this.tmExpandirMenu.Stop();
             else
                 panelMenu.Width = panelMenu.Width + 5;
-            
+
         }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
@@ -216,7 +217,7 @@ namespace COMPLETE_FLAT_UI
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;            
+            fh.Dock = DockStyle.Fill;
             this.panelContenedorForm.Controls.Add(fh);
             this.panelContenedorForm.Tag = fh;
             fh.Show();
@@ -231,14 +232,37 @@ namespace COMPLETE_FLAT_UI
         {
             MostrarFormLogo();
             LoadUserData();
+            ManejoDePermisos();
 
         }
 
-        private void LoadUserData() 
+        private void LoadUserData()
         {
-            lblUser.Text = UserLoginCache.nombre+ ", " +UserLoginCache.apellido;
-            lblCargo.Text = UserLoginCache.cargo;
+            Cargo cargo = new Cargo();
+            lblUser.Text = UserLoginCache.nombre + ", " + UserLoginCache.apellido;
+            lblCargo.Text = cargo.ListingCargosPersonalId(UserLoginCache.cargo).NombreCargo;
         }
+
+
+        //PERMISOS
+        void ManejoDePermisos()
+        { Cargo cargoUsuario = new Cargo();
+            cargoUsuario = cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
+            if (CargoEstructura.Recepcionista == cargoUsuario.NombreCargo) 
+            {
+                btnUsuarios.Enabled = false;
+            }
+
+            if (CargoEstructura.AgenteDeConsulta == cargoUsuario.NombreCargo)
+            {
+                btnUsuarios.Enabled = false;
+                btnInstructores.Enabled = false;
+                btnAltaEditarInstructor.Enabled = false;
+            }
+
+
+        }
+
         //METODO PARA MOSTRAR FORMULARIO DE LOGO Al CERRAR OTROS FORM ----------------------------------------------------------
         private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
         {

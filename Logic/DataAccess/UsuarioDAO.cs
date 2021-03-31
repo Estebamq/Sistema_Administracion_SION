@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using Logic.Cache;
+using Logic.Domain;
 
 namespace Logic.DataAccess
 {
@@ -38,10 +39,11 @@ namespace Logic.DataAccess
                         while (reader.Read()) 
                         {
                             UserLoginCache.idUser = reader.GetInt32(0);
+                            UserLoginCache.nombreUsuario = reader.GetString(1);
                             UserLoginCache.nombre = reader.GetString(3);
                             UserLoginCache.apellido = reader.GetString(4);
                             UserLoginCache.email = reader.GetString(5);
-                            UserLoginCache.cargo = reader.GetString(6);
+                            UserLoginCache.cargo = reader.GetInt32(6);
                         }
                         respuesta = true;
                     }
@@ -80,10 +82,80 @@ namespace Logic.DataAccess
             }
 
         }
-       
+
+        //BUSCAR CARGO DEL USUARIO POR NOMBRE DE CARGO
+        public List<Cargo> ListCargoPersonal(string search)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_searchCargoPersonal", connection))
+                {
+                    SqlDataReader readRows;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
 
 
+                    cmd.Parameters.AddWithValue("@search", search);
 
+                    readRows = cmd.ExecuteReader();
+
+                    List<Cargo> listing = new List<Cargo>();
+
+                    while (readRows.Read())
+                    {
+                        listing.Add(new Cargo
+
+                        {
+                            IdCargo = readRows.GetInt32(0),
+                            NombreCargo = readRows.GetString(1),
+
+                        });
+                    }
+
+
+                    readRows.Close();
+
+                    return listing;
+                }
+            }
+        }
+        ////BUSCAR CARGO DEL USUARIO POR ID DE CARGO
+        public Cargo ListCargoPersonalId(int search)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_searchCargoPersonalID", connection))
+                {
+                    SqlDataReader reader;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.AddWithValue("@search", search);
+
+                    reader = cmd.ExecuteReader();
+
+                   Cargo cargo = new Cargo();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+
+                            cargo.IdCargo = reader.GetInt32(0);
+                            cargo.NombreCargo = reader.GetString(1);
+
+
+                        }
+                    }
+
+                    
+
+                    return cargo;
+                }
+            }
+        }
 
     }
 

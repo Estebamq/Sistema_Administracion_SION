@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
 using Logic.Domain;
+using Logic.Cache;
 using COMPLETE_FLAT_UI.Presentaciones;
 using COMPLETE_FLAT_UI.Presentaciones.alumno;
 
@@ -23,8 +24,30 @@ namespace COMPLETE_FLAT_UI
             InitializeComponent();
             ShowAlumnos();
             HideWidthColumns();
+            
+        }
+        private void FormListaAlumnos_Load(object sender, EventArgs e)
+        {
+            ManejoDePermisos();
         }
 
+
+        //PERMISOS
+        void ManejoDePermisos()
+        {
+            Cargo cargoUsuario = new Cargo();
+            cargoUsuario = cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
+           
+
+            if (CargoEstructura.AgenteDeConsulta == cargoUsuario.NombreCargo)
+            {
+                btnNuevo.Enabled = false;
+                btnEditar.Enabled = false;
+                btnBajaAlumno.Enabled = false;
+            }
+
+
+        }
 
         public void HideWidthColumns()
         {
@@ -269,6 +292,6 @@ namespace COMPLETE_FLAT_UI
             }
         }
 
-       
+        
     }
 }

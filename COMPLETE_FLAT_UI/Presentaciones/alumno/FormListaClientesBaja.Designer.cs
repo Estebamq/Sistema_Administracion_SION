@@ -359,6 +359,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.Controls.Add(this.label1);
             this.Name = "FormListaClientesBaja";
             this.Text = "FormListaClientesBaja";
+            this.Load += new System.EventHandler(this.FormListaClientesBaja_Load);
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnosBaja)).EndInit();

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
 using Logic.Domain;
+using Logic.Cache;
+
 
 namespace COMPLETE_FLAT_UI.Presentaciones.alumno
 {
@@ -23,8 +25,35 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             
             ShowAlumnosBaja();
             HideWidthColumns();
+           
 
         }
+        private void FormListaClientesBaja_Load(object sender, EventArgs e)
+        {
+            ManejoDePermisos();
+
+        }
+
+        //PERMISOS
+        void ManejoDePermisos()
+        {
+            Cargo cargoUsuario = new Cargo();
+            cargoUsuario = cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
+            if (CargoEstructura.Recepcionista == cargoUsuario.NombreCargo)
+            {
+                btnEliminarAlumno.Enabled = false;
+            }
+
+            if (CargoEstructura.AgenteDeConsulta == cargoUsuario.NombreCargo)
+            {
+               
+                btnEliminarAlumno.Enabled = false;
+                btnEditarBajaAlumno.Enabled = false;
+            }
+
+
+        }
+
         public void HideWidthColumns()
         {
             dataGridViewAlumnosBaja.Columns[7].Visible = false;
@@ -112,6 +141,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.Close();
         }
 
-       
+        
     }
 }

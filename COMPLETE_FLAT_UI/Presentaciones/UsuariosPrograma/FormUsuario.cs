@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Logic.Domain;
+using Logic.Cache;
+using COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma;
 
 namespace COMPLETE_FLAT_UI.Presentaciones
 {
@@ -17,6 +19,32 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         public FormUsuario()
         {
             InitializeComponent();
+        }
+        private void FormUsuario_Load(object sender, EventArgs e)
+        {
+            LoadDataUser();
+            ListCargoPersonal();
+        }
+
+        private void LoadDataUser() 
+        {
+            Cargo cargoUsuario = new Cargo();
+            cargoUsuario= cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
+            lblInputnombreUsuario.Text = UserLoginCache.nombreUsuario;
+            lblinputNombre.Text =UserLoginCache.nombre;
+            lblInputApellido.Text = UserLoginCache.apellido;
+            lblInputCargo.Text = cargoUsuario.NombreCargo;
+            lblInputEmail.Text = UserLoginCache.email;
+
+
+        }
+
+        public void ListCargoPersonal()
+        {
+            Cargo cargoPersonal = new Cargo();
+            cmbBoxCargoPersonal.DataSource =cargoPersonal.ListingCargosPersonal("");
+            cmbBoxCargoPersonal.ValueMember = "IdCargo";
+            cmbBoxCargoPersonal.DisplayMember = "NombreCargo";
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -78,6 +106,14 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private void button2_Click(object sender, EventArgs e)
         {
             panelEditarPerfil.Visible = false;
+        }
+
+        //BOTONES CREAR: NUEVO USUARIO, NUEVO METODO DE PAGO
+
+        private void btnCrearNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            FormNuevoUsuario frm = new FormNuevoUsuario();
+            frm.ShowDialog();
         }
     }
 }

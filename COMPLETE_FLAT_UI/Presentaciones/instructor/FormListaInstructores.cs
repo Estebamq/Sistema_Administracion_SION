@@ -28,8 +28,6 @@ namespace COMPLETE_FLAT_UI
             HideWidthColumns();
         }
 
-      
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -227,5 +225,7 @@ namespace COMPLETE_FLAT_UI
             }
 
         }
+
+       
     }
 }

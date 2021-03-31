@@ -385,6 +385,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormListaInstructores";
             this.Text = "FormListarInstructores";
+           
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).EndInit();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();

@@ -27,9 +27,7 @@ namespace Logic.Domain
         public bool GeneratingBackUp() 
         {
             return usuarioDAO.GenerateBackUp();
-        }
-
-        
+        }  
 
     }
 }
