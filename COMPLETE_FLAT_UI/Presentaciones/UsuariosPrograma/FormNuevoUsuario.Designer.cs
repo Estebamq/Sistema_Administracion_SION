@@ -280,6 +280,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             // dataGridViewUsuariosActivos
             // 
             this.dataGridViewUsuariosActivos.AllowUserToAddRows = false;
+            this.dataGridViewUsuariosActivos.AllowUserToDeleteRows = false;
             this.dataGridViewUsuariosActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -309,6 +310,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.dataGridViewUsuariosActivos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewUsuariosActivos.Location = new System.Drawing.Point(334, 108);
             this.dataGridViewUsuariosActivos.Name = "dataGridViewUsuariosActivos";
+            this.dataGridViewUsuariosActivos.ReadOnly = true;
             this.dataGridViewUsuariosActivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -320,7 +322,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.dataGridViewUsuariosActivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewUsuariosActivos.Size = new System.Drawing.Size(625, 290);
             this.dataGridViewUsuariosActivos.TabIndex = 78;
-         
             // 
             // btnEliminar
             // 

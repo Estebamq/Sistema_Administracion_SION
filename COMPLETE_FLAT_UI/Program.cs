@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMPLETE_FLAT_UI.Presentaciones;
 
 namespace COMPLETE_FLAT_UI
 {
@@ -14,7 +15,7 @@ namespace COMPLETE_FLAT_UI
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Elijo el formulario que inicia primero
             Application.Run(new FormLogin());

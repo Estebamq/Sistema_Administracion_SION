@@ -143,6 +143,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // dataGridViewVencimientoSeguros
             // 
             this.dataGridViewVencimientoSeguros.AllowUserToAddRows = false;
+            this.dataGridViewVencimientoSeguros.AllowUserToDeleteRows = false;
             this.dataGridViewVencimientoSeguros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -172,6 +173,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewVencimientoSeguros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewVencimientoSeguros.Location = new System.Drawing.Point(599, 39);
             this.dataGridViewVencimientoSeguros.Name = "dataGridViewVencimientoSeguros";
+            this.dataGridViewVencimientoSeguros.ReadOnly = true;
             this.dataGridViewVencimientoSeguros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -417,6 +419,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // dataGridViewClasesDeHoy
             // 
             this.dataGridViewClasesDeHoy.AllowUserToAddRows = false;
+            this.dataGridViewClasesDeHoy.AllowUserToDeleteRows = false;
             this.dataGridViewClasesDeHoy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -446,6 +449,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewClasesDeHoy.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewClasesDeHoy.Location = new System.Drawing.Point(404, 74);
             this.dataGridViewClasesDeHoy.Name = "dataGridViewClasesDeHoy";
+            this.dataGridViewClasesDeHoy.ReadOnly = true;
             this.dataGridViewClasesDeHoy.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -463,6 +467,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // dataGridViewCertificados
             // 
             this.dataGridViewCertificados.AllowUserToAddRows = false;
+            this.dataGridViewCertificados.AllowUserToDeleteRows = false;
             this.dataGridViewCertificados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewCertificados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -491,6 +496,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewCertificados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewCertificados.Location = new System.Drawing.Point(22, 74);
             this.dataGridViewCertificados.Name = "dataGridViewCertificados";
+            this.dataGridViewCertificados.ReadOnly = true;
             this.dataGridViewCertificados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));

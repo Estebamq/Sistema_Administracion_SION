@@ -73,6 +73,7 @@
             // dataGridViewAlumnos
             // 
             this.dataGridViewAlumnos.AllowUserToAddRows = false;
+            this.dataGridViewAlumnos.AllowUserToDeleteRows = false;
             this.dataGridViewAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -102,6 +103,7 @@
             this.dataGridViewAlumnos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewAlumnos.Location = new System.Drawing.Point(12, 56);
             this.dataGridViewAlumnos.Name = "dataGridViewAlumnos";
+            this.dataGridViewAlumnos.ReadOnly = true;
             this.dataGridViewAlumnos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));

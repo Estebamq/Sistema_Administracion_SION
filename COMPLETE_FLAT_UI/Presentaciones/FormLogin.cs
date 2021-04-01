@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic.Domain;
+using COMPLETE_FLAT_UI.Presentaciones;
 
 namespace COMPLETE_FLAT_UI
 {
@@ -83,6 +84,9 @@ namespace COMPLETE_FLAT_UI
                     bool loginValido = usuario.LoginUsuario(txtUsuario.Text,txtPass.Text);
                     if (loginValido == true) 
                     {
+                        this.Hide();
+                        FormBienvenida frmBienvenida = new FormBienvenida();
+                        frmBienvenida.ShowDialog();
                         FormMenuPrincipal menuPrincipal = new FormMenuPrincipal();
                         menuPrincipal.Show();
                         menuPrincipal.FormClosed += Logout;
@@ -92,6 +96,7 @@ namespace COMPLETE_FLAT_UI
                     {
                         MsjError("Nombre de Usuario o Contraseña incorrecto. \n Intentelo nuevamente");
                         txtPass.Text= "CONTRASEÑA";
+                        txtPass.PasswordChar = '\0';
                         txtUsuario.Focus();
                     }
                         

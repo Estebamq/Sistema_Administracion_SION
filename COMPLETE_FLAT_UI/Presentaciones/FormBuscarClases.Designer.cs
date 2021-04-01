@@ -146,6 +146,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // dataGridViewPersonas
             // 
             this.dataGridViewPersonas.AllowUserToAddRows = false;
+            this.dataGridViewPersonas.AllowUserToDeleteRows = false;
             this.dataGridViewPersonas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -175,6 +176,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewPersonas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewPersonas.Location = new System.Drawing.Point(10, 32);
             this.dataGridViewPersonas.Name = "dataGridViewPersonas";
+            this.dataGridViewPersonas.ReadOnly = true;
             this.dataGridViewPersonas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -267,6 +269,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // dataGridViewInformacionDato
             // 
             this.dataGridViewInformacionDato.AllowUserToAddRows = false;
+            this.dataGridViewInformacionDato.AllowUserToDeleteRows = false;
             this.dataGridViewInformacionDato.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -296,6 +299,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dataGridViewInformacionDato.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewInformacionDato.Location = new System.Drawing.Point(10, 127);
             this.dataGridViewInformacionDato.Name = "dataGridViewInformacionDato";
+            this.dataGridViewInformacionDato.ReadOnly = true;
             this.dataGridViewInformacionDato.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));

@@ -305,6 +305,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             // dataGridViewClasesAsistencia
             // 
             this.dataGridViewClasesAsistencia.AllowUserToAddRows = false;
+            this.dataGridViewClasesAsistencia.AllowUserToDeleteRows = false;
             this.dataGridViewClasesAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -334,6 +335,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.dataGridViewClasesAsistencia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewClasesAsistencia.Location = new System.Drawing.Point(17, 187);
             this.dataGridViewClasesAsistencia.Name = "dataGridViewClasesAsistencia";
+            this.dataGridViewClasesAsistencia.ReadOnly = true;
             this.dataGridViewClasesAsistencia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));

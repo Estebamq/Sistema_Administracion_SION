@@ -68,52 +68,49 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             Usuario usuario = new Usuario();
             try
             {
-                usuario.NombreUsuario = txtBoxNombreUsuario.Text;
-                if (txtBoxContraseña.Text == txtBoxConfirmarContraseña.Text)
+                
+                if (!validar(this))//si esta no vacio los textbox del formulario agrego un nuevo usuario
                 {
-                    usuario.Contraseña = txtBoxContraseña.Text;               
-                    usuario.Nombre = txtBoxNombre.Text;
-                    usuario.Apellido = txtBoxApellido.Text;
-                    usuario.Email = txtBoxEmail.Text;
-                    usuario.IdCargo = Convert.ToInt32(cmbBoxCargoPersonal.SelectedValue);
-                    if (usuario.CreatingUsuario(usuario)) 
+                    usuario.NombreUsuario = txtBoxNombreUsuario.Text;
+                    if (txtBoxContraseña.Text == txtBoxConfirmarContraseña.Text)
                     {
-                        FormInformacion frmError = new FormInformacion("EXISTE EL NOMBRE DE USUARIO");
-                        frmError.ShowDialog();
+                        usuario.Contraseña = txtBoxContraseña.Text;
+                        usuario.Nombre = txtBoxNombre.Text;
+                        usuario.Apellido = txtBoxApellido.Text;
+                        usuario.Email = txtBoxEmail.Text;
+                        usuario.IdCargo = Convert.ToInt32(cmbBoxCargoPersonal.SelectedValue);
+                        if (usuario.CreatingUsuario(usuario))
+                        {
+                            FormInformacion frmError = new FormInformacion("EXISTE EL NOMBRE DE USUARIO");
+                            frmError.ShowDialog();
+                        }
+                        else
+                        {
+                            FormConfirmacion frmConfirm = new FormConfirmacion("SE CREO CON EXITO");
+                            frmConfirm.ShowDialog();
+                            ClearDatos();
+                            ShowUsuariosActivos();
+                        }
                     }
-                    else 
+                    else
                     {
-                        FormConfirmacion frmConfirm = new FormConfirmacion("SE CREO CON EXITO");
-                        frmConfirm.ShowDialog();
-                        ClearDatos();
-                        ShowUsuariosActivos();
+                        FormInformacion frmError = new FormInformacion("CONTRASEÑAS NO COINCIDEN");
+                        frmError.ShowDialog();
                     }
                 }
                 else 
                 {
-                    FormInformacion frmError = new FormInformacion("CONTRASEÑAS NO COINCIDEN");
+                    FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
                     frmError.ShowDialog();
                 }
-
             }
+
             catch (Exception)
             {
                 FormInformacion frmError = new FormInformacion("ERROR");
                 frmError.ShowDialog();
 
             }
-        }
-
-        //Limpia los datos del txtBox
-        private void ClearDatos() 
-        {
-            txtBoxNombreUsuario.Clear();
-            txtBoxContraseña.Clear();
-            txtBoxConfirmarContraseña.Clear();
-            txtBoxNombre.Clear();
-            txtBoxApellido.Clear();
-            txtBoxEmail.Clear();
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -126,7 +123,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
         {
            
                 Usuario usuario = new Usuario();
-                if (dataGridViewUsuariosActivos.SelectedRows.Count > 0)
+                if (dataGridViewUsuariosActivos.SelectedRows.Count > 0 )
                 {
                     usuario.NombreUsuario = dataGridViewUsuariosActivos.CurrentRow.Cells[1].Value.ToString();
                     usuario.UserId = Convert.ToInt32(dataGridViewUsuariosActivos.CurrentRow.Cells[0].Value.ToString());
@@ -158,6 +155,34 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
                 }
         }
 
-                
+
+        //Limpia los datos del txtBox
+        private void ClearDatos()
+        {
+            txtBoxNombreUsuario.Clear();
+            txtBoxContraseña.Clear();
+            txtBoxConfirmarContraseña.Clear();
+            txtBoxNombre.Clear();
+            txtBoxApellido.Clear();
+            txtBoxEmail.Clear();
+
+        }
+
+        //valido que ingrese datos en el formulario
+        private bool validar(Form formulario)
+        {
+            bool vacio = false;
+            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+            {
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
+                {
+                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
+                }
+            }
+
+            return vacio;
+        }
+
+
     }
 }

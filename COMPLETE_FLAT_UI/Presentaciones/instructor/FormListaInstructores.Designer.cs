@@ -136,6 +136,7 @@
             // dataGridViewInstructores
             // 
             this.dataGridViewInstructores.AllowUserToAddRows = false;
+            this.dataGridViewInstructores.AllowUserToDeleteRows = false;
             this.dataGridViewInstructores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -165,6 +166,7 @@
             this.dataGridViewInstructores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewInstructores.Location = new System.Drawing.Point(12, 62);
             this.dataGridViewInstructores.Name = "dataGridViewInstructores";
+            this.dataGridViewInstructores.ReadOnly = true;
             this.dataGridViewInstructores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -385,7 +387,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormListaInstructores";
             this.Text = "FormListarInstructores";
-           
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).EndInit();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();

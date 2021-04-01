@@ -280,6 +280,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             // dataGridViewAlumnosBaja
             // 
             this.dataGridViewAlumnosBaja.AllowUserToAddRows = false;
+            this.dataGridViewAlumnosBaja.AllowUserToDeleteRows = false;
             this.dataGridViewAlumnosBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -309,6 +310,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.dataGridViewAlumnosBaja.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridViewAlumnosBaja.Location = new System.Drawing.Point(12, 56);
             this.dataGridViewAlumnosBaja.Name = "dataGridViewAlumnosBaja";
+            this.dataGridViewAlumnosBaja.ReadOnly = true;
             this.dataGridViewAlumnosBaja.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));

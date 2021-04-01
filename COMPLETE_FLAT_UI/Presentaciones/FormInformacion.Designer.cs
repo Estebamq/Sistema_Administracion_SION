@@ -48,7 +48,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 271);
+            this.panel1.Size = new System.Drawing.Size(397, 271);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -57,7 +57,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 205);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 66);
+            this.panel2.Size = new System.Drawing.Size(397, 66);
             this.panel2.TabIndex = 2;
             // 
             // lblMensaje
@@ -69,7 +69,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMensaje.Location = new System.Drawing.Point(0, 16);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(318, 35);
+            this.lblMensaje.Size = new System.Drawing.Size(397, 35);
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Mensaje";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,7 +77,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // pictureBox1
             // 
             this.pictureBox1.Image = global::COMPLETE_FLAT_UI.Properties.Resources.Alerta;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(248, 157);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,7 +91,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnOk.Location = new System.Drawing.Point(35, 298);
+            this.btnOk.Location = new System.Drawing.Point(76, 303);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(108, 33);
             this.btnOk.TabIndex = 1;
@@ -106,7 +106,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCancelar.Location = new System.Drawing.Point(170, 298);
+            this.btnCancelar.Location = new System.Drawing.Point(211, 303);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(113, 33);
             this.btnCancelar.TabIndex = 2;
@@ -114,17 +114,17 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // InformacionView
+            // FormInformacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(318, 372);
+            this.ClientSize = new System.Drawing.Size(397, 372);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InformacionView";
+            this.Name = "FormInformacion";
             this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformatioView";

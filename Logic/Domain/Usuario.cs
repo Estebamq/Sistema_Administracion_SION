@@ -41,8 +41,18 @@ namespace Logic.Domain
         #endregion
 
         #region PROPIEDADES
-        public int UserId { get => userId; set => userId = value; }
-        public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
+        public int UserId { get => userId; set => userId =  value; }
+        public string NombreUsuario
+        {
+            get { return nombreUsuario; }
+
+            set
+            {
+               
+                    nombreUsuario = value;
+                
+            }
+        }
         public string Contraseña { get => contraseña; set => contraseña = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
