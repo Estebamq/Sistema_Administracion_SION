@@ -297,6 +297,12 @@
     <Compile Include="Presentaciones\FormPlanillas.Designer.cs">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentaciones\UsuariosPrograma\FormMediosDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\UsuariosPrograma\FormMediosDePago.Designer.cs">
+      <DependentUpon>FormMediosDePago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentaciones\UsuariosPrograma\FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -394,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\FormPlanillas.resx">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\UsuariosPrograma\FormMediosDePago.resx">
+      <DependentUpon>FormMediosDePago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\UsuariosPrograma\FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>

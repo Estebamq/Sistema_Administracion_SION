@@ -136,18 +136,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             panelEditarPerfil.Visible = true;
         }
 
-
-
-        //BOTONES CREAR: NUEVO USUARIO, NUEVO METODO DE PAGO
-
-        private void btnCrearNuevoUsuario_Click(object sender, EventArgs e)
-        {
-            FormNuevoUsuario frm = new FormNuevoUsuario();
-            frm.ShowDialog();
-        }
-
-       
-
+        //Editar usuario
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
@@ -202,6 +191,8 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             Reset();
         }
 
+
+        //Validar texbox
         bool validarTextBoxs()
         {
             foreach (Control item in panelEditarPerfil.Controls)
@@ -223,6 +214,18 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             return true;
         }
 
+        //BOTONES CREAR: NUEVO USUARIO, NUEVO METODO DE PAGO
 
+        private void btnCrearNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            FormNuevoUsuario frm = new FormNuevoUsuario();
+            frm.ShowDialog();
+        }
+
+        private void btnCrearNuevoMedioDePago_Click(object sender, EventArgs e)
+        {
+            FormMediosDePago frm = new FormMediosDePago();
+            frm.ShowDialog();
+        }
     }
 }

@@ -431,6 +431,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCrearNuevoMedioDePago.TabIndex = 40;
             this.btnCrearNuevoMedioDePago.Text = "CREAR";
             this.btnCrearNuevoMedioDePago.UseVisualStyleBackColor = false;
+            this.btnCrearNuevoMedioDePago.Click += new System.EventHandler(this.btnCrearNuevoMedioDePago_Click);
             // 
             // label3
             // 

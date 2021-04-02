@@ -41,6 +41,21 @@ namespace Logic.Domain
         {
             return metodosDePagoDAO.MetodosDePagoList(search);
         }
+
+        public List<MetodosDePago> ListingTodosLosMetodosDePago()
+        {
+            return metodosDePagoDAO.MetodosDePagoTodos();
+        }
+
+        public void CreatingMedioDePago(string medioDePago) 
+        {
+            metodosDePagoDAO.CreateMedioDePago(medioDePago);
+        }
+
+        public void DeletingMedioDePago(int idMedioDePago)
+        {
+            metodosDePagoDAO.DeleteMedioDePago(idMedioDePago);
+        }
         #endregion
     }
 }
