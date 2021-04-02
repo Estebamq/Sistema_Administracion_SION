@@ -35,6 +35,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarClases));
             this.btnWhatsapp = new System.Windows.Forms.Button();
             this.btnInstagram = new System.Windows.Forms.Button();
             this.btnFacebook = new System.Windows.Forms.Button();
@@ -82,7 +83,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnWhatsapp.Location = new System.Drawing.Point(410, 29);
             this.btnWhatsapp.Name = "btnWhatsapp";
             this.btnWhatsapp.Size = new System.Drawing.Size(100, 30);
-            this.btnWhatsapp.TabIndex = 12;
+            this.btnWhatsapp.TabIndex = 3;
             this.btnWhatsapp.Text = "WhatsApp";
             this.btnWhatsapp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnWhatsapp.UseVisualStyleBackColor = false;
@@ -103,7 +104,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnInstagram.Location = new System.Drawing.Point(288, 29);
             this.btnInstagram.Name = "btnInstagram";
             this.btnInstagram.Size = new System.Drawing.Size(100, 30);
-            this.btnInstagram.TabIndex = 11;
+            this.btnInstagram.TabIndex = 12;
             this.btnInstagram.Text = "Instagram";
             this.btnInstagram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInstagram.UseVisualStyleBackColor = false;
@@ -124,7 +125,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnFacebook.Location = new System.Drawing.Point(527, 29);
             this.btnFacebook.Name = "btnFacebook";
             this.btnFacebook.Size = new System.Drawing.Size(100, 30);
-            this.btnFacebook.TabIndex = 10;
+            this.btnFacebook.TabIndex = 4;
             this.btnFacebook.Text = "Facebook";
             this.btnFacebook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFacebook.UseVisualStyleBackColor = false;
@@ -139,7 +140,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.BtnCerrar.Location = new System.Drawing.Point(3, 23);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(43, 43);
-            this.BtnCerrar.TabIndex = 9;
+            this.BtnCerrar.TabIndex = 1;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -327,7 +328,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarAlumno.Location = new System.Drawing.Point(215, 59);
             this.btnBuscarAlumno.Name = "btnBuscarAlumno";
             this.btnBuscarAlumno.Size = new System.Drawing.Size(100, 30);
-            this.btnBuscarAlumno.TabIndex = 14;
+            this.btnBuscarAlumno.TabIndex = 6;
             this.btnBuscarAlumno.Text = "Alumno";
             this.btnBuscarAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarAlumno.UseVisualStyleBackColor = false;
@@ -338,7 +339,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(257, 35);
+            this.label2.Location = new System.Drawing.Point(249, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 13;
@@ -359,7 +360,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarInstructor.Location = new System.Drawing.Point(332, 59);
             this.btnBuscarInstructor.Name = "btnBuscarInstructor";
             this.btnBuscarInstructor.Size = new System.Drawing.Size(100, 30);
-            this.btnBuscarInstructor.TabIndex = 13;
+            this.btnBuscarInstructor.TabIndex = 7;
             this.btnBuscarInstructor.Text = "Instructor";
             this.btnBuscarInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarInstructor.UseVisualStyleBackColor = false;
@@ -374,7 +375,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.txtSearchPersonaId.Multiline = true;
             this.txtSearchPersonaId.Name = "txtSearchPersonaId";
             this.txtSearchPersonaId.Size = new System.Drawing.Size(69, 23);
-            this.txtSearchPersonaId.TabIndex = 20;
+            this.txtSearchPersonaId.TabIndex = 5;
             // 
             // lblId
             // 
@@ -438,6 +439,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.ClientSize = new System.Drawing.Size(1122, 526);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscarClases";
             this.Text = "PlanillasView";
             this.Load += new System.EventHandler(this.FormBuscarClases_Load);

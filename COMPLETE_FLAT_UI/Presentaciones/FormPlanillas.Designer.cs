@@ -37,6 +37,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlanillas));
             this.InstructorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -106,10 +107,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Image = global::COMPLETE_FLAT_UI.Properties.Resources.Close;
-            this.BtnCerrar.Location = new System.Drawing.Point(12, 13);
+            this.BtnCerrar.Location = new System.Drawing.Point(11, 8);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(43, 43);
-            this.BtnCerrar.TabIndex = 11;
+            this.BtnCerrar.TabIndex = 1;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -204,7 +205,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.dateTimePickerPlanillas.Location = new System.Drawing.Point(72, 422);
             this.dateTimePickerPlanillas.Name = "dateTimePickerPlanillas";
             this.dateTimePickerPlanillas.Size = new System.Drawing.Size(224, 20);
-            this.dateTimePickerPlanillas.TabIndex = 40;
+            this.dateTimePickerPlanillas.TabIndex = 3;
             // 
             // btnBuscarClasesInstructor
             // 
@@ -221,7 +222,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnBuscarClasesInstructor.Location = new System.Drawing.Point(72, 372);
             this.btnBuscarClasesInstructor.Name = "btnBuscarClasesInstructor";
             this.btnBuscarClasesInstructor.Size = new System.Drawing.Size(224, 30);
-            this.btnBuscarClasesInstructor.TabIndex = 31;
+            this.btnBuscarClasesInstructor.TabIndex = 2;
             this.btnBuscarClasesInstructor.Text = "GENERAR PLANILLA PARA MAÑANA";
             this.btnBuscarClasesInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarClasesInstructor.UseVisualStyleBackColor = false;
@@ -253,7 +254,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnGenerarPlanillaPorFecha.Location = new System.Drawing.Point(72, 458);
             this.btnGenerarPlanillaPorFecha.Name = "btnGenerarPlanillaPorFecha";
             this.btnGenerarPlanillaPorFecha.Size = new System.Drawing.Size(224, 30);
-            this.btnGenerarPlanillaPorFecha.TabIndex = 30;
+            this.btnGenerarPlanillaPorFecha.TabIndex = 4;
             this.btnGenerarPlanillaPorFecha.Text = "GENERAR PLANILLA POR FECHA";
             this.btnGenerarPlanillaPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenerarPlanillaPorFecha.UseVisualStyleBackColor = false;
@@ -290,6 +291,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.ClientSize = new System.Drawing.Size(1168, 547);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPlanillas";
             this.Text = "FormPlanillas";
             this.Load += new System.EventHandler(this.FormPlanillas_Load);

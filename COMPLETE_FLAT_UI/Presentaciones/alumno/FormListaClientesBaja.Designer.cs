@@ -32,6 +32,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaClientesBaja));
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,7 +108,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.txtSearchAlumnoDni.Multiline = true;
             this.txtSearchAlumnoDni.Name = "txtSearchAlumnoDni";
             this.txtSearchAlumnoDni.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchAlumnoDni.TabIndex = 18;
+            this.txtSearchAlumnoDni.TabIndex = 6;
             // 
             // txtSearchAlumnoId
             // 
@@ -118,7 +119,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.txtSearchAlumnoId.Multiline = true;
             this.txtSearchAlumnoId.Name = "txtSearchAlumnoId";
             this.txtSearchAlumnoId.Size = new System.Drawing.Size(54, 23);
-            this.txtSearchAlumnoId.TabIndex = 11;
+            this.txtSearchAlumnoId.TabIndex = 3;
             // 
             // lblApellido
             // 
@@ -140,7 +141,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.txtSearchAlumnoNombre.Multiline = true;
             this.txtSearchAlumnoNombre.Name = "txtSearchAlumnoNombre";
             this.txtSearchAlumnoNombre.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchAlumnoNombre.TabIndex = 12;
+            this.txtSearchAlumnoNombre.TabIndex = 4;
             // 
             // lblNombre
             // 
@@ -162,7 +163,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.txtSearchAlumnoApellido.Multiline = true;
             this.txtSearchAlumnoApellido.Name = "txtSearchAlumnoApellido";
             this.txtSearchAlumnoApellido.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchAlumnoApellido.TabIndex = 13;
+            this.txtSearchAlumnoApellido.TabIndex = 5;
             // 
             // label3
             // 
@@ -250,7 +251,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.btnEliminarAlumno.Location = new System.Drawing.Point(749, 92);
             this.btnEliminarAlumno.Name = "btnEliminarAlumno";
             this.btnEliminarAlumno.Size = new System.Drawing.Size(100, 30);
-            this.btnEliminarAlumno.TabIndex = 25;
+            this.btnEliminarAlumno.TabIndex = 2;
             this.btnEliminarAlumno.Text = "ELIMINAR";
             this.btnEliminarAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarAlumno.UseVisualStyleBackColor = false;
@@ -271,7 +272,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.btnEditarBajaAlumno.Location = new System.Drawing.Point(749, 56);
             this.btnEditarBajaAlumno.Name = "btnEditarBajaAlumno";
             this.btnEditarBajaAlumno.Size = new System.Drawing.Size(100, 30);
-            this.btnEditarBajaAlumno.TabIndex = 24;
+            this.btnEditarBajaAlumno.TabIndex = 1;
             this.btnEditarBajaAlumno.Text = "Editar";
             this.btnEditarBajaAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarBajaAlumno.UseVisualStyleBackColor = false;
@@ -343,7 +344,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.BtnCerrar.Location = new System.Drawing.Point(0, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(43, 43);
-            this.BtnCerrar.TabIndex = 23;
+            this.BtnCerrar.TabIndex = 7;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -359,6 +360,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.alumno
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.dataGridViewAlumnosBaja);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaClientesBaja";
             this.Text = "FormListaClientesBaja";
             this.Load += new System.EventHandler(this.FormListaClientesBaja_Load);

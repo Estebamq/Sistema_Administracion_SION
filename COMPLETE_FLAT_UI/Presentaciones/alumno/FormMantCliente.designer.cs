@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMantCliente));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(479, 38);
+            this.BarraTitulo.Size = new System.Drawing.Size(479, 43);
             this.BarraTitulo.TabIndex = 2;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -73,7 +74,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(152, 9);
+            this.label6.Location = new System.Drawing.Point(152, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 17);
             this.label6.TabIndex = 15;
@@ -89,7 +90,7 @@
             this.BtnCerrar.Location = new System.Drawing.Point(441, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(38, 38);
-            this.BtnCerrar.TabIndex = 4;
+            this.BtnCerrar.TabIndex = 12;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -99,7 +100,7 @@
             this.txtNombre.Location = new System.Drawing.Point(179, 71);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(232, 23);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
@@ -107,7 +108,7 @@
             this.txtApellido.Location = new System.Drawing.Point(179, 100);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(232, 23);
-            this.txtApellido.TabIndex = 4;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtDni
             // 
@@ -115,7 +116,7 @@
             this.txtDni.Location = new System.Drawing.Point(179, 129);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(232, 23);
-            this.txtDni.TabIndex = 5;
+            this.txtDni.TabIndex = 3;
             // 
             // txtTelefono
             // 
@@ -123,7 +124,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(179, 158);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(232, 23);
-            this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.TabIndex = 4;
             // 
             // label2
             // 
@@ -179,14 +180,14 @@
             this.btnGuarda.Location = new System.Drawing.Point(100, 465);
             this.btnGuarda.Name = "btnGuarda";
             this.btnGuarda.Size = new System.Drawing.Size(100, 35);
-            this.btnGuarda.TabIndex = 12;
+            this.btnGuarda.TabIndex = 10;
             this.btnGuarda.Text = "Guardar";
             this.btnGuarda.UseVisualStyleBackColor = false;
             this.btnGuarda.Click += new System.EventHandler(this.btnGuarda_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.GrayText;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,7 +195,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(277, 465);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 35);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -205,7 +206,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(179, 187);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(232, 23);
-            this.txtDireccion.TabIndex = 7;
+            this.txtDireccion.TabIndex = 5;
             // 
             // label7
             // 
@@ -224,7 +225,7 @@
             this.txtEmail.Location = new System.Drawing.Point(179, 216);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(232, 23);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 6;
             // 
             // label8
             // 
@@ -266,7 +267,7 @@
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(380, 100);
-            this.txtObservaciones.TabIndex = 11;
+            this.txtObservaciones.TabIndex = 9;
             // 
             // lblId
             // 
@@ -286,7 +287,7 @@
             this.txtId.Location = new System.Drawing.Point(179, 44);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(232, 23);
-            this.txtId.TabIndex = 29;
+            this.txtId.TabIndex = 1;
             this.txtId.Visible = false;
             // 
             // label5
@@ -308,7 +309,7 @@
             this.cmbEstadosAlumnos.Location = new System.Drawing.Point(179, 245);
             this.cmbEstadosAlumnos.Name = "cmbEstadosAlumnos";
             this.cmbEstadosAlumnos.Size = new System.Drawing.Size(232, 21);
-            this.cmbEstadosAlumnos.TabIndex = 9;
+            this.cmbEstadosAlumnos.TabIndex = 7;
             // 
             // dateTimePickerAlumnos
             // 
@@ -316,7 +317,7 @@
             this.dateTimePickerAlumnos.Location = new System.Drawing.Point(179, 280);
             this.dateTimePickerAlumnos.Name = "dateTimePickerAlumnos";
             this.dateTimePickerAlumnos.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerAlumnos.TabIndex = 10;
+            this.dateTimePickerAlumnos.TabIndex = 8;
             this.dateTimePickerAlumnos.Value = new System.DateTime(2021, 2, 18, 0, 0, 0, 0);
             // 
             // FormMantCliente
@@ -349,6 +350,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMantCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormMantCliente";

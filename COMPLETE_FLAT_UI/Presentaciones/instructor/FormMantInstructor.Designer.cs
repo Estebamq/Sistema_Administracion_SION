@@ -29,6 +29,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMantInstructor));
             this.BarraTituloInstructor = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
@@ -115,7 +116,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtPatente.Location = new System.Drawing.Point(178, 301);
             this.txtPatente.Name = "txtPatente";
             this.txtPatente.Size = new System.Drawing.Size(223, 23);
-            this.txtPatente.TabIndex = 35;
+            this.txtPatente.TabIndex = 8;
             // 
             // label8
             // 
@@ -134,7 +135,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtEmail.Location = new System.Drawing.Point(178, 245);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(223, 23);
-            this.txtEmail.TabIndex = 33;
+            this.txtEmail.TabIndex = 6;
             // 
             // label7
             // 
@@ -153,11 +154,11 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtDireccion.Location = new System.Drawing.Point(178, 216);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(223, 23);
-            this.txtDireccion.TabIndex = 32;
+            this.txtDireccion.TabIndex = 5;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,7 +236,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtTelefono.Location = new System.Drawing.Point(178, 187);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(223, 23);
-            this.txtTelefono.TabIndex = 31;
+            this.txtTelefono.TabIndex = 4;
             // 
             // txtDni
             // 
@@ -243,7 +244,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtDni.Location = new System.Drawing.Point(178, 158);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(223, 23);
-            this.txtDni.TabIndex = 30;
+            this.txtDni.TabIndex = 3;
             // 
             // txtApellido
             // 
@@ -251,7 +252,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtApellido.Location = new System.Drawing.Point(178, 129);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(223, 23);
-            this.txtApellido.TabIndex = 29;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtNombre
             // 
@@ -259,7 +260,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtNombre.Location = new System.Drawing.Point(178, 101);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(223, 23);
-            this.txtNombre.TabIndex = 28;
+            this.txtNombre.TabIndex = 1;
             // 
             // label5
             // 
@@ -278,7 +279,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtModeloAuto.Location = new System.Drawing.Point(178, 330);
             this.txtModeloAuto.Name = "txtModeloAuto";
             this.txtModeloAuto.Size = new System.Drawing.Size(223, 23);
-            this.txtModeloAuto.TabIndex = 36;
+            this.txtModeloAuto.TabIndex = 9;
             // 
             // label10
             // 
@@ -297,7 +298,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.dateTimePickerVencimientoSeguro.Location = new System.Drawing.Point(178, 359);
             this.dateTimePickerVencimientoSeguro.Name = "dateTimePickerVencimientoSeguro";
             this.dateTimePickerVencimientoSeguro.Size = new System.Drawing.Size(223, 20);
-            this.dateTimePickerVencimientoSeguro.TabIndex = 37;
+            this.dateTimePickerVencimientoSeguro.TabIndex = 10;
             // 
             // lblId
             // 
@@ -360,7 +361,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.cmbEstadoInstructor.Location = new System.Drawing.Point(178, 274);
             this.cmbEstadoInstructor.Name = "cmbEstadoInstructor";
             this.cmbEstadoInstructor.Size = new System.Drawing.Size(223, 21);
-            this.cmbEstadoInstructor.TabIndex = 54;
+            this.cmbEstadoInstructor.TabIndex = 7;
             // 
             // FormMantInstructor
             // 
@@ -396,6 +397,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.BarraTituloInstructor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMantInstructor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMantInstructor";

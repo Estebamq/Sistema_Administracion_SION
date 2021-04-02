@@ -32,6 +32,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaInstructoresBaja));
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
@@ -107,7 +108,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtSearchInstructorDni.Multiline = true;
             this.txtSearchInstructorDni.Name = "txtSearchInstructorDni";
             this.txtSearchInstructorDni.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchInstructorDni.TabIndex = 18;
+            this.txtSearchInstructorDni.TabIndex = 6;
             // 
             // txtSearchInstructorId
             // 
@@ -118,7 +119,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtSearchInstructorId.Multiline = true;
             this.txtSearchInstructorId.Name = "txtSearchInstructorId";
             this.txtSearchInstructorId.Size = new System.Drawing.Size(54, 23);
-            this.txtSearchInstructorId.TabIndex = 11;
+            this.txtSearchInstructorId.TabIndex = 3;
             // 
             // lblApellido
             // 
@@ -140,7 +141,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtSearchInstructorNombre.Multiline = true;
             this.txtSearchInstructorNombre.Name = "txtSearchInstructorNombre";
             this.txtSearchInstructorNombre.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchInstructorNombre.TabIndex = 12;
+            this.txtSearchInstructorNombre.TabIndex = 4;
             // 
             // lblNombre
             // 
@@ -162,7 +163,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.txtSearchInstructorApellido.Multiline = true;
             this.txtSearchInstructorApellido.Name = "txtSearchInstructorApellido";
             this.txtSearchInstructorApellido.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchInstructorApellido.TabIndex = 13;
+            this.txtSearchInstructorApellido.TabIndex = 5;
             // 
             // label3
             // 
@@ -250,7 +251,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.btnEliminarInstructor.Location = new System.Drawing.Point(798, 109);
             this.btnEliminarInstructor.Name = "btnEliminarInstructor";
             this.btnEliminarInstructor.Size = new System.Drawing.Size(100, 30);
-            this.btnEliminarInstructor.TabIndex = 27;
+            this.btnEliminarInstructor.TabIndex = 2;
             this.btnEliminarInstructor.Text = "ELIMINAR";
             this.btnEliminarInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarInstructor.UseVisualStyleBackColor = false;
@@ -271,7 +272,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.btnEditarInstructorBaja.Location = new System.Drawing.Point(798, 73);
             this.btnEditarInstructorBaja.Name = "btnEditarInstructorBaja";
             this.btnEditarInstructorBaja.Size = new System.Drawing.Size(100, 30);
-            this.btnEditarInstructorBaja.TabIndex = 25;
+            this.btnEditarInstructorBaja.TabIndex = 1;
             this.btnEditarInstructorBaja.Text = "Editar";
             this.btnEditarInstructorBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarInstructorBaja.UseVisualStyleBackColor = false;
@@ -343,7 +344,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.BtnCerrar.Location = new System.Drawing.Point(0, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(43, 43);
-            this.BtnCerrar.TabIndex = 24;
+            this.BtnCerrar.TabIndex = 7;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -359,6 +360,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.dataGridViewInstructoresBaja);
             this.Controls.Add(this.lblInstructoresBaja);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaInstructoresBaja";
             this.Text = "FormInstructoresBaja";
             this.Load += new System.EventHandler(this.FormListaInstructoresBaja_Load);

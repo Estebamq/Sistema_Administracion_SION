@@ -29,6 +29,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario));
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
@@ -111,7 +112,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnGenerar.Location = new System.Drawing.Point(11, 54);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(129, 36);
-            this.btnGenerar.TabIndex = 28;
+            this.btnGenerar.TabIndex = 2;
             this.btnGenerar.Text = "GENERAR";
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
@@ -173,7 +174,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.LinkLabelEditarPass.Location = new System.Drawing.Point(230, 224);
             this.LinkLabelEditarPass.Name = "LinkLabelEditarPass";
             this.LinkLabelEditarPass.Size = new System.Drawing.Size(46, 18);
-            this.LinkLabelEditarPass.TabIndex = 42;
+            this.LinkLabelEditarPass.TabIndex = 24;
             this.LinkLabelEditarPass.TabStop = true;
             this.LinkLabelEditarPass.Text = "Editar";
             this.LinkLabelEditarPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelEditarPass_LinkClicked);
@@ -184,7 +185,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.txtBoxContraseñaActual.Name = "txtBoxContraseñaActual";
             this.txtBoxContraseñaActual.PasswordChar = '●';
             this.txtBoxContraseñaActual.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxContraseñaActual.TabIndex = 52;
+            this.txtBoxContraseñaActual.TabIndex = 27;
             // 
             // txtBoxConfirmarContraseña
             // 
@@ -192,7 +193,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.txtBoxConfirmarContraseña.Name = "txtBoxConfirmarContraseña";
             this.txtBoxConfirmarContraseña.PasswordChar = '●';
             this.txtBoxConfirmarContraseña.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxConfirmarContraseña.TabIndex = 51;
+            this.txtBoxConfirmarContraseña.TabIndex = 26;
             // 
             // txtBoxNuevaContraseña
             // 
@@ -200,7 +201,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.txtBoxNuevaContraseña.Name = "txtBoxNuevaContraseña";
             this.txtBoxNuevaContraseña.PasswordChar = '●';
             this.txtBoxNuevaContraseña.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxNuevaContraseña.TabIndex = 50;
+            this.txtBoxNuevaContraseña.TabIndex = 25;
             // 
             // labelContraseñaActual
             // 
@@ -244,7 +245,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnAceptar.Location = new System.Drawing.Point(156, 428);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(120, 40);
-            this.btnAceptar.TabIndex = 46;
+            this.btnAceptar.TabIndex = 28;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -258,7 +259,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCancelar.Location = new System.Drawing.Point(21, 428);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 40);
-            this.btnCancelar.TabIndex = 41;
+            this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -268,28 +269,28 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.txtBoxEmail.Location = new System.Drawing.Point(21, 201);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxEmail.TabIndex = 45;
+            this.txtBoxEmail.TabIndex = 23;
             // 
             // txtBoxApellido
             // 
             this.txtBoxApellido.Location = new System.Drawing.Point(21, 153);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxApellido.TabIndex = 44;
+            this.txtBoxApellido.TabIndex = 22;
             // 
             // txtBoxNombre
             // 
             this.txtBoxNombre.Location = new System.Drawing.Point(21, 107);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxNombre.TabIndex = 43;
+            this.txtBoxNombre.TabIndex = 21;
             // 
             // txtBoxNombreUsuario
             // 
             this.txtBoxNombreUsuario.Location = new System.Drawing.Point(21, 61);
             this.txtBoxNombreUsuario.Name = "txtBoxNombreUsuario";
             this.txtBoxNombreUsuario.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxNombreUsuario.TabIndex = 42;
+            this.txtBoxNombreUsuario.TabIndex = 20;
             // 
             // labelEmail
             // 
@@ -403,7 +404,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCrearNuevoUsuario.Location = new System.Drawing.Point(182, 52);
             this.btnCrearNuevoUsuario.Name = "btnCrearNuevoUsuario";
             this.btnCrearNuevoUsuario.Size = new System.Drawing.Size(111, 36);
-            this.btnCrearNuevoUsuario.TabIndex = 43;
+            this.btnCrearNuevoUsuario.TabIndex = 3;
             this.btnCrearNuevoUsuario.Text = "CREAR";
             this.btnCrearNuevoUsuario.UseVisualStyleBackColor = false;
             this.btnCrearNuevoUsuario.Click += new System.EventHandler(this.btnCrearNuevoUsuario_Click);
@@ -428,7 +429,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCrearNuevoMedioDePago.Location = new System.Drawing.Point(320, 52);
             this.btnCrearNuevoMedioDePago.Name = "btnCrearNuevoMedioDePago";
             this.btnCrearNuevoMedioDePago.Size = new System.Drawing.Size(111, 36);
-            this.btnCrearNuevoMedioDePago.TabIndex = 40;
+            this.btnCrearNuevoMedioDePago.TabIndex = 4;
             this.btnCrearNuevoMedioDePago.Text = "CREAR";
             this.btnCrearNuevoMedioDePago.UseVisualStyleBackColor = false;
             this.btnCrearNuevoMedioDePago.Click += new System.EventHandler(this.btnCrearNuevoMedioDePago_Click);
@@ -448,11 +449,11 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.linkLblEditar.AutoSize = true;
             this.linkLblEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblEditar.LinkColor = System.Drawing.Color.Turquoise;
+            this.linkLblEditar.LinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLblEditar.Location = new System.Drawing.Point(285, 347);
             this.linkLblEditar.Name = "linkLblEditar";
             this.linkLblEditar.Size = new System.Drawing.Size(46, 18);
-            this.linkLblEditar.TabIndex = 40;
+            this.linkLblEditar.TabIndex = 1;
             this.linkLblEditar.TabStop = true;
             this.linkLblEditar.Text = "Editar";
             this.linkLblEditar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblEditar_LinkClicked);
@@ -472,7 +473,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.ForeColor = System.Drawing.Color.Turquoise;
             this.lblEmail.Location = new System.Drawing.Point(284, 282);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 24);
@@ -494,7 +495,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.ForeColor = System.Drawing.Color.Turquoise;
             this.lblCargo.Location = new System.Drawing.Point(284, 217);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(61, 24);
@@ -516,7 +517,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.ForeColor = System.Drawing.Color.White;
+            this.lblApellido.ForeColor = System.Drawing.Color.Turquoise;
             this.lblApellido.Location = new System.Drawing.Point(284, 153);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(79, 24);
@@ -538,7 +539,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.ForeColor = System.Drawing.Color.Turquoise;
             this.lblNombre.Location = new System.Drawing.Point(284, 88);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(79, 24);
@@ -560,7 +561,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNombreUsuario.ForeColor = System.Drawing.Color.Turquoise;
             this.lblNombreUsuario.Location = new System.Drawing.Point(284, 23);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(175, 24);
@@ -571,6 +572,8 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::COMPLETE_FLAT_UI.Properties.Resources.icono_cliente;
             this.button1.Location = new System.Drawing.Point(3, 15);
@@ -588,6 +591,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.Controls.Add(this.panelInformacionDelPerfil);
             this.Controls.Add(this.panelEditarPerfil);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             this.Load += new System.EventHandler(this.FormUsuario_Load);

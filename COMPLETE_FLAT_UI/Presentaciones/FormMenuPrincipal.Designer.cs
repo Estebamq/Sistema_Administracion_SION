@@ -66,6 +66,7 @@
             this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
             this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.timerMenuPrincipal = new System.Windows.Forms.Timer(this.components);
             this.panelContenedorPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -476,7 +477,7 @@
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.Image = global::COMPLETE_FLAT_UI.Properties.Resources.shut_down;
-            this.btnLogout.Location = new System.Drawing.Point(12, 500);
+            this.btnLogout.Location = new System.Drawing.Point(6, 499);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(43, 37);
             this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -593,6 +594,11 @@
             this.tmFechaHora.Enabled = true;
             this.tmFechaHora.Tick += new System.EventHandler(this.tmFechaHora_Tick);
             // 
+            // timerMenuPrincipal
+            // 
+            this.timerMenuPrincipal.Interval = 20;
+            this.timerMenuPrincipal.Tick += new System.EventHandler(this.timerMenuPrincipal_Tick);
+            // 
             // FormMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,6 +669,7 @@
         private System.Windows.Forms.Button btnPlanillas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Timer timerMenuPrincipal;
     }
 }
 

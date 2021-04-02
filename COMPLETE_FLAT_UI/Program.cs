@@ -15,7 +15,7 @@ namespace COMPLETE_FLAT_UI
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Elijo el formulario que inicia primero
             Application.Run(new FormLogin());

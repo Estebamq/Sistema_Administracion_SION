@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaInstructores));
             this.btnNuevoInstructor = new System.Windows.Forms.Button();
             this.btnBajaInstructor = new System.Windows.Forms.Button();
             this.btnEditarInstructor = new System.Windows.Forms.Button();
@@ -72,7 +73,7 @@
             this.btnNuevoInstructor.Location = new System.Drawing.Point(756, 61);
             this.btnNuevoInstructor.Name = "btnNuevoInstructor";
             this.btnNuevoInstructor.Size = new System.Drawing.Size(100, 30);
-            this.btnNuevoInstructor.TabIndex = 12;
+            this.btnNuevoInstructor.TabIndex = 1;
             this.btnNuevoInstructor.Text = "Nuevo";
             this.btnNuevoInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoInstructor.UseVisualStyleBackColor = false;
@@ -93,7 +94,7 @@
             this.btnBajaInstructor.Location = new System.Drawing.Point(756, 133);
             this.btnBajaInstructor.Name = "btnBajaInstructor";
             this.btnBajaInstructor.Size = new System.Drawing.Size(100, 30);
-            this.btnBajaInstructor.TabIndex = 11;
+            this.btnBajaInstructor.TabIndex = 3;
             this.btnBajaInstructor.Text = "Baja";
             this.btnBajaInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBajaInstructor.UseVisualStyleBackColor = false;
@@ -114,7 +115,7 @@
             this.btnEditarInstructor.Location = new System.Drawing.Point(756, 97);
             this.btnEditarInstructor.Name = "btnEditarInstructor";
             this.btnEditarInstructor.Size = new System.Drawing.Size(100, 30);
-            this.btnEditarInstructor.TabIndex = 10;
+            this.btnEditarInstructor.TabIndex = 2;
             this.btnEditarInstructor.Text = "Editar";
             this.btnEditarInstructor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarInstructor.UseVisualStyleBackColor = false;
@@ -129,7 +130,7 @@
             this.BtnCerrar.Location = new System.Drawing.Point(0, 2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(43, 43);
-            this.BtnCerrar.TabIndex = 9;
+            this.BtnCerrar.TabIndex = 8;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -240,7 +241,7 @@
             this.txtSearchInstructorDni.Multiline = true;
             this.txtSearchInstructorDni.Name = "txtSearchInstructorDni";
             this.txtSearchInstructorDni.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchInstructorDni.TabIndex = 18;
+            this.txtSearchInstructorDni.TabIndex = 7;
             this.txtSearchInstructorDni.TextChanged += new System.EventHandler(this.txtSearchInstructorDni_TextChanged);
             // 
             // txtSearchInstructorId
@@ -252,7 +253,7 @@
             this.txtSearchInstructorId.Multiline = true;
             this.txtSearchInstructorId.Name = "txtSearchInstructorId";
             this.txtSearchInstructorId.Size = new System.Drawing.Size(54, 23);
-            this.txtSearchInstructorId.TabIndex = 11;
+            this.txtSearchInstructorId.TabIndex = 4;
             this.txtSearchInstructorId.TextChanged += new System.EventHandler(this.txtSearchInstructorId_TextChanged);
             // 
             // lblApellido
@@ -275,7 +276,7 @@
             this.txtSearchInstructorNombre.Multiline = true;
             this.txtSearchInstructorNombre.Name = "txtSearchInstructorNombre";
             this.txtSearchInstructorNombre.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchInstructorNombre.TabIndex = 12;
+            this.txtSearchInstructorNombre.TabIndex = 5;
             this.txtSearchInstructorNombre.TextChanged += new System.EventHandler(this.txtSearchInstructorNombre_TextChanged);
             // 
             // lblNombre
@@ -298,7 +299,7 @@
             this.txtSearchInstructorApellido.Multiline = true;
             this.txtSearchInstructorApellido.Name = "txtSearchInstructorApellido";
             this.txtSearchInstructorApellido.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchInstructorApellido.TabIndex = 13;
+            this.txtSearchInstructorApellido.TabIndex = 6;
             this.txtSearchInstructorApellido.TextChanged += new System.EventHandler(this.txtSearchInstructorApellido_TextChanged);
             // 
             // label3
@@ -385,6 +386,7 @@
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.dataGridViewInstructores);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaInstructores";
             this.Text = "FormListarInstructores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstructores)).EndInit();

@@ -233,6 +233,9 @@ namespace COMPLETE_FLAT_UI
             MostrarFormLogo();
             LoadUserData();
             ManejoDePermisos();
+            
+            this.Opacity = 0.0;
+            timerMenuPrincipal.Start();
 
         }
 
@@ -243,6 +246,23 @@ namespace COMPLETE_FLAT_UI
             lblCargo.Text = cargo.ListingCargosPersonalId(UserLoginCache.cargo).NombreCargo;
         }
 
+
+
+        //ANIMACION CON OPACIDAD DEL MENU PRINCIPAL
+        int contador = 0;
+        private void timerMenuPrincipal_Tick(object sender, EventArgs e)
+        {
+
+            if (this.Opacity < 1)
+            {
+                this.Opacity += 0.05;
+            }
+            contador++;
+            if (contador == 100)
+            {
+                timerMenuPrincipal.Stop();
+            }
+        }
 
         //PERMISOS
         void ManejoDePermisos()
@@ -358,6 +378,8 @@ namespace COMPLETE_FLAT_UI
             AbrirFormEnPanel(fm);
             HideSubMenu();
         }
+
+       
 
         //BOTON DE CERRAR SESION
         private void btnLogout_Click(object sender, EventArgs e)

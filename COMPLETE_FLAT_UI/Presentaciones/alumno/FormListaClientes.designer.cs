@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaAlumnos));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewAlumnos = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -131,7 +132,7 @@
             this.btnEditar.Location = new System.Drawing.Point(749, 92);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 30);
-            this.btnEditar.TabIndex = 4;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -152,7 +153,7 @@
             this.btnBajaAlumno.Location = new System.Drawing.Point(749, 128);
             this.btnBajaAlumno.Name = "btnBajaAlumno";
             this.btnBajaAlumno.Size = new System.Drawing.Size(100, 30);
-            this.btnBajaAlumno.TabIndex = 5;
+            this.btnBajaAlumno.TabIndex = 3;
             this.btnBajaAlumno.Text = "Dar Baja";
             this.btnBajaAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBajaAlumno.UseVisualStyleBackColor = false;
@@ -173,7 +174,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(749, 56);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 30);
-            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -194,7 +195,7 @@
             this.btnCargarClase.Location = new System.Drawing.Point(749, 164);
             this.btnCargarClase.Name = "btnCargarClase";
             this.btnCargarClase.Size = new System.Drawing.Size(100, 30);
-            this.btnCargarClase.TabIndex = 7;
+            this.btnCargarClase.TabIndex = 4;
             this.btnCargarClase.Text = "Cargar Clase";
             this.btnCargarClase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCargarClase.UseVisualStyleBackColor = false;
@@ -256,7 +257,7 @@
             this.txtSearchAlumnoId.Multiline = true;
             this.txtSearchAlumnoId.Name = "txtSearchAlumnoId";
             this.txtSearchAlumnoId.Size = new System.Drawing.Size(54, 23);
-            this.txtSearchAlumnoId.TabIndex = 11;
+            this.txtSearchAlumnoId.TabIndex = 6;
             this.txtSearchAlumnoId.TextChanged += new System.EventHandler(this.txtSearchAlumnoId_TextChanged);
             // 
             // txtSearchAlumnoNombre
@@ -268,7 +269,7 @@
             this.txtSearchAlumnoNombre.Multiline = true;
             this.txtSearchAlumnoNombre.Name = "txtSearchAlumnoNombre";
             this.txtSearchAlumnoNombre.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchAlumnoNombre.TabIndex = 12;
+            this.txtSearchAlumnoNombre.TabIndex = 7;
             this.txtSearchAlumnoNombre.TextChanged += new System.EventHandler(this.txtSearchAlumnoNombre_TextChanged);
             // 
             // txtSearchAlumnoApellido
@@ -280,7 +281,7 @@
             this.txtSearchAlumnoApellido.Multiline = true;
             this.txtSearchAlumnoApellido.Name = "txtSearchAlumnoApellido";
             this.txtSearchAlumnoApellido.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchAlumnoApellido.TabIndex = 13;
+            this.txtSearchAlumnoApellido.TabIndex = 8;
             this.txtSearchAlumnoApellido.TextChanged += new System.EventHandler(this.txtSearchAlumnoApellido_TextChanged);
             // 
             // label2
@@ -335,7 +336,7 @@
             this.txtSearchAlumnoDni.Multiline = true;
             this.txtSearchAlumnoDni.Name = "txtSearchAlumnoDni";
             this.txtSearchAlumnoDni.Size = new System.Drawing.Size(132, 23);
-            this.txtSearchAlumnoDni.TabIndex = 18;
+            this.txtSearchAlumnoDni.TabIndex = 9;
             this.txtSearchAlumnoDni.TextChanged += new System.EventHandler(this.txtSearchAlumnoDni_TextChanged);
             // 
             // label4
@@ -397,7 +398,7 @@
             this.btnAsistencia.Location = new System.Drawing.Point(749, 200);
             this.btnAsistencia.Name = "btnAsistencia";
             this.btnAsistencia.Size = new System.Drawing.Size(100, 30);
-            this.btnAsistencia.TabIndex = 21;
+            this.btnAsistencia.TabIndex = 5;
             this.btnAsistencia.Text = "Asistencia";
             this.btnAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAsistencia.UseVisualStyleBackColor = false;
@@ -412,7 +413,7 @@
             this.BtnCerrar.Location = new System.Drawing.Point(0, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(43, 43);
-            this.BtnCerrar.TabIndex = 3;
+            this.BtnCerrar.TabIndex = 10;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click_1);
             // 
@@ -431,6 +432,7 @@
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.dataGridViewAlumnos);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaAlumnos";
             this.Text = "FormListaAlumnos";
             this.Load += new System.EventHandler(this.FormListaAlumnos_Load);

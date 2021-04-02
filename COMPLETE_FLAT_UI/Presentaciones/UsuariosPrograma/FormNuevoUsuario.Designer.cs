@@ -32,6 +32,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
@@ -104,7 +105,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.cmbBoxCargoPersonal.Location = new System.Drawing.Point(28, 244);
             this.cmbBoxCargoPersonal.Name = "cmbBoxCargoPersonal";
             this.cmbBoxCargoPersonal.Size = new System.Drawing.Size(255, 21);
-            this.cmbBoxCargoPersonal.TabIndex = 73;
+            this.cmbBoxCargoPersonal.TabIndex = 4;
             // 
             // label4
             // 
@@ -124,7 +125,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.txtBoxContraseña.Name = "txtBoxContraseña";
             this.txtBoxContraseña.PasswordChar = '●';
             this.txtBoxContraseña.Size = new System.Drawing.Size(255, 21);
-            this.txtBoxContraseña.TabIndex = 71;
+            this.txtBoxContraseña.TabIndex = 6;
             // 
             // labelContraseñaActual
             // 
@@ -146,7 +147,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.btnAceptar.Location = new System.Drawing.Point(163, 424);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(120, 40);
-            this.btnAceptar.TabIndex = 65;
+            this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -160,7 +161,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.btnCancelar.Location = new System.Drawing.Point(28, 424);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 40);
-            this.btnCancelar.TabIndex = 59;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -170,28 +171,28 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.txtBoxEmail.Location = new System.Drawing.Point(28, 288);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxEmail.TabIndex = 64;
+            this.txtBoxEmail.TabIndex = 5;
             // 
             // txtBoxApellido
             // 
             this.txtBoxApellido.Location = new System.Drawing.Point(28, 200);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxApellido.TabIndex = 63;
+            this.txtBoxApellido.TabIndex = 3;
             // 
             // txtBoxNombre
             // 
             this.txtBoxNombre.Location = new System.Drawing.Point(28, 154);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxNombre.TabIndex = 62;
+            this.txtBoxNombre.TabIndex = 2;
             // 
             // txtBoxNombreUsuario
             // 
             this.txtBoxNombreUsuario.Location = new System.Drawing.Point(28, 108);
             this.txtBoxNombreUsuario.Name = "txtBoxNombreUsuario";
             this.txtBoxNombreUsuario.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxNombreUsuario.TabIndex = 61;
+            this.txtBoxNombreUsuario.TabIndex = 1;
             // 
             // labelEmail
             // 
@@ -244,7 +245,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.txtBoxConfirmarContraseña.Name = "txtBoxConfirmarContraseña";
             this.txtBoxConfirmarContraseña.PasswordChar = '●';
             this.txtBoxConfirmarContraseña.Size = new System.Drawing.Size(255, 21);
-            this.txtBoxConfirmarContraseña.TabIndex = 75;
+            this.txtBoxConfirmarContraseña.TabIndex = 7;
             // 
             // label2
             // 
@@ -332,7 +333,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.btnEliminar.Location = new System.Drawing.Point(839, 424);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 40);
-            this.btnEliminar.TabIndex = 79;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -376,6 +377,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNuevoUsuario";
