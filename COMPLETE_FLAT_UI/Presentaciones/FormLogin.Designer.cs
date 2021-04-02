@@ -165,6 +165,7 @@ namespace COMPLETE_FLAT_UI
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Ha olvidado la contraseña?";
+            this.linkLabel1.Visible = false;
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Aqua;
             // 
             // lblErrorMensaje
@@ -209,7 +210,7 @@ namespace COMPLETE_FLAT_UI
             this.Name = "FormLogin";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Login";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();

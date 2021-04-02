@@ -39,6 +39,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +48,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // pictureBox2
             // 
             this.pictureBox2.Image = global::COMPLETE_FLAT_UI.Properties.Resources.LOGO_SION_CURSOS_DE_MANEJO_CON_SLOGAN;
-            this.pictureBox2.Location = new System.Drawing.Point(56, 103);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 78);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(177, 107);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -61,6 +62,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panel1.Controls.Add(this.lblBienvenida);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.circularProgressBar);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -71,9 +73,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNombre.Location = new System.Drawing.Point(23, 342);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(89, 30);
@@ -84,8 +87,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // lblBienvenida
             // 
             this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.BackColor = System.Drawing.Color.White;
             this.lblBienvenida.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblBienvenida.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblBienvenida.Location = new System.Drawing.Point(21, 291);
             this.lblBienvenida.Name = "lblBienvenida";
             this.lblBienvenida.Size = new System.Drawing.Size(184, 40);
@@ -103,22 +107,22 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.circularProgressBar.InnerColor = System.Drawing.Color.Black;
             this.circularProgressBar.InnerMargin = 0;
             this.circularProgressBar.InnerWidth = 0;
-            this.circularProgressBar.Location = new System.Drawing.Point(12, 34);
+            this.circularProgressBar.Location = new System.Drawing.Point(0, 0);
             this.circularProgressBar.Margin = new System.Windows.Forms.Padding(0);
             this.circularProgressBar.MarqueeAnimationSpeed = 1000;
             this.circularProgressBar.Name = "circularProgressBar";
             this.circularProgressBar.OuterColor = System.Drawing.Color.Black;
-            this.circularProgressBar.OuterMargin = -20;
+            this.circularProgressBar.OuterMargin = 0;
             this.circularProgressBar.OuterWidth = 15;
             this.circularProgressBar.ProgressColor = System.Drawing.Color.White;
             this.circularProgressBar.ProgressWidth = 10;
             this.circularProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar.Size = new System.Drawing.Size(265, 248);
-            this.circularProgressBar.StartAngle = 270;
+            this.circularProgressBar.Size = new System.Drawing.Size(297, 266);
+            this.circularProgressBar.StartAngle = 280;
             this.circularProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.circularProgressBar.SubscriptColor = System.Drawing.Color.Black;
             this.circularProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(0);
-            this.circularProgressBar.SubscriptText = ".23";
+            this.circularProgressBar.SubscriptText = "0";
             this.circularProgressBar.SuperscriptColor = System.Drawing.Color.Black;
             this.circularProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(0);
             this.circularProgressBar.SuperscriptText = "°C";
@@ -129,9 +133,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(78, -12);
+            this.pictureBox1.Location = new System.Drawing.Point(146, -20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(732, 412);
+            this.pictureBox1.Size = new System.Drawing.Size(726, 431);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -145,6 +149,15 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             this.timer2.Interval = 30;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 262);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(297, 138);
+            this.panel2.TabIndex = 4;
             // 
             // FormBienvenida
             // 
@@ -178,5 +191,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private CircularProgressBar.CircularProgressBar circularProgressBar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

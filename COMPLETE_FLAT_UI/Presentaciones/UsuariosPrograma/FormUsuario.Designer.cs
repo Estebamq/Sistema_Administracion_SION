@@ -35,8 +35,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelEditarPerfil = new System.Windows.Forms.Panel();
-            this.cmbBoxCargoPersonal = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LinkLabelEditarPass = new System.Windows.Forms.LinkLabel();
             this.txtBoxContraseñaActual = new System.Windows.Forms.TextBox();
             this.txtBoxConfirmarContraseña = new System.Windows.Forms.TextBox();
             this.txtBoxNuevaContraseña = new System.Windows.Forms.TextBox();
@@ -141,8 +140,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // panelEditarPerfil
             // 
             this.panelEditarPerfil.BackColor = System.Drawing.Color.LightGray;
-            this.panelEditarPerfil.Controls.Add(this.cmbBoxCargoPersonal);
-            this.panelEditarPerfil.Controls.Add(this.label4);
+            this.panelEditarPerfil.Controls.Add(this.LinkLabelEditarPass);
             this.panelEditarPerfil.Controls.Add(this.txtBoxContraseñaActual);
             this.panelEditarPerfil.Controls.Add(this.txtBoxConfirmarContraseña);
             this.panelEditarPerfil.Controls.Add(this.txtBoxNuevaContraseña);
@@ -167,43 +165,40 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.panelEditarPerfil.TabIndex = 31;
             this.panelEditarPerfil.Visible = false;
             // 
-            // cmbBoxCargoPersonal
+            // LinkLabelEditarPass
             // 
-            this.cmbBoxCargoPersonal.FormattingEnabled = true;
-            this.cmbBoxCargoPersonal.Location = new System.Drawing.Point(21, 197);
-            this.cmbBoxCargoPersonal.Name = "cmbBoxCargoPersonal";
-            this.cmbBoxCargoPersonal.Size = new System.Drawing.Size(255, 21);
-            this.cmbBoxCargoPersonal.TabIndex = 55;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(119, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Cargo";
+            this.LinkLabelEditarPass.AutoSize = true;
+            this.LinkLabelEditarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLabelEditarPass.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.LinkLabelEditarPass.Location = new System.Drawing.Point(230, 224);
+            this.LinkLabelEditarPass.Name = "LinkLabelEditarPass";
+            this.LinkLabelEditarPass.Size = new System.Drawing.Size(46, 18);
+            this.LinkLabelEditarPass.TabIndex = 42;
+            this.LinkLabelEditarPass.TabStop = true;
+            this.LinkLabelEditarPass.Text = "Editar";
+            this.LinkLabelEditarPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelEditarPass_LinkClicked);
             // 
             // txtBoxContraseñaActual
             // 
-            this.txtBoxContraseñaActual.Location = new System.Drawing.Point(21, 383);
+            this.txtBoxContraseñaActual.Location = new System.Drawing.Point(21, 343);
             this.txtBoxContraseñaActual.Name = "txtBoxContraseñaActual";
+            this.txtBoxContraseñaActual.PasswordChar = '●';
             this.txtBoxContraseñaActual.Size = new System.Drawing.Size(255, 20);
             this.txtBoxContraseñaActual.TabIndex = 52;
             // 
             // txtBoxConfirmarContraseña
             // 
-            this.txtBoxConfirmarContraseña.Location = new System.Drawing.Point(21, 333);
+            this.txtBoxConfirmarContraseña.Location = new System.Drawing.Point(21, 293);
             this.txtBoxConfirmarContraseña.Name = "txtBoxConfirmarContraseña";
+            this.txtBoxConfirmarContraseña.PasswordChar = '●';
             this.txtBoxConfirmarContraseña.Size = new System.Drawing.Size(255, 20);
             this.txtBoxConfirmarContraseña.TabIndex = 51;
             // 
             // txtBoxNuevaContraseña
             // 
-            this.txtBoxNuevaContraseña.Location = new System.Drawing.Point(21, 287);
+            this.txtBoxNuevaContraseña.Location = new System.Drawing.Point(21, 247);
             this.txtBoxNuevaContraseña.Name = "txtBoxNuevaContraseña";
+            this.txtBoxNuevaContraseña.PasswordChar = '●';
             this.txtBoxNuevaContraseña.Size = new System.Drawing.Size(255, 20);
             this.txtBoxNuevaContraseña.TabIndex = 50;
             // 
@@ -212,7 +207,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelContraseñaActual.AutoSize = true;
             this.labelContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContraseñaActual.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelContraseñaActual.Location = new System.Drawing.Point(76, 360);
+            this.labelContraseñaActual.Location = new System.Drawing.Point(76, 320);
             this.labelContraseñaActual.Name = "labelContraseñaActual";
             this.labelContraseñaActual.Size = new System.Drawing.Size(141, 20);
             this.labelContraseñaActual.TabIndex = 47;
@@ -223,7 +218,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelConfirmarContraseña.AutoSize = true;
             this.labelConfirmarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmarContraseña.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelConfirmarContraseña.Location = new System.Drawing.Point(45, 310);
+            this.labelConfirmarContraseña.Location = new System.Drawing.Point(45, 270);
             this.labelConfirmarContraseña.Name = "labelConfirmarContraseña";
             this.labelConfirmarContraseña.Size = new System.Drawing.Size(214, 20);
             this.labelConfirmarContraseña.TabIndex = 48;
@@ -234,7 +229,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelNuevaContraseña.AutoSize = true;
             this.labelNuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNuevaContraseña.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelNuevaContraseña.Location = new System.Drawing.Point(76, 264);
+            this.labelNuevaContraseña.Location = new System.Drawing.Point(76, 224);
             this.labelNuevaContraseña.Name = "labelNuevaContraseña";
             this.labelNuevaContraseña.Size = new System.Drawing.Size(141, 20);
             this.labelNuevaContraseña.TabIndex = 49;
@@ -252,6 +247,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnAceptar.TabIndex = 46;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -265,11 +261,11 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(21, 241);
+            this.txtBoxEmail.Location = new System.Drawing.Point(21, 201);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(255, 20);
             this.txtBoxEmail.TabIndex = 45;
@@ -300,7 +296,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelEmail.Location = new System.Drawing.Point(122, 218);
+            this.labelEmail.Location = new System.Drawing.Point(122, 178);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(48, 20);
             this.labelEmail.TabIndex = 41;
@@ -650,7 +646,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Button btnCrearNuevoUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCrearNuevoMedioDePago;
-        private System.Windows.Forms.ComboBox cmbBoxCargoPersonal;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel LinkLabelEditarPass;
     }
 }

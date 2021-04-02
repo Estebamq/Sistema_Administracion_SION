@@ -24,6 +24,13 @@ namespace Logic.Domain
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         #region CONSTRUCTORES
         public Usuario(int userId, string nombreUsuario, string contraseña, string nombre, string apellido, string email, string cargo)
+                      :this(userId,nombreUsuario,contraseña,nombre,apellido,email)
+        {
+            
+            this.cargo = cargo;
+        }
+
+        public Usuario(int userId, string nombreUsuario, string contraseña, string nombre, string apellido, string email)
         {
             this.userId = userId;
             this.nombreUsuario = nombreUsuario;
@@ -31,7 +38,7 @@ namespace Logic.Domain
             this.nombre = nombre;
             this.apellido = apellido;
             this.email = email;
-            this.cargo = cargo;
+            
         }
 
         public Usuario() 
@@ -48,9 +55,7 @@ namespace Logic.Domain
 
             set
             {
-               
-                    nombreUsuario = value;
-                
+              nombreUsuario = value;  
             }
         }
         public string Contraseña { get => contraseña; set => contraseña = value; }
@@ -110,6 +115,22 @@ namespace Logic.Domain
             return usuarioDao.ListUsuariosActivos();
         }
 
+        public string UpdatingUsuario(Usuario usuario) 
+        {
+            try
+            {
+
+                usuarioDAO.UpdateUsuario(usuario);
+                LoginUsuario(usuario.nombreUsuario, usuario.contraseña);
+                return "SE ACTUALIZO CORRECTAMENTE";
+            }
+            catch (Exception)
+            {
+                return "ERROR AL ACTUALIZAR";
+
+            }
+           
+        }
 
         public void DeletingUsuario(Usuario usuario) 
         {

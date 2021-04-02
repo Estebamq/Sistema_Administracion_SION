@@ -40,6 +40,7 @@ namespace Logic.DataAccess
                         {
                             UserLoginCache.idUser = reader.GetInt32(0);
                             UserLoginCache.nombreUsuario = reader.GetString(1);
+                            UserLoginCache.password = reader.GetString(2);
                             UserLoginCache.nombre = reader.GetString(3);
                             UserLoginCache.apellido = reader.GetString(4);
                             UserLoginCache.email = reader.GetString(5);
@@ -53,6 +54,28 @@ namespace Logic.DataAccess
                     }
 
                     return respuesta;
+                }
+            }
+        }
+
+        public void UpdateUsuario(Usuario usuario)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("SP_updateUsuario", connection))
+                {
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@userId", usuario.UserId);
+                    cmd.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);
+                    cmd.Parameters.AddWithValue("@password", usuario.Contraseña);
+                    cmd.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                    cmd.Parameters.AddWithValue("@apellido", usuario.Apellido);
+                    cmd.Parameters.AddWithValue("@email", usuario.Email);
+                    cmd.ExecuteNonQuery();
+
                 }
             }
         }

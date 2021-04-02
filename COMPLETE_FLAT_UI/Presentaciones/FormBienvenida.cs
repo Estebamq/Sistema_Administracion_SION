@@ -49,7 +49,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             circularProgressBar.Value = 0;
             circularProgressBar.Minimum = 0;
             circularProgressBar.Maximum = 100;
-           
+          
+
+
             timer1.Start();
         }
 

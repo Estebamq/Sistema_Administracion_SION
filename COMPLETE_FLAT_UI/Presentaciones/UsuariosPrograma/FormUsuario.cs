@@ -23,11 +23,12 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private void FormUsuario_Load(object sender, EventArgs e)
         {
             LoadDataUser();
-            ListCargoPersonal();
+            InicializarPassControl();
         }
 
         private void LoadDataUser() 
         {
+            //view
             Cargo cargoUsuario = new Cargo();
             cargoUsuario= cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
             lblInputnombreUsuario.Text = UserLoginCache.nombreUsuario;
@@ -37,14 +38,49 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             lblInputEmail.Text = UserLoginCache.email;
 
 
+            //Editar Perfil
+
+            txtBoxNombreUsuario.Text = UserLoginCache.nombreUsuario;
+            txtBoxNombre.Text = UserLoginCache.nombre;
+            txtBoxApellido.Text = UserLoginCache.apellido;
+            txtBoxEmail.Text = UserLoginCache.email;
+            txtBoxNuevaContraseña.Text = UserLoginCache.password;
+            txtBoxConfirmarContraseña.Text = UserLoginCache.password;
+            txtBoxContraseñaActual.Text = "";
+
+
         }
 
-        public void ListCargoPersonal()
+        private void InicializarPassControl() 
         {
-            Cargo cargoPersonal = new Cargo();
-            cmbBoxCargoPersonal.DataSource =cargoPersonal.ListingCargosPersonal("");
-            cmbBoxCargoPersonal.ValueMember = "IdCargo";
-            cmbBoxCargoPersonal.DisplayMember = "NombreCargo";
+            LinkLabelEditarPass.Text = "Editar";
+            txtBoxNuevaContraseña.Enabled = false;
+            txtBoxConfirmarContraseña.Enabled = false;
+            txtBoxNuevaContraseña.Text = UserLoginCache.password;
+            txtBoxConfirmarContraseña.Text = UserLoginCache.password;
+        }
+
+        private void Reset() 
+        {
+            LoadDataUser();
+            InicializarPassControl();
+
+        }
+        private void LinkLabelEditarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (LinkLabelEditarPass.Text == "Editar")
+            {
+                LinkLabelEditarPass.Text = "Cancelar";
+                txtBoxNuevaContraseña.Enabled = true;
+                txtBoxNuevaContraseña.Text = "";
+                txtBoxConfirmarContraseña.Enabled = true;
+                txtBoxConfirmarContraseña.Text = "";
+
+            }
+            else if (LinkLabelEditarPass.Text == "Cancelar")
+            {
+                InicializarPassControl();
+            }
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -87,26 +123,20 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
             }
         }
+       
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void linkLblEditar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panelEditarPerfil.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            panelEditarPerfil.Visible = false;
-        }
+
 
         //BOTONES CREAR: NUEVO USUARIO, NUEVO METODO DE PAGO
 
@@ -115,5 +145,84 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             FormNuevoUsuario frm = new FormNuevoUsuario();
             frm.ShowDialog();
         }
+
+       
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+            if (txtBoxNuevaContraseña.TextLength>4)
+            {
+                if (txtBoxNuevaContraseña.Text == txtBoxConfirmarContraseña.Text)
+                 {
+                    if (txtBoxContraseñaActual.Text == UserLoginCache.password)
+                    {
+                        Usuario usuario = new Usuario(
+                            userId: UserLoginCache.idUser,
+                            nombreUsuario: txtBoxNombreUsuario.Text,
+                            contraseña: txtBoxNuevaContraseña.Text,
+                            nombre: txtBoxNombre.Text,
+                            apellido: txtBoxApellido.Text,
+                            email: txtBoxEmail.Text
+                            );
+                        if (validarTextBoxs()) { 
+                            usuario.UpdatingUsuario(usuario);
+                            Reset();
+                            panelEditarPerfil.Visible = false;
+                            FormConfirmacion frmConfirm = new FormConfirmacion("SE ACTUALIZO CON EXITO");
+                            DialogResult resultConfirm = frmConfirm.ShowDialog();
+
+
+                        }
+                        else
+                        {
+                            FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
+                           frmError.ShowDialog();
+                        }
+
+                     }
+                }
+                else
+                {
+                    FormInformacion frmError = new FormInformacion("LAS CONTRASEÑAS NO COINCIDEN");
+                    frmError.ShowDialog();
+                }
+            }
+            else
+            {
+                FormInformacion frmError = new FormInformacion("NUEVA CONTRASEÑA INSEGURA: MIN 5 CARACTERES");
+                frmError.ShowDialog();
+            }
+           
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            panelEditarPerfil.Visible = false;
+            Reset();
+        }
+
+        bool validarTextBoxs()
+        {
+            foreach (Control item in panelEditarPerfil.Controls)
+            {
+                try
+                {
+                    if (item is TextBox)
+                    {
+                        //Codigo comprobacion  de textbox
+                        if (item.Text == "")
+                        {
+                            item.Focus();
+                            return false;
+                        }
+                    }
+                }
+                catch { }
+            }
+            return true;
+        }
+
+
     }
 }
