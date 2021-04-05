@@ -24,6 +24,41 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         {
             LoadDataUser();
             InicializarPassControl();
+            ManejoDePermisos();
+        }
+
+        void ManejoDePermisos()
+        {
+            Cargo cargoUsuario = new Cargo();
+            cargoUsuario = cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
+            if (CargoEstructura.Recepcionista == cargoUsuario.NombreCargo)
+            {
+                ocultarControles();
+
+            }
+
+            if (CargoEstructura.AgenteDeConsulta == cargoUsuario.NombreCargo)
+            {
+                ocultarControles();
+            }
+
+
+        }
+
+       private void ocultarControles() 
+        {
+            lblMediosDePago.Visible = false;
+            lblNuevoUsuario.Visible = false;
+            lblRespaldo.Visible = false;
+            lblBaseDeDatos.Visible = false;
+            btnCrearNuevoUsuario.Enabled = false;
+            btnCrearNuevoUsuario.Visible = false;
+            btnCrearNuevoMedioDePago.Enabled = false;
+            btnCrearNuevoMedioDePago.Visible = false;
+            btnGenerar.Enabled = false;
+            btnGenerar.Visible = false;
+
+
         }
 
         private void LoadDataUser() 

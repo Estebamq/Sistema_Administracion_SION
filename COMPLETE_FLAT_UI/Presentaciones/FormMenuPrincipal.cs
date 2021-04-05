@@ -270,12 +270,12 @@ namespace COMPLETE_FLAT_UI
             cargoUsuario = cargoUsuario.ListingCargosPersonalId(UserLoginCache.cargo);
             if (CargoEstructura.Recepcionista == cargoUsuario.NombreCargo) 
             {
-                btnUsuarios.Enabled = false;
+                //btnUsuarios.Enabled = false;
             }
 
             if (CargoEstructura.AgenteDeConsulta == cargoUsuario.NombreCargo)
             {
-                btnUsuarios.Enabled = false;
+               // btnUsuarios.Enabled = false;
                 btnInstructores.Enabled = false;
                 btnAltaEditarInstructor.Enabled = false;
             }

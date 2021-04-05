@@ -33,7 +33,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblBaseDeDatos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelEditarPerfil = new System.Windows.Forms.Panel();
             this.LinkLabelEditarPass = new System.Windows.Forms.LinkLabel();
@@ -56,11 +56,11 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.labelEditarPerfil = new System.Windows.Forms.Label();
             this.panelInformacionDelPerfil = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblNuevoUsuario = new System.Windows.Forms.Label();
             this.btnCrearNuevoUsuario = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblMediosDePago = new System.Windows.Forms.Label();
             this.btnCrearNuevoMedioDePago = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRespaldo = new System.Windows.Forms.Label();
             this.linkLblEditar = new System.Windows.Forms.LinkLabel();
             this.lblInputEmail = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -117,16 +117,16 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // label2
+            // lblBaseDeDatos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Base de Datos";
+            this.lblBaseDeDatos.AutoSize = true;
+            this.lblBaseDeDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaseDeDatos.ForeColor = System.Drawing.Color.White;
+            this.lblBaseDeDatos.Location = new System.Drawing.Point(17, 24);
+            this.lblBaseDeDatos.Name = "lblBaseDeDatos";
+            this.lblBaseDeDatos.Size = new System.Drawing.Size(115, 20);
+            this.lblBaseDeDatos.TabIndex = 29;
+            this.lblBaseDeDatos.Text = "Base de Datos";
             // 
             // panel1
             // 
@@ -371,29 +371,29 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.lblNuevoUsuario);
             this.panel2.Controls.Add(this.btnCrearNuevoUsuario);
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.lblMediosDePago);
             this.panel2.Controls.Add(this.btnCrearNuevoMedioDePago);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblRespaldo);
             this.panel2.Controls.Add(this.btnGenerar);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblBaseDeDatos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 393);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(589, 100);
             this.panel2.TabIndex = 41;
             // 
-            // label14
+            // lblNuevoUsuario
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(180, 13);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 20);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "Nuevo Usuario";
+            this.lblNuevoUsuario.AutoSize = true;
+            this.lblNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNuevoUsuario.Location = new System.Drawing.Point(180, 13);
+            this.lblNuevoUsuario.Name = "lblNuevoUsuario";
+            this.lblNuevoUsuario.Size = new System.Drawing.Size(113, 20);
+            this.lblNuevoUsuario.TabIndex = 45;
+            this.lblNuevoUsuario.Text = "Nuevo Usuario";
             // 
             // btnCrearNuevoUsuario
             // 
@@ -409,16 +409,16 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCrearNuevoUsuario.UseVisualStyleBackColor = false;
             this.btnCrearNuevoUsuario.Click += new System.EventHandler(this.btnCrearNuevoUsuario_Click);
             // 
-            // label12
+            // lblMediosDePago
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(316, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 20);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Medios de Pago";
+            this.lblMediosDePago.AutoSize = true;
+            this.lblMediosDePago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMediosDePago.ForeColor = System.Drawing.Color.White;
+            this.lblMediosDePago.Location = new System.Drawing.Point(316, 13);
+            this.lblMediosDePago.Name = "lblMediosDePago";
+            this.lblMediosDePago.Size = new System.Drawing.Size(123, 20);
+            this.lblMediosDePago.TabIndex = 42;
+            this.lblMediosDePago.Text = "Medios de Pago";
             // 
             // btnCrearNuevoMedioDePago
             // 
@@ -434,16 +434,16 @@ namespace COMPLETE_FLAT_UI.Presentaciones
             this.btnCrearNuevoMedioDePago.UseVisualStyleBackColor = false;
             this.btnCrearNuevoMedioDePago.Click += new System.EventHandler(this.btnCrearNuevoMedioDePago_Click);
             // 
-            // label3
+            // lblRespaldo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 20);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Respaldo";
+            this.lblRespaldo.AutoSize = true;
+            this.lblRespaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRespaldo.ForeColor = System.Drawing.Color.White;
+            this.lblRespaldo.Location = new System.Drawing.Point(33, 4);
+            this.lblRespaldo.Name = "lblRespaldo";
+            this.lblRespaldo.Size = new System.Drawing.Size(77, 20);
+            this.lblRespaldo.TabIndex = 39;
+            this.lblRespaldo.Text = "Respaldo";
             // 
             // linkLblEditar
             // 
@@ -612,14 +612,14 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblBaseDeDatos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelEditarPerfil;
         private System.Windows.Forms.Panel panelInformacionDelPerfil;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelEditarPerfil;
         private System.Windows.Forms.LinkLabel linkLblEditar;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRespaldo;
         private System.Windows.Forms.Label lblInputEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblInputCargo;
@@ -647,9 +647,9 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelNombreUsuario;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblNuevoUsuario;
         private System.Windows.Forms.Button btnCrearNuevoUsuario;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblMediosDePago;
         private System.Windows.Forms.Button btnCrearNuevoMedioDePago;
         private System.Windows.Forms.LinkLabel LinkLabelEditarPass;
     }
