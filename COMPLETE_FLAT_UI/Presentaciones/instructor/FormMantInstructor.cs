@@ -3,6 +3,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Logic.Domain;
+using System.Text.RegularExpressions;
 
 namespace COMPLETE_FLAT_UI.Presentaciones.instructor
 {
@@ -71,15 +72,23 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
 
                         if (validarTextBoxs())
                         {
-                            instructor.CreatingInstructor(instructor);
+                            if (ValidarEmail(instructor.Email))
+                            {
+                                instructor.CreatingInstructor(instructor);
 
-                        FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                        DialogResult resultConfirm = frmConfirm.ShowDialog();
+                                FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                                DialogResult resultConfirm = frmConfirm.ShowDialog();
 
-                        if (resultConfirm == DialogResult.OK)
-                        {
-                            this.Close();
-                        }
+                                if (resultConfirm == DialogResult.OK)
+                                {
+                                    this.Close();
+                                }
+                            }
+                            else
+                            {
+                                FormInformacion frmError = new FormInformacion("EMAIL INCORRECTO");
+                                frmError.ShowDialog();
+                            }
 
                         }
                         else
@@ -114,17 +123,25 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
 
                         if (validarTextBoxs())
                         {
-                            instructor.UpdatingInstructor(instructor);
-
-                            FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                            DialogResult resultConfirm = frmConfirm.ShowDialog();
-
-                            if (resultConfirm == DialogResult.OK)
+                            if (ValidarEmail(instructor.Email))
                             {
-                                this.Close();
-                            }
+                                instructor.UpdatingInstructor(instructor);
 
-                            updateInstructor = false;
+                                FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                                DialogResult resultConfirm = frmConfirm.ShowDialog();
+
+                                if (resultConfirm == DialogResult.OK)
+                                {
+                                    this.Close();
+                                }
+
+                                updateInstructor = false;
+                            }
+                            else
+                            {
+                                FormInformacion frmError = new FormInformacion("EMAIL INCORRECTO");
+                                frmError.ShowDialog();
+                            }
                         }
                         else
                         {
@@ -143,7 +160,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             }
         
         }
-
+        //VALIDAR TEXTBOX
         bool validarTextBoxs()
         {
             foreach (Control item in this.Controls)
@@ -166,6 +183,28 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
                 catch { }
             }
             return true;
+        }
+
+        //validar email
+        private Boolean ValidarEmail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

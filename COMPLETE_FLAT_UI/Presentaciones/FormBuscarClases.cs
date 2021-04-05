@@ -27,12 +27,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones
         private void FormBuscarClases_Load(object sender, EventArgs e)
         {
 
-            //Task task = new Task(() =>
-            //{
-            //    Thread.Sleep(1000);
-            //    chWebBrowser.Load("web.whatsapp.com");
-            //});
-            //task.Start();
         }
 
         public void ShowClasePorIdAlumno()
@@ -75,17 +69,46 @@ namespace COMPLETE_FLAT_UI.Presentaciones
 
         private void btnWhatsapp_Click(object sender, EventArgs e)
         {
-            chWebBrowser.Load("web.whatsapp.com");
+            try
+            {
+                chWebBrowser.Load("web.whatsapp.com");
+            }
+            catch (Exception)
+            {
+                FormInformacion frmError = new FormInformacion("ERROR");
+                frmError.ShowDialog();
+
+            }
         }
 
         private void btnFacebook_Click(object sender, EventArgs e)
         {
-            chWebBrowser.Load("www.facebook.com");
+                try
+                {
+                    chWebBrowser.Load("www.facebook.com");
+            }
+            catch (Exception)
+            {
+                FormInformacion frmError = new FormInformacion("ERROR");
+                frmError.ShowDialog();
+
+            }
         }
 
         private void btnInstagram_Click(object sender, EventArgs e)
         {
-            chWebBrowser.Load("www.instagram.com");
+                try 
+                { 
+                       chWebBrowser.Load("www.instagram.com");
+                }
+                catch (Exception)
+                {
+                      FormInformacion frmError = new FormInformacion("ERROR");
+                      frmError.ShowDialog();
+
+                }
+
+
         }
 
         private void btnBuscarAlumno_Click(object sender, EventArgs e)
@@ -118,7 +141,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                     frmError.ShowDialog();
                 }
             }
-            catch(Exception ex) 
+            catch(Exception) 
             {
                 FormInformacion frmError = new FormInformacion("ERROR DE BUSQUEDA");
                 frmError.ShowDialog();
@@ -154,7 +177,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                     frmError.ShowDialog();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 FormInformacion frmError = new FormInformacion("ERROR DE BUSQUEDA");
                 frmError.ShowDialog();

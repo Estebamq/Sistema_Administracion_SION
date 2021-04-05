@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Logic.Domain;
 using Logic.Cache;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
 {
@@ -79,18 +80,29 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
                         usuario.Apellido = txtBoxApellido.Text;
                         usuario.Email = txtBoxEmail.Text;
                         usuario.IdCargo = Convert.ToInt32(cmbBoxCargoPersonal.SelectedValue);
-                        if (usuario.CreatingUsuario(usuario))
+                        if (ValidarEmail(usuario.Email))
                         {
-                            FormInformacion frmError = new FormInformacion("EXISTE EL NOMBRE DE USUARIO");
-                            frmError.ShowDialog();
+                            if (usuario.CreatingUsuario(usuario))
+                            {
+                                FormInformacion frmError = new FormInformacion("EXISTE EL NOMBRE DE USUARIO");
+                                frmError.ShowDialog();
+                            }
+                            else
+                            {
+                                FormConfirmacion frmConfirm = new FormConfirmacion("SE CREO CON EXITO");
+                                frmConfirm.ShowDialog();
+                                ClearDatos();
+                                ShowUsuariosActivos();
+                            }
+
                         }
                         else
                         {
-                            FormConfirmacion frmConfirm = new FormConfirmacion("SE CREO CON EXITO");
-                            frmConfirm.ShowDialog();
-                            ClearDatos();
-                            ShowUsuariosActivos();
+                            FormInformacion frmError = new FormInformacion("EMAIL INCORRECTO");
+                            frmError.ShowDialog();
                         }
+
+                   
                     }
                     else
                     {
@@ -191,21 +203,27 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             return true;
         }
 
-        /*
-        private bool validar(Form formulario)
+        //validar email
+        private Boolean ValidarEmail(String email)
         {
-            bool vacio = false;
-            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
             {
-                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
                 {
-                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
-
-            return vacio;
+            else
+            {
+                return false;
+            }
         }
-        */
 
     }
 }

@@ -11,6 +11,7 @@ using System.IO;
 using Logic.Domain;
 using Logic.Cache;
 using COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma;
+using System.Text.RegularExpressions;
 
 namespace COMPLETE_FLAT_UI.Presentaciones
 {
@@ -190,12 +191,22 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                             email: txtBoxEmail.Text
                             );
                         if (validarTextBoxs())
-                        { 
-                            usuario.UpdatingUsuario(usuario);
-                            Reset();
-                            panelEditarPerfil.Visible = false;
-                            FormConfirmacion frmConfirm = new FormConfirmacion("SE ACTUALIZO CON EXITO");
-                            frmConfirm.ShowDialog();
+                        {
+                            if (ValidarEmail(usuario.Email))
+                            {
+
+                                usuario.UpdatingUsuario(usuario);
+                                Reset();
+                                panelEditarPerfil.Visible = false;
+                                FormConfirmacion frmConfirm = new FormConfirmacion("SE ACTUALIZO CON EXITO");
+                                frmConfirm.ShowDialog();
+
+                            }
+                            else
+                            {
+                                FormInformacion frmError = new FormInformacion("EMAIL INCORRECTO");
+                                frmError.ShowDialog();
+                            }
                         }
                         else
                         {
@@ -245,6 +256,28 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                 }catch { }
             }
             return true;
+        }
+
+        //Validar email
+        private Boolean ValidarEmail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //BOTONES CREAR: NUEVO USUARIO, NUEVO METODO DE PAGO

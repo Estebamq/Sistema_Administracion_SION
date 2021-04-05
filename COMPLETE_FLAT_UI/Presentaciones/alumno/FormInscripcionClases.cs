@@ -286,7 +286,7 @@ namespace COMPLETE_FLAT_UI
                     txtNombreInstructor.Text = dataGridViewClases.CurrentRow.Cells[2].Value.ToString();
                     txtApellidoInstructor.Text = dataGridViewClases.CurrentRow.Cells[3].Value.ToString();
                     txtNumClase.Text = dataGridViewClases.CurrentRow.Cells[4].Value.ToString();
-                    txtDiaClase.Text = dataGridViewClases.CurrentRow.Cells[5].Value.ToString();
+                    txtDiaClase.Text = Convert.ToDateTime(dataGridViewClases.CurrentRow.Cells[5].Value.ToString()).ToString("dd/MM/yyyy");
                     cmbHoraClase.Text = dataGridViewClases.CurrentRow.Cells[6].Value.ToString();
                     cmbMediosDePago.Text = dataGridViewClases.CurrentRow.Cells[8].Value.ToString();
                     txtDescripcionClase.Text = dataGridViewClases.CurrentRow.Cells[9].Value.ToString();

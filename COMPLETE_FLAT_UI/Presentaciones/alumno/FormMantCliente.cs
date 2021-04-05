@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Logic;
 using Logic.Domain;
 using COMPLETE_FLAT_UI.Presentaciones;
+using System.Text.RegularExpressions;
 
 
 namespace COMPLETE_FLAT_UI
@@ -84,15 +85,23 @@ namespace COMPLETE_FLAT_UI
                         
                         if (validarTextBoxs())
                         {
-                            alumno.CreatingAlumno(alumno);
+                            if (ValidarEmail(alumno.Email)) { 
+                                alumno.CreatingAlumno(alumno);
 
-                            FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                            DialogResult resultConfirm = frmConfirm.ShowDialog();
+                                FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                                DialogResult resultConfirm = frmConfirm.ShowDialog();
 
-                            if (resultConfirm == DialogResult.OK)
-                            {
-                                this.Close();
+                                if (resultConfirm == DialogResult.OK)
+                                {
+                                    this.Close();
+                                }
                             }
+                            else
+                            {
+                                FormInformacion frmError = new FormInformacion("EMAIL INCORRECTO");
+                                frmError.ShowDialog();
+                            }
+
                         }
                         else
                         {
@@ -125,18 +134,27 @@ namespace COMPLETE_FLAT_UI
                         alumno.Observaciones = txtObservaciones.Text;
                         if (validarTextBoxs())
                         {
-                            alumno.UpdatingAlumno(alumno);
-
-
-                            FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                            DialogResult resultConfirm = frmConfirm.ShowDialog();
-
-                            if (resultConfirm == DialogResult.OK)
+                            if (ValidarEmail(alumno.Email))
                             {
-                                this.Close();
-                            }
+                                    alumno.UpdatingAlumno(alumno);
 
-                             update = false;
+
+                                FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                                DialogResult resultConfirm = frmConfirm.ShowDialog();
+
+                                if (resultConfirm == DialogResult.OK)
+                                {
+                                    this.Close();
+                                }
+
+                                 update = false;
+
+                            }
+                            else
+                            {
+                                FormInformacion frmError = new FormInformacion("EMAIL INCORRECTO");
+                                frmError.ShowDialog();
+                            }
 
                         }
                         else
@@ -178,6 +196,28 @@ namespace COMPLETE_FLAT_UI
                 catch { }
             }
             return true;
+        }
+
+        //validar email
+        private Boolean ValidarEmail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
