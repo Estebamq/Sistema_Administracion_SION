@@ -68,8 +68,10 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
                         instructor.Patente = txtPatente.Text;
                         instructor.ModeloAuto = txtModeloAuto.Text;
                         instructor.FechaVencimientoSeguro = dateTimePickerVencimientoSeguro.Value;// ingresa la fecha de nacimiento usando un dateTimePicker
-                       
-                        instructor.CreatingInstructor(instructor);
+
+                        if (validarTextBoxs())
+                        {
+                            instructor.CreatingInstructor(instructor);
 
                         FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
                         DialogResult resultConfirm = frmConfirm.ShowDialog();
@@ -79,12 +81,18 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
                             this.Close();
                         }
 
+                        }
+                        else
+                        {
+                            FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
+                            frmError.ShowDialog();
+                        }
+
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
-                        frmError.ShowDialog();
-                       // MessageBox.Show("No se pudo guardar el registro" + ex);
+                        frmError.ShowDialog(); 
                     }
                 }
 
@@ -104,29 +112,61 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
                         instructor.ModeloAuto = txtModeloAuto.Text;
                         instructor.FechaVencimientoSeguro = dateTimePickerVencimientoSeguro.Value;// ingresa la fecha de nacimiento usando un dateTimePicker
 
-                        instructor.UpdatingInstructor(instructor);
-
-                        FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                        DialogResult resultConfirm = frmConfirm.ShowDialog();
-
-                        if (resultConfirm == DialogResult.OK)
+                        if (validarTextBoxs())
                         {
-                            this.Close();
+                            instructor.UpdatingInstructor(instructor);
+
+                            FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                            DialogResult resultConfirm = frmConfirm.ShowDialog();
+
+                            if (resultConfirm == DialogResult.OK)
+                            {
+                                this.Close();
+                            }
+
+                            updateInstructor = false;
+                        }
+                        else
+                        {
+                            FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
+                            frmError.ShowDialog();
                         }
 
-                        updateInstructor = false;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        /*FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
-                        frmError.ShowDialog();*/
-                        MessageBox.Show("No se pudo editar el registro" + ex);
+                        FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
+                        frmError.ShowDialog();
+
                     }
                 }
             }
         
         }
 
-        
+        bool validarTextBoxs()
+        {
+            foreach (Control item in this.Controls)
+            {
+                try
+                {
+                    if (item is TextBox)
+                    {
+                        if (item.Enabled == true)
+                        {
+                            //Codigo comprobacion  de textbox
+                            if (String.IsNullOrWhiteSpace(item.Text))
+                            {
+                                item.Focus();
+                                return false;
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+            return true;
+        }
+
     }
 }

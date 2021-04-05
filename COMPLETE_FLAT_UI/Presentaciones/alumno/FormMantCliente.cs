@@ -71,31 +71,41 @@ namespace COMPLETE_FLAT_UI
                 {
                     try
                     {
-                        alumno.Nombre = txtNombre.Text;
-                        alumno.Apellido = txtApellido.Text;
-                        alumno.Dni = Convert.ToInt32(txtDni.Text);
-                        alumno.Telefono = Convert.ToInt32(txtTelefono.Text);
-                        alumno.Direccion = txtDireccion.Text;
-                        alumno.Email = txtEmail.Text;
-                        alumno.Estado = Convert.ToInt32(cmbEstadosAlumnos.SelectedValue);
-                        alumno.FechaDeNacimiento = dateTimePickerAlumnos.Value;// ingresa la fecha de nacimiento usando un dateTimePicker
-                        alumno.Observaciones = txtObservaciones.Text;
-                        alumno.CreatingAlumno(alumno);
-
-                        FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                        DialogResult resultConfirm = frmConfirm.ShowDialog();
-
-                        if (resultConfirm == DialogResult.OK)
+                        
+                            alumno.Nombre = txtNombre.Text;
+                            alumno.Apellido = txtApellido.Text;
+                            alumno.Dni = Convert.ToInt32(txtDni.Text);
+                            alumno.Telefono = Convert.ToInt32(txtTelefono.Text);
+                            alumno.Direccion = txtDireccion.Text;
+                            alumno.Email = txtEmail.Text;
+                            alumno.Estado = Convert.ToInt32(cmbEstadosAlumnos.SelectedValue);
+                            alumno.FechaDeNacimiento = dateTimePickerAlumnos.Value;// ingresa la fecha de nacimiento usando un dateTimePicker
+                            alumno.Observaciones = txtObservaciones.Text;
+                        
+                        if (validarTextBoxs())
                         {
-                            this.Close();
+                            alumno.CreatingAlumno(alumno);
+
+                            FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                            DialogResult resultConfirm = frmConfirm.ShowDialog();
+
+                            if (resultConfirm == DialogResult.OK)
+                            {
+                                this.Close();
+                            }
+                        }
+                        else
+                        {
+                            FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
+                            frmError.ShowDialog();
                         }
 
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
                         frmError.ShowDialog();
-                        //MessageBox.Show("No se pudo guardar el registro" + ex);
+                      
                     }
                 }
 
@@ -113,30 +123,61 @@ namespace COMPLETE_FLAT_UI
                         alumno.Estado = Convert.ToInt32(cmbEstadosAlumnos.SelectedValue);
                         alumno.FechaDeNacimiento = dateTimePickerAlumnos.Value;
                         alumno.Observaciones = txtObservaciones.Text;
-
-                        alumno.UpdatingAlumno(alumno);
-
-
-                        FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
-                        DialogResult resultConfirm = frmConfirm.ShowDialog();
-
-                        if (resultConfirm == DialogResult.OK)
+                        if (validarTextBoxs())
                         {
-                            this.Close();
-                        }
+                            alumno.UpdatingAlumno(alumno);
 
-                        update = false;
+
+                            FormConfirmacion frmConfirm = new FormConfirmacion("SE GUARDARON CON EXITO");
+                            DialogResult resultConfirm = frmConfirm.ShowDialog();
+
+                            if (resultConfirm == DialogResult.OK)
+                            {
+                                this.Close();
+                            }
+
+                             update = false;
+
+                        }
+                        else
+                        {
+                            FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
+                            frmError.ShowDialog();
+                        }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         FormInformacion frmError = new FormInformacion("ERROR: DATOS INCORRECTOS");
                         frmError.ShowDialog();
-                        //MessageBox.Show("No se pudo editar el registro" + ex);
+                       
                     }
                 }
             }
         }
 
-        
+        //Validar texbox
+        bool validarTextBoxs()
+        {
+            foreach (Control item in this.Controls)
+            {
+                try
+                {
+                    if (item is TextBox)
+                    {
+                        if (item.Enabled == true)
+                        {
+                            //Codigo comprobacion  de textbox
+                            if (String.IsNullOrWhiteSpace(item.Text))
+                            {
+                                item.Focus();
+                                return false;
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+            return true;
+        }
     }
 }

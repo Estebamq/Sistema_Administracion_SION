@@ -71,7 +71,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
                     if (item is TextBox)
                     {
                         //Codigo comprobacion  de textbox
-                        if (item.Text == "")
+                        if (String.IsNullOrWhiteSpace(item.Text))
                         {
                             item.Focus();
                             return false;

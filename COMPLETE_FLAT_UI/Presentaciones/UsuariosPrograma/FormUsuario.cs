@@ -154,18 +154,17 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                             apellido: txtBoxApellido.Text,
                             email: txtBoxEmail.Text
                             );
-                        if (validarTextBoxs()) { 
+                        if (validarTextBoxs())
+                        { 
                             usuario.UpdatingUsuario(usuario);
                             Reset();
                             panelEditarPerfil.Visible = false;
                             FormConfirmacion frmConfirm = new FormConfirmacion("SE ACTUALIZO CON EXITO");
-                            DialogResult resultConfirm = frmConfirm.ShowDialog();
-
-
+                            frmConfirm.ShowDialog();
                         }
                         else
                         {
-                            FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
+                           FormInformacion frmError = new FormInformacion("DEBE LLENAR TODOS LOS CAMPOS");
                            frmError.ShowDialog();
                         }
 
@@ -202,14 +201,13 @@ namespace COMPLETE_FLAT_UI.Presentaciones
                     if (item is TextBox)
                     {
                         //Codigo comprobacion  de textbox
-                        if (item.Text == "")
+                        if (String.IsNullOrWhiteSpace(item.Text))
                         {
                             item.Focus();
                             return false;
                         }
                     }
-                }
-                catch { }
+                }catch { }
             }
             return true;
         }

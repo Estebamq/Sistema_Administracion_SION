@@ -69,7 +69,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
             try
             {
                 
-                if (!validar(this))//si esta no vacio los textbox del formulario agrego un nuevo usuario
+                if (validarTextBoxs())//si esta no vacio los textbox del formulario agrego un nuevo usuario
                 {
                     usuario.NombreUsuario = txtBoxNombreUsuario.Text;
                     if (txtBoxContraseña.Text == txtBoxConfirmarContraseña.Text)
@@ -169,6 +169,29 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
         }
 
         //valido que ingrese datos en el formulario
+
+        bool validarTextBoxs()
+        {
+            foreach (Control item in this.Controls)
+            {
+                try
+                {
+                    if (item is TextBox)
+                    {
+                        //Codigo comprobacion  de textbox
+                        if (String.IsNullOrWhiteSpace(item.Text))
+                        {
+                            item.Focus();
+                            return false;
+                        }
+                    }
+                }
+                catch { }
+            }
+            return true;
+        }
+
+        /*
         private bool validar(Form formulario)
         {
             bool vacio = false;
@@ -182,7 +205,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.UsuariosPrograma
 
             return vacio;
         }
-
+        */
 
     }
 }

@@ -55,8 +55,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.dateTimePickerVencimientoSeguro = new System.Windows.Forms.DateTimePicker();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.txtAuto = new System.Windows.Forms.TextBox();
-            this.lblAuto = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.cmbEstadoInstructor = new System.Windows.Forms.ComboBox();
             this.BarraTituloInstructor.SuspendLayout();
@@ -314,33 +312,13 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(102, 60);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(71, 23);
             this.txtId.TabIndex = 49;
             this.txtId.Visible = false;
-            // 
-            // txtAuto
-            // 
-            this.txtAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuto.Location = new System.Drawing.Point(272, 60);
-            this.txtAuto.Name = "txtAuto";
-            this.txtAuto.Size = new System.Drawing.Size(71, 23);
-            this.txtAuto.TabIndex = 51;
-            this.txtAuto.Visible = false;
-            // 
-            // lblAuto
-            // 
-            this.lblAuto.AutoSize = true;
-            this.lblAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuto.ForeColor = System.Drawing.Color.White;
-            this.lblAuto.Location = new System.Drawing.Point(218, 60);
-            this.lblAuto.Name = "lblAuto";
-            this.lblAuto.Size = new System.Drawing.Size(48, 17);
-            this.lblAuto.TabIndex = 50;
-            this.lblAuto.Text = "IdAuto";
-            this.lblAuto.Visible = false;
             // 
             // lblEstado
             // 
@@ -371,8 +349,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.ClientSize = new System.Drawing.Size(418, 514);
             this.Controls.Add(this.cmbEstadoInstructor);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtAuto);
-            this.Controls.Add(this.lblAuto);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.dateTimePickerVencimientoSeguro);
@@ -434,8 +410,6 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblId;
         public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.TextBox txtAuto;
-        private System.Windows.Forms.Label lblAuto;
         private System.Windows.Forms.Label lblEstado;
         public System.Windows.Forms.ComboBox cmbEstadoInstructor;
         public System.Windows.Forms.DateTimePicker dateTimePickerVencimientoSeguro;
