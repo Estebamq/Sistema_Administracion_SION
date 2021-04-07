@@ -66,7 +66,7 @@
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(479, 43);
-            this.BarraTitulo.TabIndex = 2;
+            this.BarraTitulo.TabIndex = 61;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // label6
@@ -288,7 +288,7 @@
             this.txtId.Location = new System.Drawing.Point(179, 44);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(232, 23);
-            this.txtId.TabIndex = 1;
+            this.txtId.TabIndex = 60;
             this.txtId.Visible = false;
             // 
             // label5

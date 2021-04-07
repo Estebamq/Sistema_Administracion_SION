@@ -230,7 +230,7 @@
             this.btnUsuarios.Location = new System.Drawing.Point(0, 375);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(230, 37);
-            this.btnUsuarios.TabIndex = 25;
+            this.btnUsuarios.TabIndex = 6;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -252,7 +252,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(0, 332);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(230, 43);
-            this.btnDashboard.TabIndex = 24;
+            this.btnDashboard.TabIndex = 5;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,7 +274,7 @@
             this.btnPlanillas.Location = new System.Drawing.Point(0, 292);
             this.btnPlanillas.Name = "btnPlanillas";
             this.btnPlanillas.Size = new System.Drawing.Size(230, 40);
-            this.btnPlanillas.TabIndex = 22;
+            this.btnPlanillas.TabIndex = 4;
             this.btnPlanillas.Text = "Planillas";
             this.btnPlanillas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlanillas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -296,7 +296,7 @@
             this.btnBuscarClase.Location = new System.Drawing.Point(0, 252);
             this.btnBuscarClase.Name = "btnBuscarClase";
             this.btnBuscarClase.Size = new System.Drawing.Size(230, 40);
-            this.btnBuscarClase.TabIndex = 1;
+            this.btnBuscarClase.TabIndex = 3;
             this.btnBuscarClase.Text = "Buscar Clase";
             this.btnBuscarClase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarClase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -371,7 +371,7 @@
             this.btnListaClientes.Location = new System.Drawing.Point(0, 126);
             this.btnListaClientes.Name = "btnListaClientes";
             this.btnListaClientes.Size = new System.Drawing.Size(230, 40);
-            this.btnListaClientes.TabIndex = 7;
+            this.btnListaClientes.TabIndex = 2;
             this.btnListaClientes.Text = "Alumnos";
             this.btnListaClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnListaClientes.UseVisualStyleBackColor = true;
@@ -445,7 +445,7 @@
             this.btnInstructores.Location = new System.Drawing.Point(0, 0);
             this.btnInstructores.Name = "btnInstructores";
             this.btnInstructores.Size = new System.Drawing.Size(230, 40);
-            this.btnInstructores.TabIndex = 2;
+            this.btnInstructores.TabIndex = 1;
             this.btnInstructores.Text = "Instructores";
             this.btnInstructores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInstructores.UseVisualStyleBackColor = true;
@@ -498,7 +498,7 @@
             this.PanelBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.PanelBarraTitulo.Name = "PanelBarraTitulo";
             this.PanelBarraTitulo.Size = new System.Drawing.Size(1100, 43);
-            this.PanelBarraTitulo.TabIndex = 1;
+            this.PanelBarraTitulo.TabIndex = 61;
             this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
             // pictureBox8
@@ -532,7 +532,7 @@
             this.btnNormal.Location = new System.Drawing.Point(996, 0);
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(43, 43);
-            this.btnNormal.TabIndex = 3;
+            this.btnNormal.TabIndex = 8;
             this.btnNormal.UseVisualStyleBackColor = true;
             this.btnNormal.Visible = false;
             this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
@@ -547,7 +547,7 @@
             this.btnMinimizar.Location = new System.Drawing.Point(950, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(43, 43);
-            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabIndex = 9;
             this.btnMinimizar.UseVisualStyleBackColor = true;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
@@ -575,7 +575,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(1043, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(39, 39);
-            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 

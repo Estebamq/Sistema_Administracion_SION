@@ -93,7 +93,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.BtnCerrar.Location = new System.Drawing.Point(376, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(38, 38);
-            this.BtnCerrar.TabIndex = 16;
+            this.BtnCerrar.TabIndex = 13;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -164,7 +164,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.btnCancelar.Location = new System.Drawing.Point(250, 435);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 35);
-            this.btnCancelar.TabIndex = 39;
+            this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -179,7 +179,7 @@ namespace COMPLETE_FLAT_UI.Presentaciones.instructor
             this.btnGuardarInstructor.Location = new System.Drawing.Point(73, 435);
             this.btnGuardarInstructor.Name = "btnGuardarInstructor";
             this.btnGuardarInstructor.Size = new System.Drawing.Size(100, 35);
-            this.btnGuardarInstructor.TabIndex = 38;
+            this.btnGuardarInstructor.TabIndex = 11;
             this.btnGuardarInstructor.Text = "Guardar";
             this.btnGuardarInstructor.UseVisualStyleBackColor = false;
             this.btnGuardarInstructor.Click += new System.EventHandler(this.btnGuarda_Click);
