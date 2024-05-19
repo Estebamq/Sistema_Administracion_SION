@@ -16,6 +16,6 @@ https://www.youtube.com/watch?v=vQrADCBPoGk
 <div align='center'>
  <h1>ABM SION</h1>
 </div>
-<img src="https://github.com/Estebamq/ADMINISTRACION/blob/master/COMPLETE_FLAT_UI/Resources/Ejemplo%20Sion.png">
+<img src="./COMPLETE_FLAT_UI/Resources/Ejemplo Sion.png">
 
 
